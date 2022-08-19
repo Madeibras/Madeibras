@@ -15,8 +15,8 @@ export default function HomeSlogan() {
                 >Orçamento agora!</Button> 
                 <SocialMidia/>
             </C.Box>
-            <C.Vetor src='Assets/img/VetorMadeibras.png' alt=''/>
             <Vectors/>
+            <C.Vetor src='Assets/img/VetorMadeibras.png' alt=''/>
         </C.Container>
     )
 }

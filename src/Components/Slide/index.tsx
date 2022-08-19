@@ -2,6 +2,8 @@ import * as C from './style'
 import { SlideImg } from 'Mock/Slide'
 import { useRef } from 'react'
 
+import {MdKeyboardArrowLeft, MdKeyboardArrowRight} from 'react-icons/md'
+
 const Slide = () => {
 
     const carrousel = useRef <HTMLInputElement | null>(null)
@@ -16,24 +18,23 @@ const Slide = () => {
         e.preventDefault()
 
         
-        //carrousel.current.scrollLeft = carrousel.current?.offsetLeft
+        //carrousel.current?.scrollLeft = carrousel.current?.offsetLeft
     }
 
     return(
-        <>
-            <C.Container ref={carrousel}>
+        <C.Container>
+            <C.Box  >
                 {SlideImg.map((item) => (
                     <C.CardImg key={item.id}>
                         <img src={item.img} alt='asdasdasd' />
                     </C.CardImg>
                 ))}
-            </C.Container>
-
-            <div className='Buttons'>
-                <button onClick={handleLeftClick}>Left</button>
-                <button onClick={handleRightClick}>Right</button>
-            </div>
-        </>
+            </C.Box>
+            <C.Buttons>
+                <C.BtnLeft onClick={handleLeftClick}><MdKeyboardArrowLeft/></C.BtnLeft>
+                <C.BtnRight onClick={handleRightClick}><MdKeyboardArrowRight/> </C.BtnRight>
+            </C.Buttons>
+        </C.Container>
     )
 }
 

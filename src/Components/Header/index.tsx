@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import * as C from './style'
 
 import Nav from 'Components/NavBar'
@@ -8,6 +8,7 @@ import { BurguerButton } from 'Components/BurguerButton'
 export default function Header(){
 
     const [isOpen, setIsOpen] = useState(false)
+    
 
     return (
     <>
@@ -17,10 +18,18 @@ export default function Header(){
                 <img src="Assets/img/background.svg" alt="Logo" />
                 <img src="Assets/img/LogoBranca.png" alt="Logo" />
             </C.BoxImg>
+            <C.Ul>
+                <Nav/>  
+            </C.Ul>
+                
+            <BurguerButton
+                isActive={isOpen}
+                onClick={() => setIsOpen(!isOpen)}/>
 
-            {isOpen && <Nav/>}
-            
-            <BurguerButton onClick={() => setIsOpen(!isOpen)}/>
+            {isOpen ? 
+                <C.UlNav>
+                    <Nav/>
+                </C.UlNav>: <></>}
         </C.Header>
     </>
     )

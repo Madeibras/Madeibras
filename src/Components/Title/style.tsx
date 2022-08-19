@@ -7,8 +7,8 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 8rem;
-    margin-bottom: 10rem;   
+    margin-top: 7rem;
+    margin-bottom: 7rem;   
 `
 
 export const Icon = styled.img`

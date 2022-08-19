@@ -7,45 +7,22 @@ const Media = {
     MobileS: "@media(min-width: 320px)",
 }
 
-export const Ul = styled.ul`
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-evenly;
-    align-content: center;  
-
-    ${Media.Tablet}{
-        position: fixed;
-        width: 60%;
-        height: 100vh;
-        top: 70px;
-        right: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: #6FB742;
-        z-index: 10;
-        box-sizing: border-box;
-        transition: all 0.2s ease-in-out;
-    }
-
-    ${Media.MobileS}{
-        width: 80%;
-    }
-` 
-
 export const Li = styled.li `
-    width: 100%;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
 
+    &:hover{
+        transition: all 0.2s ease-in;
+        border-bottom: 2px solid #6FB742;
+    }
+
     ${Media.Tablet}{
-        margin-top: 2.5rem;
-        margin-bottom: 2.5rem;
+        width: 100%;
+        margin-top: 1.6rem;
+        margin-bottom: 1.6rem;
         color: #fff;
     }
 `
@@ -54,13 +31,14 @@ export const Span = styled.span`
     font-size: 1.15rem;
     display: flex;
     justify-content: flex-start;
+    color: #6FB742;
 
     ${Media.Tablet}{
-        width: 50%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         font-size: 2rem;
+        color: #fff;
     }
 `
 
@@ -69,8 +47,14 @@ export const Icon = styled.i`
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-right: 0.5rem;
+    color: #6FB742;
 
     ${Media.Tablet}{
         font-size: 2rem;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 `

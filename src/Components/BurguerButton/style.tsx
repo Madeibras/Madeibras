@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, {css} from "styled-components"
 
 const Media = {
     Tablet:  "@media(min-width: 768px)",
@@ -7,44 +7,55 @@ const Media = {
     MobileS: "@media(min-width: 320px)"
 }
 
+interface BoxButtonProps {
+    isActive?: boolean
+}
 
-export const BoxButton = styled.div`
-    width: 55px;
-    height: 55px;
+export const BoxButton = styled.button<BoxButtonProps>`
+    position: relative;
+    width: 85px;
+    height: 85px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    overflow: hidden;
+    align-items: center;
+    border: 1px solid red;
 
     ${Media.Tablet}{
         display: none;
     }
 
-    span{
-        position: absolute;
-        width: 40px;
-        height: 3px;
-        border-radius: 40px;
-        background-color: #000;
-        transition: 0.5s ;
-    }
+        span{
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            border-radius: 40px;
+            background-color: #000;
+            transition: 0.5s;
+            
+            
 
-    span:nth-child(1){
-        transform: translate(0, -12px); 
-    }
+        ${({isActive}) => isActive ? `
+            &:nth-child(1){
+                transform: translateY(0);
+                transform: rotate(-45deg);
+            }
 
-    span:nth-child(2){
-        transform: translate(0, 12px); 
-    }  
+            &:nth-child(2){
+                transform: rotate(45deg);
+            }
 
-    .hamburguer.open span:nth-child(1){
-        transform: rotate(45deg);
-    }
+            &:nth-child(3){
+                display: none;
+            }
+        `: `
+            &:nth-child(1){
+                transform: translateY(-13px);
+            }
 
-    .hamburguer.open span:nth-child(1){
-        opacity: 0;
-    }
-
-    .hamburguer.open span:nth-child(3){
-        transform: rotate(-45deg);
+            &:nth-child(3){
+                transform: translateY(13px);
+            }
+        `}
     }
 `

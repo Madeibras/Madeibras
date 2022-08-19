@@ -16,29 +16,26 @@ export const Header = styled.header`
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
-    
 `
 
 export const BoxImg = styled.div`
-    width: 50%;
+    width: 60%;
     height: 85px;
 
     img:nth-child(1){
         position: relative;
-        width: 80%;
+        width: 100%;
         z-index: -1;
     }
 
     img:nth-child(2){
-        width: 28%;
+        width: 45%;
         margin-top: 5px;
-        margin-left: 4%;
+        margin-left: 6%;
         position: absolute;
         z-index: 10;
         left: 0;
     }
-
-
 
     ${Media.Tablet}{
         background-size: 80% 100%;
@@ -47,8 +44,6 @@ export const BoxImg = styled.div`
             position: relative;
             width: 90%;
             z-index: -1;
-
-         
         }
         
         img:nth-child(2){
@@ -57,5 +52,37 @@ export const BoxImg = styled.div`
             margin-top: 5px;
             z-index: 10;
         }
+    }
+`
+
+export const Ul = styled.ul`
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;  
+
+    ${Media.Tablets}{
+        display: none;
+    }
+`
+
+export const UlNav = styled.ul`
+    position: fixed;
+    width: 80%;
+    height: 100%;
+    top: 70px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #6FB742;
+    z-index: 20;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    
+    ${Media.Tablet}{
+        display: none;
     }
 `

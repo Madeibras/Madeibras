@@ -1,6 +1,6 @@
 
 
-export type ICards = {
+interface ICards {
     id: number
     name: string
     description: string
