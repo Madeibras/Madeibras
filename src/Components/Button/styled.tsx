@@ -3,7 +3,7 @@ import { Iprops } from "./Types/IProps";
 
 const Media = {
     Tablet:  "@media(max-width: 768px)",
-    MobileL: "@media(min-width: 425px)",
+    MobileL: "@media(max-width: 425px)",
     MobileM: "@media(min-width: 375px)",
     MobileS: "@media(min-width: 320px)"
 }
@@ -25,6 +25,10 @@ export const Button = styled.button<Iprops>`
     }
 
     ${Media.Tablet}{
-        width: 100%;
+        width: ${(props) => props.primary ? "100%": "50%"};
     }    
+
+    ${Media.MobileL}{
+        width: ${(props) => props.primary ? "100%" : "70%"};
+    }
 `

@@ -1,25 +1,47 @@
 import styled from "styled-components";
 
+const Media = {
+    MobileL: "@media(max-width: 500px)",
+    MobileS: "@media(max-width: 320px)"
+}
+export const Container = styled.div`
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    justify-items: center;
+    align-items: center;
+    margin: auto;
+    row-gap: 150px;
+    font-family: 'Poppins';
+    background-image: url('Assets/Sallers/Background_Sallers.png');
+
+        ${Media.MobileL}{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+`
+
 export const Box = styled.div`
     position: relative;
-    width: 280px;
+    width: 300px;
     padding: 24px;
     background-color: #ffff;
     box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
     border-radius: 19px;
-    font-family: 'Poppins';
 `
 
 export const Header = styled.div`
     position: absolute;
-    top: -15%;
+    top: -20%;
     left: 30%;
     border-radius: 10px 10px 0 10px;
 `
 
 export const Perfil = styled.img`
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border: 5px solid #A6CE39;
     border-radius: 50%;
     position: relative;

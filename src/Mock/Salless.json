@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "img": "Assets/Sallers/Tabua.png",
+        "alt": "Tabua de pinus",
+      
+
+        "th1": {
+            "thL": "30",
+            "thE": "1,9",
+            "thC": "25"
+        },
+
+        "th2": {
+            "thL": "30",
+            "thE": "1,9",
+            "thC": "25"
+        },
+
+        "th3": {
+            "thL": "30",
+            "thE": "1,9",
+            "thC": "25"
+        }
+    }
+]

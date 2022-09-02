@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 
 const Media = {
-
     MobileL: "@media(max-width: 500px)",
     MobileS: "@media(max-width: 320px)"
 }

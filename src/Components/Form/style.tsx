@@ -33,6 +33,10 @@ export const BoxImg = styled.div`
         object-fit: cover;
         max-width: 100%;
         height: 450px;
+
+        ${Media.MobileM}{
+            height: 400px;
+        }
     }
 
     ${Media.Tablet}{

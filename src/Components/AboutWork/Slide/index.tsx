@@ -22,7 +22,7 @@ const Slide = () => {
 
     return(
         <C.Container>
-            <C.Box  >
+            <C.Box>
                 {SlideImg.map((item) => ( 
                     <C.CardImg key={item.img}>
                         <img src={item.img} alt='asdasdasd' />
