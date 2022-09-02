@@ -19,7 +19,6 @@ export const BoxButton = styled.button<BoxButtonProps>`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
 
     ${Media.Tablet}{
         display: none;
@@ -31,7 +30,7 @@ export const BoxButton = styled.button<BoxButtonProps>`
             height: 3px;
             border-radius: 40px;
             background-color: #000;
-            transition: 0.5s;
+            transition: 0.25s;
             
             
 
@@ -46,7 +45,7 @@ export const BoxButton = styled.button<BoxButtonProps>`
             }
 
             &:nth-child(3){
-                display: none;
+                opacity: 0;
             }
         `: `
             &:nth-child(1){

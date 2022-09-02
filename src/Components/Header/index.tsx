@@ -1,14 +1,13 @@
 import { useRef, useState } from 'react'
 import * as C from './style'
 
-import Nav from 'Components/NavBar'
+import Nav from 'Components/Header/NavBar'
 
-import { BurguerButton } from 'Components/BurguerButton'
+import { BurguerButton } from 'Components/Header/BurguerButton'
 
 export default function Header(){
 
     const [isOpen, setIsOpen] = useState(false)
-    
 
     return (
     <>

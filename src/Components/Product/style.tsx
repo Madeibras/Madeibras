@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-
-
 export const Container = styled.section`
     width: 100%;
     height: 100%;
@@ -23,6 +21,7 @@ export const Box = styled.div`
     background-color: #FFFF;
     box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
+    font-family: 'Poppins';
 
     img{
         width: 100%;

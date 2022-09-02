@@ -1,13 +1,13 @@
 import * as C from './style'
-import { SlideImg } from 'Mock/Slide'
+import  SlideImg  from 'Mock/Slide.json'
 import { useRef } from 'react'
 
 import {MdKeyboardArrowLeft, MdKeyboardArrowRight} from 'react-icons/md'
 
 const Slide = () => {
 
-    const carrousel = useRef <HTMLInputElement | null>(null)
-
+    const carrousel = useRef <HTMLHeadingElement | null>(null)
+ 
     const  handleLeftClick = (e: React.MouseEvent<HTMLElement>) => {
         e.preventDefault()
 
@@ -16,16 +16,15 @@ const Slide = () => {
 
     const handleRightClick = (e: React.MouseEvent<HTMLElement>) => {
         e.preventDefault()
-
-        
+  
         //carrousel.current?.scrollLeft = carrousel.current?.offsetLeft
     }
 
     return(
         <C.Container>
             <C.Box  >
-                {SlideImg.map((item) => (
-                    <C.CardImg key={item.id}>
+                {SlideImg.map((item) => ( 
+                    <C.CardImg key={item.img}>
                         <img src={item.img} alt='asdasdasd' />
                     </C.CardImg>
                 ))}

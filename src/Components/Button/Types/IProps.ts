@@ -5,4 +5,6 @@ export type Iprops = {
     txtColor?: string
     backgroundHover?: string
     children: ReactNode 
+    boxShadow?: string
+    primary?: boolean
 }

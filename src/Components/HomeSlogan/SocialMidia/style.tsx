@@ -8,26 +8,24 @@ const Media = {
 }
 
 export const Icons = styled.ul`
-    width: 100%;
+    width: 80%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
     margin-top: 4rem;
 
     ${Media.Tablet}{
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-around;
     }
 
     a{
-        width: 100%;
         color: #6FB742;
-        font-size: 2.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
+        font-size: 3rem;
         cursor: pointer;
+        
 
         ${Media.Tablet}{
             justify-content: center;

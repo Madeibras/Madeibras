@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "img": "Assets/Slide/Canteiro.png"
+    },
+
+    {
+        "id": 2,
+        "img": "Assets/Slide/Canteiro2.png"
+    },
+    
+    {
+        "id": 3,
+        "img": "Assets/Slide/Canteiro3.png"
+    },
+
+    {
+        "id": 4,
+        "img": "Assets/Slide/Estoque.png"
+    },
+
+    {
+        "id": 4,
+        "img": "Assets/Slide/Estoque2.png"
+    },
+
+    {
+        "id": 5,
+        "img": "Assets/Slide/Estoque3.png"
+    },
+
+    {
+        "id": 6,
+        "img": "Assets/Slide/Descarregando.png"
+    },
+
+    {
+        "id": 7,
+        "img": "Assets/Slide/Descarregando2.png"
+    },
+    
+    {
+        "id": 8,
+        "img": "Assets/Slide/Descarregando3.png"
+    },
+
+    {
+        "id": 9,
+        "img": "Assets/Slide/Descarregando4.png"
+    },
+
+    {
+        "id": 10,
+        "img": "Assets/Slide/Descarregando5.png"
+    }
+]

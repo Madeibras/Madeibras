@@ -20,6 +20,7 @@ export const Footer = styled.footer`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: 'Poppins';
 
     ${Media.Tablet}{
         flex-direction: row;

@@ -41,6 +41,7 @@ export const Box = styled.div`
     flex-direction: column;
     padding: 25px;
     border-bottom: 5px solid #A6CE39;
+    font-family: 'Poppins';
 
     ${Media.Tablet}{
         padding: 25px;

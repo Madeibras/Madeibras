@@ -1,3 +1,4 @@
+
 import styled from "styled-components";
 
 const Media = {
@@ -16,6 +17,7 @@ export const Header = styled.header`
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
+    
 `
 
 export const BoxImg = styled.div`
@@ -31,7 +33,7 @@ export const BoxImg = styled.div`
     img:nth-child(2){
         width: 45%;
         margin-top: 5px;
-        margin-left: 6%;
+        margin-left: 4%;
         position: absolute;
         z-index: 10;
         left: 0;

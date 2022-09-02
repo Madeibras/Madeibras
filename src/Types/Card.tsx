@@ -8,5 +8,4 @@ export type IProps = {
     img?: string
     children?: ReactNode
     onClick?: React.MouseEventHandler<HTMLButtonElement> 
-   
 }

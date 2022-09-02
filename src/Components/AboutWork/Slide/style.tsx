@@ -16,7 +16,7 @@ export const Box = styled.div`
     overflow-x: auto;
 
     &::-webkit-scrollbar{
-        height: 0;
+        height: 4px;
     }
 `
 

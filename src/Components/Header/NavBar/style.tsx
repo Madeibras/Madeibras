@@ -13,6 +13,7 @@ export const Li = styled.li `
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    font-family: 'Poppins';
 
     &:hover{
         transition: all 0.2s ease-in;
@@ -21,6 +22,9 @@ export const Li = styled.li `
 
     ${Media.Tablet}{
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-top: 1.6rem;
         margin-bottom: 1.6rem;
         color: #fff;
@@ -31,30 +35,25 @@ export const Span = styled.span`
     font-size: 1.15rem;
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     color: #6FB742;
 
     ${Media.Tablet}{
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
         font-size: 2rem;
         color: #fff;
     }
 `
 
 export const Icon = styled.i`
-    font-size: 1.25em;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    font-size: 1.25em;
     padding-right: 0.5rem;
     color: #6FB742;
 
     ${Media.Tablet}{
         font-size: 2rem;
         color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 `

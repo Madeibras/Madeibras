@@ -27,15 +27,16 @@ export const Container = styled.section`
 `
 
 export const Box = styled.div`
-    width: 95%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: stretch;
     margin: 0 auto;
     z-index: 15;
     margin-left: 5%;
+    font-family: 'Poppins';
 
     ${Media.Tablet}{
         width: 90%;

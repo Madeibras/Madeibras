@@ -2,7 +2,7 @@ import DarkMode from 'Components/DarkMode'
 import { Lists } from 'Mock/List'
 import * as C from './style'
 
-const Nav=  () => (
+const Nav =  () => (
         <>
             {Lists.map((item) => (
                 <C.Li key={item.id}>

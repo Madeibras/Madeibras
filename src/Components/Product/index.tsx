@@ -1,6 +1,6 @@
 import * as C from './style'
 
-import { Card } from 'Mock/Card'
+import  Card  from 'Mock/Card.json'
 
 const Product = () => {
     return(
