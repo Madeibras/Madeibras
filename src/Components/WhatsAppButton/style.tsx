@@ -21,7 +21,7 @@ const animationSpan = keyframes`
     }
 `
 
-export const Button = styled.button`
+export const Button = styled.div`
     font-family: 'Poppins';
     position: fixed;
     border-radius: 50%;

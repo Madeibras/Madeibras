@@ -2,10 +2,15 @@ import * as C from './style'
 import  Card  from 'Mock/Card.json'
 import InfoProducts from './InfoProducts'
 
-const Product = () => {
+interface IProps {
+    id: string
+}
+
+
+const Product = ({id}: IProps) => {
     return(
         <>
-            <C.Container>
+            <C.Container id={id}>
                 {Card.map((item) => (
                 <C.Box key={item.id}>
                     <C.Title> {item.name} </C.Title>
@@ -14,7 +19,6 @@ const Product = () => {
                 </C.Box>
                 ))}
             </C.Container>
-        <InfoProducts/>
         </>
     )
 }

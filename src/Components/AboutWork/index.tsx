@@ -1,7 +1,11 @@
 import * as C from './style'
 
-const AboutWork = () => (
-    <C.Container>
+interface IProps {
+    id: string
+}
+
+const AboutWork = ({id}: IProps) => (
+    <C.Container id={id}>
         <C.Box>
             <img src='./Assets/Card/Calendario.svg' alt='' /> 
             <C.Description>

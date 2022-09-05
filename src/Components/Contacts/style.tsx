@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+const Media = {
+    MobileS: "@media(max-width: 1020px)"
+}
+
 export const Container = styled.div`
     min-width: 100%;
     min-height: auto;
@@ -7,10 +11,16 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
+    padding: 16px;
+`
+
+export const Iframe = styled.div`
+    width: 100%;
+    height: auto;
 
     iframe{
-        width: 100vw;
+        width: 100%;
         height: 80vh;
     }
 `
@@ -18,13 +28,31 @@ export const Container = styled.div`
 export const Box = styled.div`
     position: relative;
     max-width: 280px;
-    row-gap: 20px;
+    row-gap: 14px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-family: 'Poppins';
+    padding: 16px;
+
+    &::before{
+        content: '';
+        position: absolute;
+        right: -25%;
+        height: 125px;
+        width: 3px;
+        background-color: #6FB742;
+
+        ${Media.MobileS}{
+            display: none;
+        }
+    }
+
+    &:nth-child(4)::before{
+        display: none;
+    }   
 `
 
 export const Icon = styled.i`

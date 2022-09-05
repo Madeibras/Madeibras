@@ -27,9 +27,9 @@ const InfoProducts = () => {
                     </thead>
                     <tbody>
                         <C.Measure>
-                            <th>30cm</th>
-                            <th>30cm</th>
-                            <th>30cm</th>
+                            <th>{item.th1.thL}</th>
+                            <th>{item.th1.thE}</th>
+                            <th>{item.th1.thC}</th>
                         </C.Measure>
                         <C.Measure>
                             <th>30cm</th>

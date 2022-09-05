@@ -2,6 +2,9 @@ import {AiOutlineWhatsApp, AiOutlineMail} from 'react-icons/ai'
 import { SalesCards } from 'Mock/SalesCard'
 import * as C from './styled'
 
+interface IProps {
+
+}
 
 const SalesCard = () => (
     <C.Container>
@@ -15,8 +18,8 @@ const SalesCard = () => (
                 <p>{item.Info}</p>
             </C.Info>
             <C.BoxButton>
-                <button> <AiOutlineWhatsApp/> </button>
-                <button> <AiOutlineMail/> </button>
+                <C.Btn> <AiOutlineWhatsApp/> </C.Btn>
+                <C.Btn> <AiOutlineMail/> </C.Btn>
             </C.BoxButton>
         </C.Box>
      ))} 

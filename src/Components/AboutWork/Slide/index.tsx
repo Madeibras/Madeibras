@@ -6,23 +6,25 @@ import {MdKeyboardArrowLeft, MdKeyboardArrowRight} from 'react-icons/md'
 
 const Slide = () => {
 
-    const carrousel = useRef <HTMLHeadingElement | null>(null)
+    const carrousel = useRef <any | null>(null)
  
     const  handleLeftClick = (e: React.MouseEvent<HTMLElement>) => {
         e.preventDefault()
 
-        console.log(carrousel.current)
+        carrousel.current.scrollLeft -= carrousel.current.offsetWidth
     }
 
     const handleRightClick = (e: React.MouseEvent<HTMLElement>) => {
         e.preventDefault()
   
-        //carrousel.current?.scrollLeft = carrousel.current?.offsetLeft
+        carrousel.current.scrollLeft += carrousel.current.offsetWidth
+
+        console.log(carrousel)
     }
 
     return(
         <C.Container>
-            <C.Box>
+            <C.Box ref={carrousel}>
                 {SlideImg.map((item) => ( 
                     <C.CardImg key={item.img}>
                         <img src={item.img} alt='asdasdasd' />

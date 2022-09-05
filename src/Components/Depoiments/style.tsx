@@ -6,7 +6,15 @@ const Media = {
     MobileS: "@media(max-width: 320px)"
 }
 
+export const Container = styled.div`
+    position: relative;
+    width: 100%;
+    height: 100%;
+`
+
 export const Box = styled.div`
+    width: 100%;
+    position: relative;
     display: flex;
     overflow-x: hidden;
     scroll-snap-type: x mandatory;
@@ -14,6 +22,10 @@ export const Box = styled.div`
     overflow-x: auto;
     padding: 14px;
     gap: 24px;
+
+      &::-webkit-scrollbar{
+        height: 0px;
+    }
 `
 
 export const Card = styled.div`
@@ -76,13 +88,26 @@ export const Depoiment = styled.div`
 
     p{
         font-size: 1.3rem;
-        padding: 16px;
+        padding: 26px 16px;
         font-weight: 500;
 
         ${Media.MobileL}{
             font-size: 1.2rem;
         }
+    }
+`
 
-        
+export const Buttons = styled.div`
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 25%;
+    color: #302f2f;
+
+    button{
+        cursor: pointer;
+        font-size: 4rem;
     }
 `

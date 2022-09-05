@@ -52,3 +52,8 @@ export const Form = styled.form`
         width: 100%;
     }
 `
+
+export const IsValid = styled.p`
+    font-family: 'Poppins';
+    color: #ff5739;
+`

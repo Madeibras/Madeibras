@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+const Media = {
+    MobileL: "@media(max-width: 425px)",
+    MobileS: "@media(max-width: 320px)"
+}
+
 export const Container = styled.section`
     width: 100%;
     height: 100%;
@@ -9,6 +14,10 @@ export const Container = styled.section`
     justify-content: center;
     align-items: center;
     padding: 30px;
+
+    ${Media.MobileL}{
+        padding: 16px;
+    }
 `
 
 export const Box = styled.div`
@@ -26,6 +35,24 @@ export const Box = styled.div`
     img{
         width: 100%;
         height: 200px;
+
+        ${Media.MobileL}{
+            width: 180px;
+            height: 120px;
+            border-radius: 10px;
+        }
+
+        ${Media.MobileS}{
+            width: 140px;
+            height: 90px;
+            border-radius: 8px;
+        }
+    }
+
+
+    ${Media.MobileL}{
+        flex-direction: row;
+        transform: scaleX(-1);
     }
 `
 
@@ -37,6 +64,13 @@ export const Title = styled.h2`
     padding: 10px;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
+
+    ${Media.MobileL}{
+        font-size: 1rem;
+        background: none;
+        color: #384044;
+        transform: scaleX(-1);
+    }
 `
 
 export const Button = styled.button`
@@ -53,5 +87,9 @@ export const Button = styled.button`
     &:hover{
         transition: all 0.2s ease-in-out;
         background-color: #589134;
+    }
+
+    ${Media.MobileL}{
+        display: none;
     }
 `

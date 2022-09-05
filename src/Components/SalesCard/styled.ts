@@ -89,10 +89,13 @@ export const BoxButton = styled.div`
         justify-items: center;
         cursor: pointer;
         
-
         &:hover{
             transition: all 0.3s ease-in-out;
             background-color: #589134;
         }
     }
+`
+
+export const Btn = styled.button`
+    
 `

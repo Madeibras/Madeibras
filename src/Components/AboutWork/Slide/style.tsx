@@ -16,7 +16,7 @@ export const Box = styled.div`
     overflow-x: auto;
 
     &::-webkit-scrollbar{
-        height: 4px;
+        height: 0px;
     }
 `
 
@@ -38,7 +38,7 @@ export const Buttons = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #e11919;
+    color: #161616;
 
     z-index: 10;
 `

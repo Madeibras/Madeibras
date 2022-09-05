@@ -12,13 +12,23 @@ const Form = () => {
     
     console.log(name, email)
 
+    const HandleClick = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+
+        if(name.length <= 4 || email.length <= 4 || texterea.length <= 10){
+            setError(true)
+        }else{
+            setError(false)
+        }
+    }
+
     return(
     <C.Container>
         <C.BoxImg>
             <img src='Assets/Slide/Canteiro.png' alt='' />
         </C.BoxImg>
 
-        <C.Form>
+        <C.Form onSubmit={HandleClick}>
             <Input 
                 type='text'
                 placeHolder='Seu nome'
@@ -28,7 +38,7 @@ const Form = () => {
                 onChange={(e) => setName(e.target.value)}
             />
             {error ? (
-                <p>campo invalido</p>
+                <C.IsValid>campo invalido</C.IsValid>
             ): (<>
             </>)}
 
@@ -41,7 +51,7 @@ const Form = () => {
                 onChange={(e) => setEmail(e.target.value)}
             />
             {error ? (
-                <p>campo invalido</p>
+                <C.IsValid>campo invalido</C.IsValid>
             ): (<>
             </>)}
 
@@ -54,7 +64,7 @@ const Form = () => {
                 onChange={(e) => setTexterea(e.target.value)}
             />
             {error ? (
-                <p>campo invalido</p>
+                <C.IsValid>campo invalido</C.IsValid>
             ): (<>
             </>)}
 

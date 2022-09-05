@@ -3,9 +3,13 @@ import SocialMidia from './SocialMidia/Index'
 import * as C from './style'
 import Vectors from './Vectors'
 
-export default function HomeSlogan() {
+interface IProps {
+    id: string
+}
+
+export default function HomeSlogan({id}: IProps) {
     return(
-        <C.Container>
+        <C.Container id={id}>
             <C.Box>           
                 <C.H1>COMPRE ONLINE COM A MADEIBRÁS, SOLUÇÕES  E AGILIDADE PARA SUA OBRA</C.H1>
                 <Button 
