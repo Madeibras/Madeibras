@@ -1,7 +1,14 @@
 import * as C from './style'
 import Salles from 'Mock/Salles.json'
 
-const InfoProducts = () => {
+interface IProps {
+    SallesMenu: any
+}
+
+const InfoProducts = ({SallesMenu}: IProps) => {
+
+    
+
     return (
 
         /*
@@ -17,14 +24,14 @@ const InfoProducts = () => {
             </C.Box>
         */
        <>
-        {Salles.map((item) => (
+        {SallesMenu.map((item: any) => (
             <C.Box>
                 <C.BoxImg>
                    <img src={item.img} alt={item.alt}/>
                 </C.BoxImg>
                 <C.Table>
                     <thead>
-                        {item.thead?.map((item) => (
+                        {item.thead?.map((item: any) => (
                             <>
                                 <th>{item.Largura}</th>
                                 <th>{item.Expressura}</th>
@@ -34,7 +41,7 @@ const InfoProducts = () => {
                       
                     </thead>
                     <tbody>
-                        {item.tbody.map((item) => (
+                        {item.tbody.map((item: any) => (
                             <C.Measure>
                                 <th>{item.largura}</th>
                                 <th>{item.expressura}</th>

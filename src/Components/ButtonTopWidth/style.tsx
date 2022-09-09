@@ -47,7 +47,6 @@ export const Button = styled.button`
         color: #a1ff0b;
         background-color: #f3f3f3;
 
-        
         ${Media.MobileM}{
             width: 52px;
             height: 52px;

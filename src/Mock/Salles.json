@@ -4,6 +4,7 @@
         "id": 1,
         "img": "Assets/Sallers/Tabua.png",
         "alt": "Tabua de pinus",
+        "category": 1,
         "thead": [
             {
                 "Largura": "Largura",
@@ -34,9 +35,10 @@
     },
 
     {
-        "id": 1,
+        "id": 2,
         "img": "Assets/Sallers/Tabua.png",
         "alt": "Tabua de pinus",
+        "category": 1,
         "thead": [
             {
                 "Largura": "Largura",
@@ -66,9 +68,10 @@
 
     },
     {
-        "id": 1,
+        "id": 3,
         "img": "Assets/Sallers/Tabua.png",
         "alt": "Tabua de pinus",
+        "category": 1,
         "thead": [
             {
                 "Largura": "Largura",
@@ -83,14 +86,14 @@
                 "comprimento": "30cm"
             }
         ]
-
     },
 
 
     {
-        "id": 1,
+        "id": 4,
         "img": "Assets/Sallers/Tabua.png",
         "alt": "Tabua de pinus",
+        "category": 1,
         "thead": [
             {
                 "Largura": "Largura",
@@ -105,6 +108,68 @@
                 "comprimento": "30cm"
             }
         ]
+    },
 
+    {
+        "id": 5,
+        "img": "Assets/Sallers/Tabua.png",
+        "alt": "Plastificado",
+        "category": 2,
+        "thead": [
+            {
+                "Largura": "Largura",
+                "Expressura": "Expressura",
+                "Comprimento": "Comprimento"
+            }
+        ],
+        "tbody": [
+            {
+                "largura": "30cm",
+                "expressura": "30cm",
+                "comprimento": "30cm"
+            }
+        ]
+    },
+
+    {
+        "id": 6,
+        "img": "Assets/Sallers/Tabua.png",
+        "alt": "Madeirite",
+        "category": 3,
+        "thead": [
+            {
+                "Largura": "Largura",
+                "Expressura": "Expressura",
+                "Comprimento": "Comprimento"
+            }
+        ],
+        "tbody": [
+            {
+                "largura": "30cm",
+                "expressura": "30cm",
+                "comprimento": "30cm"
+            }
+        ]
+    },
+
+    {
+        "id": 7,
+        "img": "Assets/Sallers/Tabua.png",
+        "alt": "Pregos",
+        "category": 4,
+        "thead": [
+            {
+                "Largura": "Largura",
+                "Expressura": "Expressura",
+                "Comprimento": "Comprimento"
+            }
+        ],
+        "tbody": [
+            {
+                "largura": "30cm",
+                "expressura": "30cm",
+                "comprimento": "30cm"
+            }
+        ]
     }
 ]

@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
+interface IProps{
+    isActive: boolean
+}
+
 const Media = {
+    Laptop: "@media(max-width: 1750px)",
     MobileL: "@media(max-width: 425px)",
     MobileS: "@media(max-width: 320px)"
 }
@@ -9,18 +14,22 @@ export const Container = styled.section`
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 30px;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     padding: 30px;
 
     ${Media.MobileL}{
         padding: 16px;
     }
+
+    ${Media.Laptop}{
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
 `
 
-export const Box = styled.div`
+export const Box = styled.div<IProps>`
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -28,9 +37,16 @@ export const Box = styled.div`
     justify-content: center;
     align-items: center;
     background-color: #FFFF;
-    box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
+    
     border-radius: 25px;
     font-family: 'Poppins';
+
+
+    ${({isActive}) => isActive ? `
+         box-shadow: 6px 6px 4px #6FB742;
+    `: `
+        box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
+    `}
 
     img{
         width: 100%;

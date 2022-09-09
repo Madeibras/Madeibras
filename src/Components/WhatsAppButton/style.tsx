@@ -1,5 +1,9 @@
 import styled, { keyframes } from 'styled-components'
 
+const Media = {
+    MobileS: "@media(max-width: 375px)"
+}
+
 const animationInfinite = keyframes`
     from{
         transform: translate(2px, -3px) rotate(5deg);
@@ -65,4 +69,8 @@ export const Btn = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    ${Media.MobileS}{
+        font-size: 3rem;
+    }
 `
