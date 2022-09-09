@@ -19,6 +19,7 @@ const Product = ({id}: IProps) => {
                 </C.Box>
                 ))}
             </C.Container>
+            <InfoProducts/>
         </>
     )
 }

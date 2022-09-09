@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+const Media = {
+    MobileS: "@media(max-width: 425px)"
+}
+
 export const Container = styled.div`
     position: relative;
     width: 100%;
@@ -27,6 +31,12 @@ export const CardImg = styled.div`
    img{
         width: 100vw;
         height: 100vh;
+
+        ${Media.MobileS}{
+            width: 90vw;
+            height: 60vh;
+            padding-right: 15px;
+        }
    }
 `
 
@@ -41,11 +51,17 @@ export const Buttons = styled.div`
     color: #161616;
 
     z-index: 10;
+
+    ${Media.MobileS}{
+        display: none;
+    }
 `
 
 export const BtnLeft = styled.button`
     font-size: 6rem;
     cursor: pointer;
+
+    
 `
 
 export const BtnRight = styled.button`

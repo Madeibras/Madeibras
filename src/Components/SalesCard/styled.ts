@@ -97,5 +97,8 @@ export const BoxButton = styled.div`
 `
 
 export const Btn = styled.button`
-    
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 `

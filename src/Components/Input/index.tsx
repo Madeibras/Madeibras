@@ -9,6 +9,8 @@ const Input: React.FC <Iinputs> = ({
     placeHolder,
     value,     
     onChange,
+    id,
+    name,
     ...rest }) => (
             <C.Input 
                 type={type}
@@ -17,6 +19,8 @@ const Input: React.FC <Iinputs> = ({
                 color={color}
                 value={value}
                 onChange={onChange}
+                id={id}
+                name={name}
                 {...rest}
             />
 )

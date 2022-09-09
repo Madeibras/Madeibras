@@ -6,4 +6,6 @@ export type Iinputs = {
     value?: string
     rows?: number
     onChange?:(React.ChangeEventHandler<HTMLTextAreaElement> & ((e: React.ChangeEvent<HTMLInputElement>) => void))
+    id?: string | undefined;
+    name?: string | undefined;
 }

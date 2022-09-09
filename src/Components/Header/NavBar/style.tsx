@@ -38,14 +38,20 @@ export const Span = styled.span`
     align-items: center;
     color: #6FB742;
 
-    ${Media.Tablet}{
-        font-size: 2rem;
-        color: #fff;
-    }
-
     a{
         color: #6FB742;
     }
+
+    ${Media.Tablet}{
+        font-size: 2rem;
+        color: #fff;
+
+        a{
+            color: #ffffff;
+        }
+    }
+
+   
 `
 
 export const Icon = styled.i`

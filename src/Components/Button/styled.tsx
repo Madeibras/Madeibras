@@ -31,4 +31,9 @@ export const Button = styled.button<Iprops>`
     ${Media.MobileL}{
         width: ${(props) => props.primary ? "100%" : "70%"};
     }
+
+    
+    ${Media.MobileS}{
+        font-size: 1rem;
+    }
 `

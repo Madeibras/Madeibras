@@ -33,13 +33,7 @@ export const Button = styled.div`
     animation: ${animationInfinite} 1s infinite alternate;
     z-index: 30;
 
-    a{
-        color: #F4F4F4;
-        font-size: 4rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+   
 
     span{
             display: none;
@@ -63,4 +57,12 @@ export const Button = styled.div`
             animation: ${animationSpan} 0.3s ease-in-out;
         }
     }
+`
+
+export const Btn = styled.button`
+    color: #F4F4F4;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `

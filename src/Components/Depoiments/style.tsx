@@ -106,6 +106,10 @@ export const Buttons = styled.div`
     bottom: 25%;
     color: #302f2f;
 
+    ${Media.MobileL}{
+        display: none;
+    }
+
     button{
         cursor: pointer;
         font-size: 4rem;

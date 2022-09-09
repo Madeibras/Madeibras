@@ -1,5 +1,11 @@
 import styled from 'styled-components'
 
+const Media = {
+    Laptop: "@media(max-width: 1024px)",
+    MobileL: "@media(max-width: 425px)",
+    MobileS: "@media(max-width: 375px)"
+}
+
 export const Container = styled.div`
     width: 100%;
     height: auto;
@@ -15,6 +21,11 @@ export const Box = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    ${Media.Laptop}{
+        flex-direction: column;
+        justify-content: center;
+    }
 `
 
 export const BoxImg = styled.div`
@@ -23,6 +34,16 @@ export const BoxImg = styled.div`
     img{
         width: 500px;
         height: 400px;
+
+        ${Media.Laptop}{
+            width: 300px;
+            height: 250px;
+        }
+
+        ${Media.MobileL}{
+            width: 250px;
+            height: 200px;
+        }
     }
 `
 
@@ -51,6 +72,16 @@ export const Table = styled.table`
 
     thead{
         text-align: left; 
+
+        th{
+            ${Media.MobileS}{
+                font-size: 0.7rem;
+            }
+        }
+    }
+
+    ${Media.Laptop}{
+        margin: 25px 0;
     }
 `
 
@@ -64,18 +95,26 @@ export const Measure = styled.tr`
 
     th{
         position: relative;
-        border-left-width: 0;
-        min-width: 125px;
+        width: 125px;
         height: 80px;
         
+        ${Media.Laptop}{
+            width: 90px;
+            height: 60px;   
+        }
+
+        ${Media.MobileL}{
+            width: 60px;
+            height: 50px;
+        }
+
+
         &::before{
             position: absolute;
             content: 'X';
             font-size: 1rem;
             right: -20px;
             color: #121213;
-
-           
         }
 
         &:nth-child(3)::before{

@@ -3,6 +3,7 @@ import styled from "styled-components";
 const Media = {
     Tablet:  "@media(max-width: 768px)",
     MobileL: "@media(max-width: 425px)",
+    MobileS: "@media(max-width: 320px)"
 }
 
 export const Container = styled.section`
@@ -60,6 +61,7 @@ export const H1 = styled.h1`
     ${Media.MobileL}{
         font-size: 1.4rem;
     }
+
 `
 
 export const Vetor = styled.img`

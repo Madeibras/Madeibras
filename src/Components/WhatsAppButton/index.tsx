@@ -1,11 +1,17 @@
 import { AiOutlineWhatsApp } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 import * as C from './style'
 
 const WhatsAppButton = () => {
+
+    const openWhatsApp = (url: string) =>{
+        window.open(url, '_blank')
+    }
+
     return(
         <C.Button>
-                <a href="https://wa.me/5511947564437" target="_blank"><AiOutlineWhatsApp/></a>
-                <span> Orçamento</span>
+                <C.Btn onClick={() => openWhatsApp('https://wa.me/5511947564437')}><AiOutlineWhatsApp/></C.Btn>
+                <span>Orçamento</span>
         </C.Button>
     )
 }

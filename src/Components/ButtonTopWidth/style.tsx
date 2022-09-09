@@ -1,5 +1,9 @@
 import styled, { keyframes } from "styled-components";
 
+const Media = {
+    MobileM: "@media(max-width: 375px)"
+}
+
 const animation = keyframes`
     0%{
         transform: translateY(20px);
@@ -29,12 +33,27 @@ export const Button = styled.button`
     border-radius: 50px;
     font-size: 2.5rem;
 
+    ${Media.MobileM}{
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+        left: 20px;
+    }
+
     &:hover{
         width: 68px;
         height: 68px;
         transition: all 0.2s ease-in;
         color: #a1ff0b;
         background-color: #f3f3f3;
+
+        
+        ${Media.MobileM}{
+            width: 52px;
+            height: 52px;
+            font-size: 2rem;
+            left: 20px;
+        }
     }
 
     z-index: 30;
