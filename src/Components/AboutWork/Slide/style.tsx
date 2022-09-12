@@ -33,9 +33,9 @@ export const CardImg = styled.div`
         height: 100vh;
 
         ${Media.MobileS}{
-            width: 90vw;
-            height: 60vh;
-            padding-right: 15px;
+            width: 95vw;
+            height: 45vh;
+            padding-right: 12px;
         }
    }
 `
