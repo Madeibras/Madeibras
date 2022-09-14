@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle<Props>`
     }
 
     body{
-       
+        
         background-color: ${(props) => props.theme.body};
    
     }

@@ -1,7 +1,7 @@
 import Button from 'Components/Button'
 import Input from 'Components/Input'
 import Mensage from 'Components/Mensage'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { useState } from 'react'
 import emailjs from '@emailjs/browser';
 import * as C from './style'
@@ -33,68 +33,87 @@ const Form = () => {
        }
     }
 
+    const [active, setActive] = useState(false)
+
+
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            if(window.scrollY > 5000){
+                setActive(true)
+            }else{
+                setActive(false)
+            }
+
+            console.log(window.scrollY)
+        })
+    })
     
 
     return(
-    <C.Container>
-        <C.BoxImg>
-            <img src='Assets/Slide/Canteiro.png' alt='' />
-        </C.BoxImg>
-
-        <C.Form ref={form} onSubmit={HandleClick}>
-            <Input 
-                id='name'
-                name='name'
-                type='text'
-                placeHolder='Seu nome'
-                backgroundColor='#FFFFFF'
-                color='#555555'
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-            />
-            {error ? (
-                <C.IsValid>campo invalido</C.IsValid>
-            ): (<>
-            </>)}
-
-            <Input 
-                id='email'
-                name='email'
-                type='email'
-                placeHolder='Seu nome'
-                backgroundColor='#FFFFFF'
-                color='#555555'
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-            />
-            {error ? (
-                <C.IsValid>campo invalido</C.IsValid>
-            ): (<>
-            </>)}
-
-            <Mensage 
-                id='message'
-                name='message'
-                rows={10}
-                placeHolder='Tire sua dúvida'
-                backgroundColor='#FFFFFF'
-                color='#555555'
-                value={message}
-                onChange={(e) => setmessage(e.target.value)}
-            />
-            {error ? (
-                <C.IsValid>campo invalido</C.IsValid>
-            ): (<>
-            </>)}
-
-            <Button  
-                primary
-                backgroundColor="#18A0FB"
-                txtColor='#FFF'
-                backgroundHover='#1983ca'
-            >Enviar</Button>
-        </C.Form>
-    </C.Container>
+    <>
+    {active && (
+         <C.Container>
+         <C.BoxImg>
+             <img src='Assets/Slide/Canteiro.png' alt='' />
+         </C.BoxImg>
+ 
+         <C.Form ref={form} onSubmit={HandleClick}>
+             <Input 
+                 id='name'
+                 name='name'
+                 type='text'
+                 placeHolder='Seu nome'
+                 backgroundColor='#FFFFFF'
+                 color='#555555'
+                 value={name}
+                 onChange={(e) => setName(e.target.value)}
+             />
+             {error ? (
+                 <C.IsValid>campo invalido</C.IsValid>
+             ): (<>
+             </>)}
+ 
+             <Input 
+                 id='email'
+                 name='email'
+                 type='email'
+                 placeHolder='Seu nome'
+                 backgroundColor='#FFFFFF'
+                 color='#555555'
+                 value={email}
+                 onChange={(e) => setEmail(e.target.value)}
+             />
+             {error ? (
+                 <C.IsValid>campo invalido</C.IsValid>
+             ): (<>
+             </>)}
+ 
+             <Mensage 
+                 id='message'
+                 name='message'
+                 rows={10}
+                 placeHolder='Tire sua dúvida'
+                 backgroundColor='#FFFFFF'
+                 color='#555555'
+                 value={message}
+                 onChange={(e) => setmessage(e.target.value)}
+             />
+             {error ? (
+                 <C.IsValid>campo invalido</C.IsValid>
+             ): (<>
+             </>)}
+ 
+             <Button  
+                 primary
+                 backgroundColor="#18A0FB"
+                 txtColor='#FFF'
+                 backgroundHover='#1983ca'
+             >Enviar</Button>
+         </C.Form>
+     </C.Container>
+    )}
+   
+    </>
     )
 }
 

@@ -13,7 +13,20 @@ interface IProps {
 const Product = ({id}: IProps) => {
 
     const [activeCategory, setActiveCategory] = useState<any>(undefined)
-    const [items, setItems] = useState(Salles)
+    const [active, setActive] = useState(false)
+
+
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            if(window.scrollY > 1500){
+                setActive(true)
+            }else{
+                setActive(false)
+            }
+
+            console.log(window.scrollY)
+        })
+    })
 
     const selectFilter = (category: any) => {
         if(activeCategory !== category){
@@ -28,10 +41,10 @@ const Product = ({id}: IProps) => {
     const FilterSalles = activeCategory ? 
     Salles.filter((item: any) => item.category === activeCategory) : []
 
-  
-    
     return(
         <>
+        {active && (
+            <>
             <C.Container id={id}>
                 {Card.map((item) => (
                 <C.Box
@@ -42,8 +55,11 @@ const Product = ({id}: IProps) => {
                     <C.Button onClick={() => selectFilter(item)}>Ver Mais</C.Button>
                 </C.Box>
                 ))}
-            </C.Container>
+                </C.Container>
             <InfoProducts SallesMenu={FilterSalles} />
+            </>
+        )}
+          
         </>
     )
 }

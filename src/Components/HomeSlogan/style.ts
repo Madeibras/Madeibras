@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import 'animate.css';
 
 const Media = {
     Tablet:  "@media(max-width: 768px)",
@@ -13,6 +14,8 @@ export const Container = styled.section`
     align-items: center;
     flex-direction: row;
     margin-top: 10%;
+    overflow: hidden;
+   
 
     ${Media.Tablet}{
         position: relative;
@@ -38,6 +41,8 @@ export const Box = styled.div`
     z-index: 15;
     margin-left: 5%;
     font-family: 'Poppins';
+
+    animation: fadeInLeft 1.2s ease-in-out;
 
     ${Media.Tablet}{
         width: 90%;
@@ -66,7 +71,8 @@ export const H1 = styled.h1`
 
 export const Vetor = styled.img`
     width: 100%;
-    
+    animation: fadeInRight 1.2s ease-in-out;
+
     ${Media.Tablet}{
         margin-top: 2rem;
     }

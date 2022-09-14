@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import 'animate.css';
 
 const Media = {
     Tablet:  "@media(min-width: 768px)",
@@ -21,6 +22,15 @@ export const Footer = styled.footer`
     align-items: center;
     justify-content: center;
     font-family: 'Poppins';
+`
+
+export const Box = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInDown 1s ease-in;
 
     ${Media.Tablet}{
         flex-direction: row;
@@ -42,6 +52,7 @@ export const Icons = styled.ul`
     justify-content: center;
     padding-top: 2rem;
     padding-bottom: 2rem;
+
 
     a{
         color: #fff;

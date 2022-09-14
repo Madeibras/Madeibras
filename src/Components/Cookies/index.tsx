@@ -24,7 +24,7 @@ const Cookies = () => {
         {isActive && (
              <C.Box>
              <C.Privacy>
-                 <p>Ao clicar em "Aceitar todos os cookies", você concorda que a Stack Exchange pode guardar cookies no seu dispositivo e utilizar essas informações de acordo com a nossa <Link to="/">Política de Cookies.</Link></p>
+                 <p>Ao clicar em "Aceitar todos os cookies", você concorda que a Stack Exchange pode guardar cookies no seu dispositivo e utilizar essas informações de acordo com a nossa <Link to="/" data-text="Política de Cookies">Política de Cookies.</Link></p>
              </C.Privacy>
              <C.BoxButton>
                  <C.Button primary>Configurações Cookies</C.Button>

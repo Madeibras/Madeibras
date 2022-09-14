@@ -41,6 +41,8 @@ export const Box = styled.div<IProps>`
     border-radius: 25px;
     font-family: 'Poppins';
 
+    animation: fadeInUp 1.3s ease-in-out;
+
 
     ${({isActive}) => isActive ? `
          box-shadow: 6px 6px 4px #6FB742;

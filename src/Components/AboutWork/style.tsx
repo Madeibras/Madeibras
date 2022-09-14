@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import 'animate.css';
 
 const Media = {
     Tablet:  "@media(min-width: 768px)",
@@ -24,6 +25,8 @@ export const Container = styled.div`
     opacity: 0.8;
     margin-bottom: 4rem;
 
+  
+
 
     ${Media.Tablet}{
         display: flex;
@@ -43,6 +46,8 @@ export const Box = styled.div`
     border-bottom: 5px solid #A6CE39;
     font-family: 'Poppins';
 
+    
+
     ${Media.Tablet}{
         padding: 25px;
         border-right: 5px solid #A6CE39;
@@ -56,6 +61,9 @@ export const Box = styled.div`
     img{
         width: 120px;
         height: 120px;
+
+        animation: fadeInDown;
+        animation-duration: 1s;
     }
 
     
@@ -65,6 +73,8 @@ export const Description = styled.section`
     text-align: center;
     color: #fff;
 
+    animation: fadeInDown;
+    animation-duration: 1s;
 
     h2{
         font-size: 3rem;

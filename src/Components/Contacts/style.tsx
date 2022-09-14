@@ -18,6 +18,7 @@ export const Container = styled.div`
 export const Iframe = styled.div`
     width: 100%;
     height: auto;
+    animation: flash 1s ease-in;
 
     iframe{
         width: 100%;
@@ -36,6 +37,8 @@ export const Box = styled.div`
     text-align: center;
     font-family: 'Poppins';
     padding: 16px;
+
+    animation: fadeInDown 0.8s ease-in-out;
 
     &::before{
         content: '';

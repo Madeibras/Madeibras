@@ -30,6 +30,8 @@ export const Box = styled.div`
     background-color: #ffff;
     box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
     border-radius: 19px;
+
+    animation: fadeInUp 1s ease-in-out;
 `
 
 export const Header = styled.div`

@@ -17,6 +17,8 @@ export const Header = styled.header`
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
+
+    animation: fadeInDown 0.8s ease-in-out;
     
 `
 
@@ -79,7 +81,7 @@ export const UlNav = styled.ul`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #6FB742;
+    background-color: #6FB742; 
     z-index: 20;
     box-sizing: border-box;
     transition: all 0.2s ease-in-out;

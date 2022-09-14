@@ -10,6 +10,7 @@ export const Container = styled.div`
     position: relative;
     width: 100%;
     height: 100%;
+    animation: fadeInUp 1s ease-in-out alternate;
 `
 
 export const Box = styled.div`
@@ -22,6 +23,8 @@ export const Box = styled.div`
     overflow-x: auto;
     padding: 14px;
     gap: 24px;
+
+    
 
       &::-webkit-scrollbar{
         height: 0px;

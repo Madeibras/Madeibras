@@ -1,4 +1,4 @@
-import {useRef} from 'react'
+import {useEffect, useRef, useState} from 'react'
 import {AiFillStar} from 'react-icons/ai'
 import Depoiment from 'Mock/Depoiments.json'
 import * as C from './style'
@@ -23,8 +23,25 @@ const Depoiments = () => {
         console.log(carrousel)
     }
 
+    const [active, setActive] = useState(false)
+
+
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            if(window.scrollY > 2300){
+                setActive(true)
+            }else{
+                setActive(false)
+            }
+
+            console.log(window.scrollY)
+        })
+    })
+
     return(
-        <C.Container >
+        <>
+        {active && (
+            <C.Container >
             <C.Box ref={carrousel}>
                 {Depoiment.map((item) => (
                     <C.Card key={item.id}>
@@ -48,7 +65,10 @@ const Depoiments = () => {
                     <button onClick={handleLeftClick}>{<MdKeyboardArrowLeft/>}</button>
                     <button onClick={handleRightClick}>{<MdKeyboardArrowRight/>}</button>
                 </C.Buttons>
-        </C.Container>
+            </C.Container>
+        )}
+           
+        </>
         )
 }
 

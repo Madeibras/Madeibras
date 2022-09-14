@@ -16,7 +16,8 @@ export const Container = styled.div`
     padding: 16px;
     font-family: 'Poppins';
     margin-bottom: 10%;
-
+    animation: bounceInUp 1.5s ease-in-out;
+    
     ${Media.Tablet}{
         display: flex;
         flex-direction: column;

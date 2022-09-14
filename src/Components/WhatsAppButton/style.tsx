@@ -29,14 +29,14 @@ export const Button = styled.div`
     font-family: 'Poppins';
     position: fixed;
     border-radius: 50%;
-    cursor: pointer;
+
     padding: 8px;
     bottom: 30px;
     right: 30px;
     background-color: #6ff71b;
     animation: ${animationInfinite} 1s infinite alternate;
     z-index: 30;
-
+    
    
 
     span{
@@ -69,7 +69,8 @@ export const Btn = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
-
+    cursor: pointer;
+    
     ${Media.MobileS}{
         font-size: 3rem;
     }

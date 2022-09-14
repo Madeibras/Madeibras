@@ -26,6 +26,11 @@ export const Txt = styled.span`
     font-size: 1.5rem;
     font-weight: 600;
     border-bottom: 4px solid #000;
+    
+    &::selection{
+            color: #fff;
+            background-color: #41b123;
+        }
 
     ${Media.MobileL} {
         font-size: 1.2rem;
