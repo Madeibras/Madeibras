@@ -2,11 +2,7 @@ import * as C from './style'
 import CountUp from 'react-countup'
 import { useEffect, useState } from 'react'
 
-    interface IProps {
-        id: string
-    }
-
-const AboutWork = ({id}: IProps) => {
+const AboutWork = () => {
 
     const [counter, setCounter] = useState(false)
 
@@ -25,7 +21,7 @@ const AboutWork = ({id}: IProps) => {
     return(
     <>
     {counter && (
-        <C.Container id={id}>
+        <C.Container>
             <C.Box>
                 <img src='./Assets/Card/Calendario.svg' alt='' /> 
                 <C.Description>

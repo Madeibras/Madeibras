@@ -24,10 +24,9 @@ export const Container = styled.div`
     align-items: center;
     opacity: 0.8;
     margin-bottom: 4rem;
+   
 
   
-
-
     ${Media.Tablet}{
         display: flex;
         justify-content: center;
@@ -45,7 +44,7 @@ export const Box = styled.div`
     padding: 25px;
     border-bottom: 5px solid #A6CE39;
     font-family: 'Poppins';
-
+    animation: fadeInDown 0.4s ease-in-out; 
     
 
     ${Media.Tablet}{

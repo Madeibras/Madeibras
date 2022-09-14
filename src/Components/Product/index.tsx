@@ -6,11 +6,8 @@ import { useEffect, useState } from 'react'
 
 type Categorys = typeof Card[0]
 
-interface IProps {
-    id: string
-}
 
-const Product = ({id}: IProps) => {
+const Product = () => {
 
     const [activeCategory, setActiveCategory] = useState<any>(undefined)
     const [active, setActive] = useState(false)
@@ -45,7 +42,7 @@ const Product = ({id}: IProps) => {
         <>
         {active && (
             <>
-            <C.Container id={id}>
+            <C.Container >
                 {Card.map((item) => (
                 <C.Box
                 isActive={activeCategory === item.id ? true : false}

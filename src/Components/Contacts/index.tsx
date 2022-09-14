@@ -3,11 +3,8 @@ import * as C from './style'
 import {Contact} from 'Mock/Contacts'
 import { useEffect, useState } from 'react'
 
-interface IProps {
-    id: string
-}
 
-const Contacts = ({id}: IProps) => {
+const Contacts = () => {
 
     const [active, setActive] = useState(false)
 
@@ -29,7 +26,7 @@ const Contacts = ({id}: IProps) => {
 
     {active && (
         <>
-            <C.Container id={id}>
+            <C.Container>
                 {Contact.map((item) => (
                     <C.Box key={item.id}>
                         <C.Icon> {item.icon} </C.Icon>

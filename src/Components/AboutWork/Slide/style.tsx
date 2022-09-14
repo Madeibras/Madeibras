@@ -48,7 +48,7 @@ export const Buttons = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #161616;
+    color: #f4f4f4;
 
     z-index: 10;
 
@@ -61,10 +61,19 @@ export const BtnLeft = styled.button`
     font-size: 6rem;
     cursor: pointer;
 
-    
+    &:hover{
+        transition: all 0.2s ease;
+        font-size: 6.2rem;
+    }
 `
 
 export const BtnRight = styled.button`
     font-size: 6rem;
     cursor: pointer;
+
+    
+    &:hover{
+        transition: all 0.2s ease;
+        font-size: 6.2rem;
+    }
 `

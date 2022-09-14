@@ -18,18 +18,23 @@ export default function Home() {
   return (
     <div>
       <Header/>
-      <HomeSlogan id="Home"/>
+      <HomeSlogan/>
         <Title 
+          
+          id="Home"
           name="NOSSO TRABALHO"
         />
-        <AboutWork id="about"/>
+        <AboutWork />
         <Slide/>
         
         <Title 
+          id="about"
           name="PRODUTOS"
         />
-          <Product id="Product"/>
+        <Product />
+
         <Title 
+           id="Product"
           name="NOSSAS AVALIAÇÕES"
         />
         <Depoiments/>
@@ -40,11 +45,13 @@ export default function Home() {
         <SalesCard/>
 
         <Title 
+          id="Contact"
           name="CONTATOS" 
         />
-        <Contacts id="Contact"/>
+        <Contacts />
 
         <Title 
+          
           name="FALE CONOSCO" 
         />
         <Form />

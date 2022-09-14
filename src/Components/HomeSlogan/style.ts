@@ -15,6 +15,7 @@ export const Container = styled.section`
     flex-direction: row;
     margin-top: 10%;
     overflow: hidden;
+    background-color: ${(props) => props.theme.body};
    
 
     ${Media.Tablet}{
@@ -57,6 +58,14 @@ export const Box = styled.div`
 export const H1 = styled.h1`
     margin-bottom: 3.5rem;
     font-size: 2.2rem;
+
+    background: -webkit-radial-gradient(bottom, #050505 0%, #3DC551 100%);
+    background: radial-gradient(to top, #050505 0%, #3DC551 100%);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    
 
     ${Media.Tablet}{
         font-size: 2.4rem;

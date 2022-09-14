@@ -8,6 +8,7 @@ const Media = {
 }
 
 export const BoxDarkMode = styled.button`
+    
     text-align: center;
     width: auto;
     padding-top: 0;

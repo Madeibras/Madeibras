@@ -17,7 +17,6 @@ export const Header = styled.header`
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
-
     animation: fadeInDown 0.8s ease-in-out;
     
 `
