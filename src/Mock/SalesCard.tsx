@@ -9,45 +9,45 @@ interface ISalesCards {
 export const SalesCards: ISalesCards[] = [
     {
         id: 1,
-        name: 'Gabriele',
-        Info: 'Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quit dolor sit amet, consectetur, adipisci velit...',
+        name: 'Arthur Telles',
+        Info: 'Vendedor',
         WhatsApp: 'https://wa.me/5511947564437',
-        Email: "mailto:gustavopereirafacal@gmail.com"
+        Email: "mailto:arthur@madeibras.com.br"
     },
 
     {
         id: 2,
-        name: 'Gabriele',
-        Info: 'Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quit dolor sit amet, consectetur, adipisci velit...',
+        name: 'Joyce Carvalho',
+        Info: 'Vendedora',
         WhatsApp: 'https://wa.me/5511947564437',
-        Email: "mailto:gustavopereirafacal@gmail.com"
+        Email: "mailto:joyce@madeibras.com.br"
     },
     {
         id: 3,
         name: 'Gabriele',
-        Info: 'Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quit dolor sit amet, consectetur, adipisci velit...',
+        Info: 'Vendedora',
         WhatsApp: 'https://wa.me/5511947564437',
-        Email: "mailto:gustavopereirafacal@gmail.com"
+        Email: "mailto:gabriele@madeibras.com.br"
     },
     {
         id: 4,
-        name: 'Gabriele',
-        Info: 'Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quit dolor sit amet, consectetur, adipisci velit...',
+        name: 'Rodrigo Viana',
+        Info: 'Vendedor',
         WhatsApp: 'https://wa.me/5511947564437',
-        Email: "mailto:gustavopereirafacal@gmail.com"
+        Email: "mailto:rodrigo@madeibras.com.br"
     },
     {
         id: 5,
-        name: 'Gabriele',
-        Info: 'Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quit dolor sit amet, consectetur, adipisci velit...',
+        name: 'Romualdo Cândido',
+        Info: 'Vendedor',
         WhatsApp: 'https://wa.me/5511947564437',
-        Email: "mailto:gustavopereirafacal@gmail.com"
+        Email: "mailto:romualdo@madeibras.com.br"
     },
     {
         id: 6,
-        name: 'Gabriele',
-        Info: 'Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quit dolor sit amet, consectetur, adipisci velit...',
+        name: 'Betania Lemos',
+        Info: 'Gerente',
         WhatsApp: 'https://wa.me/5511947564437',
-        Email: "mailto:gustavopereirafacal@gmail.com"
+        Email: "mailto:betanialemos@madeibras.com.br"
     }
 ]

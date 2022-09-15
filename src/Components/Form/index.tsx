@@ -28,6 +28,9 @@ const Form = () => {
               console.log(error.message);
           });
           setError('')
+          setName('')
+          setEmail('')
+          setmessage('')
        }else if(!emailRegex.test(email) && email !== ''){
         setError('E-mail não é invalido')
        }

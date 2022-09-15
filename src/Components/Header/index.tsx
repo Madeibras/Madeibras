@@ -4,15 +4,16 @@ import * as C from './style'
 import Nav from 'Components/Header/NavBar'
 
 import { BurguerButton } from 'Components/Header/BurguerButton'
+import { IProps } from 'Types/Card'
 
-export default function Header(){
+export default function Header({id}: IProps){
 
     const [isOpen, setIsOpen] = useState(false)
 
     return (
     <>
    
-        <C.Header>
+        <C.Header id={id}>
             <C.BoxImg>
                 <img src="Assets/img/background.svg" alt="Logo" />
                 <img src="Assets/img/LogoBranca.png" alt="Logo" />

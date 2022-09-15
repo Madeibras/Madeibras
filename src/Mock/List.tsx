@@ -20,7 +20,7 @@ export const Lists: IList[] = [
         id: 2,
         name: 'Sobre nós',
         icon: <MdGroup/>,
-        link: "#about"
+        link: "#About"
     },
     {
         id: 3,

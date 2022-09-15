@@ -23,24 +23,8 @@ const Depoiments = () => {
         console.log(carrousel)
     }
 
-    const [active, setActive] = useState(false)
-
-
-    useEffect(() => {
-        window.addEventListener('scroll', () => {
-            if(window.scrollY > 2300){
-                setActive(true)
-            }else{
-                setActive(false)
-            }
-
-            console.log(window.scrollY)
-        })
-    })
-
     return(
-        <>
-        {active && (
+    
             <C.Container >
             <C.Box ref={carrousel}>
                 {Depoiment.map((item) => (
@@ -66,9 +50,6 @@ const Depoiments = () => {
                     <button onClick={handleRightClick}>{<MdKeyboardArrowRight/>}</button>
                 </C.Buttons>
             </C.Container>
-        )}
-           
-        </>
         )
 }
 

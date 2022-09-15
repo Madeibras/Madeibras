@@ -17,26 +17,21 @@ export default function Home() {
 
   return (
     <div>
-      <Header/>
+      <Header id="Home"/>
       <HomeSlogan/>
-        <Title 
-          
-          id="Home"
-          name="NOSSO TRABALHO"
-        />
-        <AboutWork />
-        <Slide/>
-        
-        <Title 
-          id="about"
-          name="PRODUTOS"
-        />
-        <Product />
 
         <Title 
-           id="Product"
-          name="AVALIAÇÕES"
-        />
+         id="About"
+        name="NOSSO TRABALHO"/>
+
+        <AboutWork/>
+        <Slide/>
+        
+        <Title name="PRODUTOS"/>
+
+        <Product id="Product"/>
+
+        <Title name=" AVALIAÇÕES"/>
         <Depoiments/>
 
         <Title 
@@ -44,16 +39,11 @@ export default function Home() {
         />
         <SalesCard/>
 
-        <Title 
-          id="Contact"
-          name="CONTATOS" 
-        />
-        <Contacts />
+        <Title name="CONTATOS" />
+        <Contacts id="Contact" />
 
-        <Title 
-          
-          name="FALE CONOSCO" 
-        />
+        <Title name="FALE CONOSCO" />
+
         <Form />
 
         <ButtonTopWidth/>

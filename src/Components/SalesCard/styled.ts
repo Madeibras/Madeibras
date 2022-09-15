@@ -5,6 +5,7 @@ const Media = {
     MobileS: "@media(max-width: 320px)"
 }
 export const Container = styled.div`
+    position: relative;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
@@ -52,13 +53,14 @@ export const Perfil = styled.img`
 `
 
 export const Info = styled.div`
-    margin-top: 50px;
+    margin-top: 70px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
     span{
+        text-align: center;
         font-size: 24px;
         font-weight: 700;
         color: ${(props) => props.theme.color};

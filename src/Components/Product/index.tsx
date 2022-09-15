@@ -3,28 +3,14 @@ import  Card  from 'Mock/Card.json'
 import InfoProducts from './InfoProducts'
 import Salles from 'Mock/Salles.json'
 import { useEffect, useState } from 'react'
+import { IProps } from 'Types/Card'
 
 type Categorys = typeof Card[0]
 
 
-const Product = () => {
+const Product = ({id}: IProps) => {
 
     const [activeCategory, setActiveCategory] = useState<any>(undefined)
-    const [active, setActive] = useState(false)
-
-
-    useEffect(() => {
-        window.addEventListener('scroll', () => {
-            if(window.scrollY > 1500){
-                setActive(true)
-            }else{
-                setActive(false)
-            }
-
-            console.log(window.scrollY)
-        })
-    })
-    
 
     const selectFilter = (category: Categorys) => {
         if(activeCategory !== category){
@@ -41,7 +27,7 @@ const Product = () => {
 
     return(
         <>
-            <C.Container >
+            <C.Container id={id}>
                 {Card.map((item) => (
                 <C.Box
                 onClick={() => selectFilter(item)}

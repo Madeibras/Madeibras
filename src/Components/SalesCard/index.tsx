@@ -1,38 +1,20 @@
 import {AiOutlineWhatsApp, AiOutlineMail} from 'react-icons/ai'
 import { SalesCards } from 'Mock/SalesCard'
+import {useState} from 'react'
 import * as C from './styled'
-import { useEffect, useState } from 'react'
-
 
 const SalesCard = () => {
-
-    const [active, setActive] = useState(false)
-
-
-    useEffect(() => {
-        window.addEventListener('scroll', () => {
-            if(window.scrollY > 2900){
-                setActive(true)
-            }else{
-                setActive(false)
-            }
-
-            console.log(window.scrollY)
-        })
-    })
 
     const open = (url: string) => {
         window.open(url, '_blank')
     }
 
     return(
-    <>
-    {active && (
-          <C.Container>
+        <C.Container >
           {SalesCards.map((item) => (
               <C.Box key={item.id}>
                   <C.Header>
-                      <C.Perfil src='Assets/Slide/Estoque.png' alt='' />
+                      <C.Perfil src='Assets/Slide/Estoque.png' alt={item.name}/>
                   </C.Header>
                   <C.Info>
                       <span>{item.name}</span>
@@ -44,11 +26,10 @@ const SalesCard = () => {
                   </C.BoxButton>
               </C.Box>
           ))} 
-          </C.Container>
-    )}
-      
-    </>
+        </C.Container>
     )
+      
+   
 }
 
 export default SalesCard

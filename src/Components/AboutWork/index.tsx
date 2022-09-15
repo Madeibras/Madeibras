@@ -2,6 +2,7 @@ import * as C from './style'
 import CountUp from 'react-countup'
 import { useEffect, useState } from 'react'
 
+
 const AboutWork = () => {
 
     const [counter, setCounter] = useState(false)
@@ -21,7 +22,7 @@ const AboutWork = () => {
     return(
     <>
     {counter && (
-        <C.Container>
+        <C.Container >
             <C.Box>
                 <img src='./Assets/Card/Calendario.svg' alt='' /> 
                 <C.Description>
