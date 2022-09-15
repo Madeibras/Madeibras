@@ -24,6 +24,24 @@ export const Container = styled.div`
         justify-content: center;
         align-items: center;
     }
+
+    input{
+        background-color: ${(props) => props.theme.card};
+        color: ${(props) => props.theme.color};
+        
+        &::placeholder{
+            color: ${(props) => props.theme.description};
+        }
+    }
+
+    textarea{
+        background-color: ${(props) => props.theme.card};
+        color: ${(props) => props.theme.color};
+        
+        &::placeholder{
+            color: ${(props) => props.theme.description};
+        }
+    }
 `
 
 export const BoxImg = styled.div`

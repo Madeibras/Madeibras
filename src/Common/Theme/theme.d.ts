@@ -6,10 +6,24 @@ declare module 'styled-components' {
       light: {
         body: string;
         color: string;
+        card: string
+        description: string
+        cardDepoiment: string
+        headerCard: string
+        navBar: string
+        primaryGradient: string
+        secondGradient: string
       };
       dark: {
-        body: string;
-        color: string;
+        body: string
+        color: string
+        card: string
+        description: string
+        cardDepoiment: string
+        headerCard: string
+        navBar: string
+        primaryGradient: string
+        secondGradient: string
       };
   }
 }

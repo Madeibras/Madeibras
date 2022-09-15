@@ -58,6 +58,7 @@ export const Button = styled.div`
             color: #464343;
             font-size: 1.4rem;
             display: flex;
+            color: ${(props) => props.theme.color};
             animation: ${animationSpan} 0.3s ease-in-out;
         }
     }

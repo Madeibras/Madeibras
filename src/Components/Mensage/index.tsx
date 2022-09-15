@@ -7,8 +7,10 @@ const Mensage = ({
     placeHolder, 
     value, 
     rows,
+    type,
     onChange}: Iinputs) => (
     <C.Text 
+        type={type}
         rows={rows}
         backgroundColor={backgroundColor}
         color={color}

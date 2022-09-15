@@ -35,7 +35,7 @@ export default function Home() {
 
         <Title 
            id="Product"
-          name="NOSSAS AVALIAÇÕES"
+          name="AVALIAÇÕES"
         />
         <Depoiments/>
 

@@ -59,13 +59,11 @@ export const H1 = styled.h1`
     margin-bottom: 3.5rem;
     font-size: 2.2rem;
 
-    background: -webkit-radial-gradient(bottom, #050505 0%, #3DC551 100%);
-    background: radial-gradient(to top, #050505 0%, #3DC551 100%);
+    background: -webkit-radial-gradient(bottom, ${(props) => props.theme.primaryGradient} 0%, ${(props) => props.theme.secondGradient} 100%);
+    background: radial-gradient(to top, ${(props) => props.theme.primaryGradient} 0%, ${(props) => props.theme.secondGradient} 100%);
 
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    
+    -webkit-text-fill-color: transparent; 
 
     ${Media.Tablet}{
         font-size: 2.4rem;

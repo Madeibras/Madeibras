@@ -27,7 +27,7 @@ export const Box = styled.div`
     position: relative;
     width: 300px;
     padding: 24px;
-    background-color: #ffff;
+    background-color: ${(props) => props.theme.card};
     box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
     border-radius: 19px;
 
@@ -61,6 +61,7 @@ export const Info = styled.div`
     span{
         font-size: 24px;
         font-weight: 700;
+        color: ${(props) => props.theme.color};
     }
 
     p{
@@ -69,6 +70,7 @@ export const Info = styled.div`
         font-size: 16px;
         line-height: 24px;
         text-align: center;
+        color: ${(props) => props.theme.description};
     }
 
 `

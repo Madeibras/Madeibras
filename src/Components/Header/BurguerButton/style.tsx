@@ -20,6 +20,8 @@ export const BoxButton = styled.button<BoxButtonProps>`
     justify-content: center;
     align-items: center;
 
+    z-index: 30;
+
     ${Media.Tablet}{
         display: none;
     }
@@ -29,19 +31,23 @@ export const BoxButton = styled.button<BoxButtonProps>`
             width: 40px;
             height: 3px;
             border-radius: 40px;
-            background-color: #000;
+            background-color: ${(props) => props.theme.color};
             transition: 0.25s;
             
             
 
         ${({isActive}) => isActive ? `
             &:nth-child(1){
+                position: fixed;
                 transform: translateY(0);
                 transform: rotate(-45deg);
+                background-color: #ffff;
             }
 
             &:nth-child(2){
+                position: fixed;
                 transform: rotate(45deg);
+                background-color: #ffff;
             }
 
             &:nth-child(3){

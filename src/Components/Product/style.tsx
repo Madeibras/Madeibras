@@ -43,7 +43,6 @@ export const Box = styled.div<IProps>`
 
     animation: fadeInUp 1.3s ease-in-out;
 
-
     ${({isActive}) => isActive ? `
          box-shadow: 6px 6px 4px #6FB742;
     `: `
@@ -52,7 +51,7 @@ export const Box = styled.div<IProps>`
 
     img{
         width: 100%;
-        height: 200px;
+        height: 100%;
 
         ${Media.MobileL}{
             width: 180px;

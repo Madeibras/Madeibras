@@ -1,4 +1,6 @@
 import {BiTime} from 'react-icons/bi'
+import {HiOutlineMail, HiOutlineLocationMarker} from 'react-icons/hi'
+import {AiOutlinePhone} from 'react-icons/ai'
 
 export const Contact = [
     {
@@ -10,21 +12,21 @@ export const Contact = [
 
     {
         id: 2,
-        icon: <BiTime/>,
+        icon: <HiOutlineLocationMarker/>,
         name: "Localização",
-        description: "Av. Atlântica, 660 - Socorro, São Paulo - SP, CEP: 04768-000",
+        description: "Av. Atlântica, 660 - Socorro, São Paulo - SP",
     },
  
     {
         id: 3,
-        icon: <BiTime/>,
+        icon: <HiOutlineMail/>,
         name: "E-mail",
         description: "contato@madeibras.com.br",
     },
 
     {
         id: 4,
-        icon: <BiTime/>,
+        icon: <AiOutlinePhone/>,
         name: "Telefone",
         description: "(011) 5686-7244",
     },

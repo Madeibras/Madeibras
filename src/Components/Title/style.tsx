@@ -25,7 +25,8 @@ export const Txt = styled.span`
     font-family: 'Poppins';
     font-size: 1.5rem;
     font-weight: 600;
-    border-bottom: 4px solid #000;
+    color: ${(props) => props.theme.color};
+    border-bottom: 4px solid ${(props) => props.theme.color};
     
     &::selection{
             color: #fff;

@@ -24,8 +24,9 @@ const Product = () => {
             console.log(window.scrollY)
         })
     })
+    
 
-    const selectFilter = (category: any) => {
+    const selectFilter = (category: Categorys) => {
         if(activeCategory !== category){
             setActiveCategory(category.id)
             return;
@@ -36,15 +37,14 @@ const Product = () => {
     }
 
     const FilterSalles = activeCategory ? 
-    Salles.filter((item: any) => item.category === activeCategory) : []
+    Salles.filter((item) => item.category === activeCategory) : []
 
     return(
         <>
-        {active && (
-            <>
             <C.Container >
                 {Card.map((item) => (
                 <C.Box
+                onClick={() => selectFilter(item)}
                 isActive={activeCategory === item.id ? true : false}
                 key={item.id}>
                     <C.Title> {item.name} </C.Title>
@@ -54,9 +54,6 @@ const Product = () => {
                 ))}
                 </C.Container>
             <InfoProducts SallesMenu={FilterSalles} />
-            </>
-        )}
-          
         </>
     )
 }

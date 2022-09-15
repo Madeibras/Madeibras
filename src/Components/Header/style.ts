@@ -74,13 +74,13 @@ export const UlNav = styled.ul`
     position: fixed;
     width: 80%;
     height: 100%;
-    top: 70px;
+    top: 0;
     right: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #6FB742; 
+    background-color: ${(props) => props.theme.navBar}; 
     z-index: 20;
     box-sizing: border-box;
     transition: all 0.2s ease-in-out;

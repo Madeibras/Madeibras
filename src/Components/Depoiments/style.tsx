@@ -49,7 +49,7 @@ export const Card = styled.div`
 
 export const Header = styled.div`
     width: 100%;
-    background-color: #fff;
+    background-color: ${(props) => props.theme.headerCard};
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,6 +58,7 @@ export const Header = styled.div`
     span{
         font-size: 1.4rem;
         font-weight: 700;
+        color: ${(props) => props.theme.color};
 
         ${Media.MobileL}{
             font-size: 1.2rem;
@@ -86,7 +87,7 @@ export const Star = styled.div`
 
 export const Depoiment = styled.div`
     width: 100%;
-    background-color: #A6CE39;
+    background-color: ${(props) => props.theme.cardDepoiment};
     color: #fff;
 
     p{
@@ -106,15 +107,16 @@ export const Buttons = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    bottom: 25%;
-    color: #302f2f;
+    bottom: 30%;
+    color: ${(props) => props.theme.color};
 
     ${Media.MobileL}{
         display: none;
     }
 
     button{
+        font-weight: 600;
         cursor: pointer;
-        font-size: 4rem;
+        font-size: 5rem;
     }
 `

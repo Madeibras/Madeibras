@@ -72,9 +72,11 @@ export const Table = styled.table`
 
     thead{
         text-align: left; 
+        color: ${(props) => props.theme.color};
 
         th{
             ${Media.MobileS}{
+                
                 font-size: 0.7rem;
             }
         }

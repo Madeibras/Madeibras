@@ -15,20 +15,20 @@
         "tbody": [
             {
                 "largura": "30cm",
-                "expressura": "30cm",
-                "comprimento": "30cm"
+                "expressura": "1,9cm",
+                "comprimento": "3,00m"
             },
 
             {
                 "largura": "30cm",
-                "expressura": "30cm",
-                "comprimento": "30cm"
+                "expressura": "1,9cm",
+                "comprimento": "3,00m"
             },
 
             {
                 "largura": "30cm",
-                "expressura": "30cm",
-                "comprimento": "30cm"
+                "expressura": "1,9cm",
+                "comprimento": "3,00m"
             }
         ]
 
@@ -36,7 +36,7 @@
 
     {
         "id": 2,
-        "img": "Assets/Sallers/Tabua.png",
+        "img": "Assets/Sallers/Sarrafo.png",
         "alt": "Tabua de pinus",
         "category": 1,
         "thead": [
@@ -48,28 +48,28 @@
         ],
         "tbody": [
             {
-                "largura": "30cm",
-                "expressura": "30cm",
-                "comprimento": "30cm"
+                "largura": "15cm",
+                "expressura": "1,9cm",
+                "comprimento": "3,00m"
             },
 
             {
-                "largura": "30cm",
-                "expressura": "30cm",
-                "comprimento": "30cm"
+                "largura": "10cm",
+                "expressura": "1,9cm",
+                "comprimento": "3,00m"
             },
 
             {
-                "largura": "30cm",
-                "expressura": "30cm",
-                "comprimento": "30cm"
+                "largura": "5cm",
+                "expressura": "1,9cm",
+                "comprimento": "3,00m"
             }
         ]
 
     },
     {
         "id": 3,
-        "img": "Assets/Sallers/Tabua.png",
+        "img": "Assets/Sallers/Pontalete.png",
         "alt": "Tabua de pinus",
         "category": 1,
         "thead": [
@@ -81,9 +81,9 @@
         ],
         "tbody": [
             {
-                "largura": "30cm",
-                "expressura": "30cm",
-                "comprimento": "30cm"
+                "largura": "5cm",
+                "expressura": "5cm",
+                "comprimento": "3,00m"
             }
         ]
     },
@@ -91,7 +91,7 @@
 
     {
         "id": 4,
-        "img": "Assets/Sallers/Tabua.png",
+        "img": "Assets/Sallers/Viga.png",
         "alt": "Tabua de pinus",
         "category": 1,
         "thead": [
@@ -103,9 +103,9 @@
         ],
         "tbody": [
             {
-                "largura": "30cm",
-                "expressura": "30cm",
-                "comprimento": "30cm"
+                "largura": "5cm",
+                "expressura": "10cm",
+                "comprimento": "3,00m "
             }
         ]
     },

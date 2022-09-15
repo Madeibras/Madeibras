@@ -7,7 +7,7 @@ const Media = {
 export const Container = styled.div`
     min-width: 100%;
     min-height: auto;
-    background-color: #fff;
+    background-color: ${(props) => props.theme.card};
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -29,7 +29,7 @@ export const Iframe = styled.div`
 export const Box = styled.div`
     position: relative;
     max-width: 280px;
-    row-gap: 14px;
+    row-gap: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,6 +66,8 @@ export const Icon = styled.i`
 export const Name = styled.span`
     font-size: 1.5rem;
     font-weight: bolder;
+    color: ${(props) => props.theme.color};
+
 `
 
 export const Description = styled.p`
@@ -73,4 +75,6 @@ export const Description = styled.p`
     font-weight: 600;
     font-size: 1.1rem;    
     padding: 0 20px 0 20px;
+    color: ${(props) => props.theme.description};
+
 `
