@@ -2,21 +2,21 @@
     {
         "id": 1,
         "name": "PINUS VERDE",
-        "img": "Assets/Sallers/Pinus.png"
+        "img": "Assets/Sallers/Pinus_cm.png"
     },
     {
         "id": 2,
         "name": "CHAPA PLASTIFICADA",
-        "img": "Assets/Sallers/Plastificado.png"
+        "img": "Assets/Sallers/Plastificado_cm.png"
     },
     {
         "id": 3,
         "name": "CHAPA RESINADA",
-        "img": "Assets/Sallers/Madeirite.png"
+        "img": "Assets/Sallers/Madeirite_cm.png"
     },
     {
         "id": 4,
         "name": "PREGOS",
-        "img": "Assets/Sallers/Pregos.png"
+        "img": "Assets/Sallers/Pontalete_Roliço.png"
     }
 ]

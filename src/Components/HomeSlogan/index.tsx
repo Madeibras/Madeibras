@@ -5,15 +5,23 @@ import Vectors from './Vectors'
 
 
 export default function HomeSlogan() {
+
+    const openWhatsApp = (url: string) =>{
+        window.open(url, '_blank')
+        console.log(url)
+    }
+
     return(
         <C.Container>
             <C.Box>           
-                <C.H1>COMPRE ONLINE COM A MADEIBRÁS, SOLUÇÕES  E AGILIDADE PARA SUA OBRA</C.H1>
+                <C.H1>COMPRAR MADEIRAS NUNCA FOI TÃO FACÍL. </C.H1>
+                <C.Description>ATENDIMENTO ONLINE E AGILIDADE NA SUA ENTREGA</C.Description>
                 <Button 
                     boxShadow='#ccc'
                     backgroundColor='#77B74D'
                     txtColor='#fff'
                     backgroundHover='#5d7320'
+                    onClick={() => openWhatsApp('https://wa.me/5511947564437')}
                 >Orçamento agora!</Button> 
                 <SocialMidia/>
             </C.Box>

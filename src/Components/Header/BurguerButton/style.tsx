@@ -20,7 +20,7 @@ export const BoxButton = styled.button<BoxButtonProps>`
     justify-content: center;
     align-items: center;
 
-    z-index: 30;
+    z-index: 41;
 
     ${Media.Tablet}{
         display: none;

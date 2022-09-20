@@ -65,6 +65,8 @@ export const Ul = styled.ul`
     justify-content: space-evenly;
     align-content: center;  
 
+   
+
     ${Media.Tablets}{
         display: none;
     }
@@ -84,7 +86,7 @@ export const UlNav = styled.ul`
     z-index: 20;
     box-sizing: border-box;
     transition: all 0.2s ease-in-out;
-    
+    z-index: 40;
     ${Media.Tablet}{
         display: none;
     }

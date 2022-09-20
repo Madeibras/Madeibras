@@ -27,7 +27,7 @@ const Slide = () => {
             <C.Box ref={carrousel}>
                 {SlideImg.map((item) => ( 
                     <C.CardImg key={item.img}>
-                        <img src={item.img} alt='asdasdasd' />
+                        <img src={item.img} alt='Foto Madeibras' />
                     </C.CardImg>
                 ))}
             </C.Box>

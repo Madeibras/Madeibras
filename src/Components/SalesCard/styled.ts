@@ -8,14 +8,14 @@ export const Container = styled.div`
     position: relative;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     justify-items: center;
     align-items: center;
     margin: auto;
     row-gap: 150px;
     font-family: 'Poppins';
     background-image: url('Assets/Sallers/Background_Sallers.png');
-
+    margin-top: 15%;
         ${Media.MobileL}{
             display: flex;
             flex-direction: column;
@@ -31,24 +31,27 @@ export const Box = styled.div`
     background-color: ${(props) => props.theme.card};
     box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
     border-radius: 19px;
-
+    
     animation: fadeInUp 1s ease-in-out;
 `
 
 export const Header = styled.div`
     position: absolute;
-    top: -20%;
-    left: 30%;
+    top: -25%;
+    left: 25.5%;
     border-radius: 10px 10px 0 10px;
 `
 
 export const Perfil = styled.img`
-    width: 120px;
-    height: 120px;
+    width: 155px;
+    height: 155px;
     border: 5px solid #A6CE39;
     border-radius: 50%;
     position: relative;
-    object-fit: fill;
+    object-fit: cover;
+    background-size: 100%;
+    -webkit-transform: scale(1);
+    
     cursor: pointer;
 `
 

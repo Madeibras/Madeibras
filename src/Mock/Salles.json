@@ -1,33 +1,45 @@
 [
-   
+
     {
         "id": 1,
-        "img": "Assets/Sallers/Tabua.png",
-        "alt": "Tabua de pinus",
+        "img": "Assets/Sallers/Pinus.png",
+        "alt": "PINUS",
+        "titulo": "PINUS",
+        "description": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit... Não há ninguém que ame a dor por si só, que a busque e queira tê-la, simplesmente por ser dor...",
+        "category": 1,
+        "thead": [],
+        "tbody": []
+    },
+
+    {
+        "id": 2,
+        "titulo": "TABÚA",
+        "img": "Assets/Sallers/Pinus_cm.png",
+        "alt": "Tabua de pinus", 
         "category": 1,
         "thead": [
             {
                 "Largura": "Largura",
-                "Expressura": "Expressura",
+                "Espessura": "Espessura",
                 "Comprimento": "Comprimento"
             }
         ],
         "tbody": [
             {
                 "largura": "30cm",
-                "expressura": "1,9cm",
+                "Espessura": "1,9cm",
                 "comprimento": "3,00m"
             },
 
             {
-                "largura": "30cm",
-                "expressura": "1,9cm",
+                "largura": "25cm",
+                "Espessura": "1,9cm",
                 "comprimento": "3,00m"
             },
 
             {
-                "largura": "30cm",
-                "expressura": "1,9cm",
+                "largura": "20cm",
+                "Espessura": "1,9cm",
                 "comprimento": "3,00m"
             }
         ]
@@ -35,54 +47,57 @@
     },
 
     {
-        "id": 2,
+        "id": 3,
+        "titulo": "SARRAFO",
         "img": "Assets/Sallers/Sarrafo.png",
         "alt": "Tabua de pinus",
         "category": 1,
         "thead": [
             {
                 "Largura": "Largura",
-                "Expressura": "Expressura",
+                "Espessura": "Espessura",
                 "Comprimento": "Comprimento"
             }
         ],
         "tbody": [
             {
                 "largura": "15cm",
-                "expressura": "1,9cm",
+                "Espessura": "1,9cm",
                 "comprimento": "3,00m"
             },
 
             {
                 "largura": "10cm",
-                "expressura": "1,9cm",
+                "Espessura": "1,9cm",
                 "comprimento": "3,00m"
             },
 
             {
                 "largura": "5cm",
-                "expressura": "1,9cm",
+                "Espessura": "1,9cm",
                 "comprimento": "3,00m"
             }
         ]
 
     },
+    
     {
-        "id": 3,
+        "id": 4,
+        "titulo": "PONTALETE",
         "img": "Assets/Sallers/Pontalete.png",
         "alt": "Tabua de pinus",
         "category": 1,
         "thead": [
             {
                 "Largura": "Largura",
-                "Expressura": "Expressura",
+                "Espessura": "Espessura",
                 "Comprimento": "Comprimento"
             }
         ],
         "tbody": [
             {
-                "largura": "5cm",
-                "expressura": "5cm",
+                "largura": "6cm",
+                "Espessura": "6cm",
                 "comprimento": "3,00m"
             }
         ]
@@ -90,85 +105,145 @@
 
 
     {
-        "id": 4,
+        "id": 5,
+        "titulo": "VIGA",
         "img": "Assets/Sallers/Viga.png",
         "alt": "Tabua de pinus",
         "category": 1,
         "thead": [
             {
                 "Largura": "Largura",
-                "Expressura": "Expressura",
+                "Espessura": "Espessura",
                 "Comprimento": "Comprimento"
             }
         ],
         "tbody": [
             {
-                "largura": "5cm",
-                "expressura": "10cm",
+                "largura": "10cm",
+                "Espessura": "5cm",
                 "comprimento": "3,00m "
             }
         ]
     },
 
     {
-        "id": 5,
-        "img": "Assets/Sallers/Tabua.png",
-        "alt": "Plastificado",
+        "id": 1,
+        "img": "Assets/Sallers/Plastificado.png",
+        "alt": "Pregos",
+        "titulo": "PLASTIFICADO",
+        "description": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit... Não há ninguém que ame a dor por si só, que a busque e queira tê-la, simplesmente por ser dor...",
         "category": 2,
-        "thead": [
-            {
-                "Largura": "Largura",
-                "Expressura": "Expressura",
-                "Comprimento": "Comprimento"
-            }
-        ],
-        "tbody": [
-            {
-                "largura": "30cm",
-                "expressura": "30cm",
-                "comprimento": "30cm"
-            }
-        ]
+        "thead": [],
+        "tbody": []
     },
 
     {
         "id": 6,
-        "img": "Assets/Sallers/Tabua.png",
-        "alt": "Madeirite",
-        "category": 3,
+        "img": "Assets/Sallers/Plastificado_cm.png",
+        "alt": "Plastificado",
+        "category": 2,
         "thead": [
             {
-                "Largura": "Largura",
-                "Expressura": "Expressura",
-                "Comprimento": "Comprimento"
+                "Largura": "Espessura",
+                "Espessura": "Comprimento",
+                "Comprimento": "Largura"
             }
         ],
         "tbody": [
             {
-                "largura": "30cm",
-                "expressura": "30cm",
-                "comprimento": "30cm"
+                "largura": "10mm",
+                "Espessura": "220 cm",
+                "comprimento": "110cm"
+            },
+            {
+                "largura": "14mm",
+                "Espessura": "220 cm",
+                "comprimento": "110cm"
+            },
+            {
+                "largura": "18mm",
+                "Espessura": "220 cm",
+                "comprimento": "110cm"
+            }
+           
+        ]
+    },
+
+    {
+        "id": 1,
+        "img": "Assets/Sallers/Madeirite.png",
+        "alt": "Pregos",
+        "titulo": "MADEIRITE",
+        "description": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit... Não há ninguém que ame a dor por si só, que a busque e queira tê-la, simplesmente por ser dor...",
+        "category": 3,
+        "thead": [],
+        "tbody": []
+    },
+
+    {
+        "id": 7,
+        "img": "Assets/Sallers/Madeirite_cm.png",
+        "alt": "Madeirite",
+        "category": 3,
+        "thead": [
+            {
+                "Largura": "Espessura",
+                "Espessura": "Comprimento",
+                "Comprimento": "Largura"
+            }
+        ],
+        "tbody": [
+            {
+                "largura": "06mm",
+                "Espessura": "220cm",
+                "comprimento": "110cm"
+            },
+            {
+                "largura": "10mm",
+                "Espessura": "220cm",
+                "comprimento": "110cm"
+            },
+            {
+                "largura": "14mm",
+                "Espessura": "220cm",
+                "comprimento": "110cm"
+            },
+            {
+                "largura": "18mm",
+                "Espessura": "220cm",
+                "comprimento": "110cm"
             }
         ]
     },
 
     {
-        "id": 7,
-        "img": "Assets/Sallers/Tabua.png",
+        "id": 1,
+        "img": "Assets/Sallers/Roliço.jpg",
+        "alt": "Pregos",
+        "titulo": "PONTALETE",
+        "description": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit... Não há ninguém que ame a dor por si só, que a busque e queira tê-la, simplesmente por ser dor...",
+        "category": 4,
+        "thead": [],
+        "tbody": []
+    },
+
+    {
+        "id": 8,
+        "img": "Assets/Sallers/Pontalete_Roliço.png",
         "alt": "Pregos",
         "category": 4,
         "thead": [
             {
-                "Largura": "Largura",
-                "Expressura": "Expressura",
-                "Comprimento": "Comprimento"
+                "Largura": "Comprimetos",
+                "Espessura": "",
+                "Comprimento": ""
             }
         ],
         "tbody": [
             {
-                "largura": "30cm",
-                "expressura": "30cm",
-                "comprimento": "30cm"
+                "largura": "3,00m",
+                "Espessura": "4,00m",
+                "comprimento": "5,00m"
             }
         ]
     }

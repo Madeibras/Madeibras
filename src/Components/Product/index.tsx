@@ -29,15 +29,15 @@ const Product = ({id}: IProps) => {
         <>
             <C.Container id={id}>
                 {Card.map((item) => (
-                <C.Box
-                onClick={() => selectFilter(item)}
-                isActive={activeCategory === item.id ? true : false}
-                key={item.id}>
-                    <C.Title> {item.name} </C.Title>
-                    <img src={item.img} alt={item.img} />
-                    <C.Button onClick={() => selectFilter(item)}>Ver Mais</C.Button>
-                </C.Box>
-                ))}
+                    <C.Box
+                    onClick={() => selectFilter(item)}
+                    isActive={activeCategory === item.id ? true : false}
+                    key={item.id}>
+                        <C.Title> {item.name} </C.Title>
+                        <img src={item.img} alt={item.img} />
+                        <C.Button onClick={() => selectFilter(item)}>Ver Mais</C.Button>
+                    </C.Box>
+                    ))}
                 </C.Container>
             <InfoProducts SallesMenu={FilterSalles} />
         </>

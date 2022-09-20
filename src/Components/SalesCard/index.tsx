@@ -14,7 +14,7 @@ const SalesCard = () => {
           {SalesCards.map((item) => (
               <C.Box key={item.id}>
                   <C.Header>
-                      <C.Perfil src='Assets/Slide/Estoque.png' alt={item.name}/>
+                      <C.Perfil src={item.img} alt={item.name}/>
                   </C.Header>
                   <C.Info>
                       <span>{item.name}</span>

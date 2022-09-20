@@ -2,18 +2,11 @@ import styled from 'styled-components'
 
 const Media = {
     Laptop: "@media(max-width: 1024px)",
-    MobileL: "@media(max-width: 425px)",
+    MobileL: "@media(max-width: 580px)",
     MobileS: "@media(max-width: 375px)"
 }
 
-export const Container = styled.div`
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-`
+
 
 export const Box = styled.div`
     font-family: 'Poppins';
@@ -21,6 +14,7 @@ export const Box = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 40px 0;
 
     ${Media.Laptop}{
         flex-direction: column;
@@ -55,26 +49,75 @@ export const Category = styled.div`
     h1{
         font-size: 2rem;
         font-weight: 500;
-        margin-bottom: 10%;
+        margin-bottom: 5%;
     }
 
     p{
-        font-size: 1.4rem;
+        font-size: 1.8rem;
         font-weight: 400;
-        margin-bottom: 25%;
     }
+`
+
+export const Measurements = styled.div`
+    width: 100%;
+    height: 100%;
+    
+`
+
+export const Descriptions = styled.div`
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+ 
+    ${Media.Laptop}{
+        align-items: center;
+    }
+
+    span{
+        font-size: 2.2rem;
+        font-weight: 500;        
+    }
+
+    p{
+        width: 80%;
+        font-size: 1.8rem;
+
+        ${Media.Laptop}{
+            text-align: center;
+            width: 100%;
+        }
+
+        ${Media.MobileL}{
+            font-size: 1.4rem;
+        }
+
+        ${Media.MobileS}{
+            font-size: 1rem;
+        }
+    }    
+
+    
 `
 
 export const Table = styled.table`
     width: 100%;
     height: 100%;
+  
     border-spacing: 30px 40px;
-
+    
     thead{
         text-align: left; 
         color: ${(props) => props.theme.color};
 
         th{
+            font-size: 1.5rem;
+
+            ${Media.MobileL}{
+                font-size: 0.8rem;
+            }
+
             ${Media.MobileS}{
                 
                 font-size: 0.7rem;
@@ -90,22 +133,26 @@ export const Table = styled.table`
 export const Measure = styled.tr`   
     background-color: #384144;
     color: #F4F4F4;
+   
 
     th:nth-child(1){
         background-color: #88CF5C;
     }
 
     th{
+        font-size: 1.5rem;
         position: relative;
-        width: 125px;
-        height: 80px;
+        width: 200px;
+        height: 70px;
         
         ${Media.Laptop}{
-            width: 90px;
+            font-size: 1rem;
+            width: 70px;
             height: 60px;   
         }
 
         ${Media.MobileL}{
+            font-size: 1rem;
             width: 60px;
             height: 50px;
         }
