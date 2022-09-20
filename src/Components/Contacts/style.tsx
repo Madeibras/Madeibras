@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 const Media = {
-    MobileS: "@media(max-width: 1020px)"
+    Laptop: "@media(max-width: 1020px)",
+    MobileS: "@media(max-width: 425px)"
 }
 
 export const Container = styled.div`
@@ -37,8 +38,11 @@ export const Box = styled.div`
     text-align: center;
     font-family: 'Poppins';
     padding: 16px;
-
     animation: fadeInDown 0.8s ease-in-out;
+
+    ${Media.MobileS}{
+        border-bottom: 5px solid #6FB742;
+    }
 
     &::before{
         content: '';
@@ -47,8 +51,8 @@ export const Box = styled.div`
         height: 125px;
         width: 3px;
         background-color: #6FB742;
-
-        ${Media.MobileS}{
+       
+        ${Media.Laptop}{
             display: none;
         }
     }

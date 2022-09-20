@@ -15,7 +15,7 @@ export default function HomeSlogan() {
         <C.Container>
             <C.Box>           
                 <C.H1>COMPRAR MADEIRAS NUNCA FOI TÃO FACÍL. </C.H1>
-                <C.Description>ATENDIMENTO ONLINE E AGILIDADE NA SUA ENTREGA</C.Description>
+                <C.Description>Atendimento online, com as melhores condições do mercado. Você ganha em qualidade, agilidade e maior eficiência para seus projetos</C.Description>
                 <Button 
                     boxShadow='#ccc'
                     backgroundColor='#77B74D'

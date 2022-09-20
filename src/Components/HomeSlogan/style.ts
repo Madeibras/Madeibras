@@ -58,7 +58,7 @@ export const Box = styled.div`
 
 export const H1 = styled.h1`
     width: 90%;
-    margin-bottom: 3.5rem;
+    margin-bottom: 3rem;
     font-size: 3.5rem;
 
     background: -webkit-radial-gradient(bottom, ${(props) => props.theme.primaryGradient} 0%, ${(props) => props.theme.secondGradient} 100%);
@@ -77,11 +77,12 @@ export const H1 = styled.h1`
     }
 
     ${Media.MobileL}{
-        font-size: 1.9rem;
+        font-size: 1.5rem;
     }
 `
 
 export const Description = styled.p`
+    width: 90%;
     font-size: 1.3rem;
     margin-bottom: 3.5rem;
     font-weight: 500;
@@ -92,7 +93,7 @@ export const Description = styled.p`
     }
 
     ${Media.MobileL}{
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 `
 
