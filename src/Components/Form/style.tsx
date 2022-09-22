@@ -50,7 +50,7 @@ export const BoxImg = styled.div`
     img{
         border-radius: 15px;
         object-fit: cover;
-        max-width: 100%;
+        width: 100%;
         height: 450px;
 
         ${Media.MobileM}{

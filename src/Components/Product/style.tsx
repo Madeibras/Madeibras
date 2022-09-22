@@ -36,7 +36,7 @@ export const Box = styled.div<IProps>`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #FFFF;
+    background-color: ${(props) => props.theme.card};
     
     border-radius: 25px;
     font-family: 'Poppins';

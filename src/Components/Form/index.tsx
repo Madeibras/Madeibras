@@ -57,7 +57,7 @@ const Form = () => {
     {active && (
          <C.Container>
          <C.BoxImg>
-             <img src='Assets/Slide/Canteiro.png' alt='' />
+             <img src='Assets/Slide/imgForm.png' alt='' />
          </C.BoxImg>
  
          <C.Form ref={form} onSubmit={HandleClick}>

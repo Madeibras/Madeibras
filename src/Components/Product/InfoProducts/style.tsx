@@ -70,6 +70,7 @@ export const Descriptions = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    color: ${(props) => props.theme.color};
  
     ${Media.Laptop}{
         align-items: center;
@@ -82,7 +83,7 @@ export const Descriptions = styled.div`
 
     p{
         width: 80%;
-        font-size: 1.8rem;
+        font-size: 1.4rem;
 
         ${Media.Laptop}{
             text-align: center;
