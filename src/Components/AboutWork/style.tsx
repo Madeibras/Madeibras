@@ -12,18 +12,17 @@ const Media = {
 
 export const Container = styled.div`
     max-width: 90%;
-    height: 100%;
+    height: 300px;
     margin: 0 auto;
-    border-radius: 40px;
+    border-radius: 20px;
     background-image: url('Assets/Card/BackgroundCard.png');
     background-size: cover;
-    background-position: 30%;
+    background-position: 25%;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 50px 0 ;
     opacity: 0.8;
     margin-bottom: 4rem;
    
@@ -33,6 +32,10 @@ export const Container = styled.div`
         justify-content: center;
         align-items: center;
         flex-direction: row;
+    }
+
+    ${Media.MobileS}{
+        height: auto;
     }
 `
 
@@ -44,8 +47,7 @@ export const Box = styled.div`
     align-items: center;
     flex-direction: column;
     font-family: 'Poppins';
-    padding: 40px 0;
-    border-bottom: 8px solid #A6CE39;
+    border-bottom: 4px solid #A6CE39;
 
     ${Media.Tablet}{
         padding: 25px;
@@ -53,12 +55,16 @@ export const Box = styled.div`
 
             &::before{
             position: absolute;
-            right: -10px;
+            right: -5px;
             content: '';
-            width: 10px;
-            height: 350px;
+            width: 5px;
+            height: 200px;
             background-color: #A6CE39;
         }
+    }
+
+    ${Media.MobileS}{
+        padding: 20px;
     }
 
 
@@ -75,17 +81,24 @@ export const Box = styled.div`
     }
 
     img{
-        width: 120px;
-        height: 120px;
         animation: fadeInDown;
         animation-duration: 1s;
+
+        ${Media.Tablet}{
+            width: 80px;
+            height: 80px;
+        }
+
+        ${Media.MobileS}{
+           
+        }
     }
 
     
 `
 
 export const Description = styled.section`
-    
+    position: relative;
     text-align: center;
     color: #fff;
     animation: fadeInDown;
@@ -94,7 +107,16 @@ export const Description = styled.section`
     h2{
         position: relative;
         font-size: 3rem;
-        padding-top: 2rem;
+        padding-top: 1rem;
+
+       span{
+        position: relative;
+            &::before{
+                content: '+';
+                position: absolute;
+                left: -30px;
+            }
+       }
         
 
         ${Media.Laptop}{
@@ -102,7 +124,7 @@ export const Description = styled.section`
         }
 
         ${Media.MobileL}{
-            font-size: 2rem;
+            font-size: 2.4rem;
         }
 
         strong{
@@ -114,15 +136,15 @@ export const Description = styled.section`
     p{
         opacity: 0.8;
         font-size: 1.4rem;
-        padding-top: 1.2rem;
+        padding-top: 1rem;
 
         ${Media.Laptop}{
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
 
 
         ${Media.MobileL}{
-            font-size: 1.2rem;
+            font-size: 0.8rem;
         }
     }
 `

@@ -26,7 +26,7 @@ const AboutWork = () => {
             <C.Box>
                 <img src='./Assets/Card/Calendario.svg' alt='' /> 
                 <C.Description>
-                    <h2> <CountUp start={0} end={44} duration={2} delay={0}/> anos</h2>
+                    <h2> <CountUp start={0} end={200} duration={2} delay={0}/> m3</h2>
                     <p>Oferecendo as melhores soluções em madeiras desde 1978</p>
                 </C.Description>
             </C.Box>
