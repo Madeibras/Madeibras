@@ -57,7 +57,7 @@ export const Box = styled.div`
 `
 
 export const H1 = styled.h1`
-    width: 90%;
+    width: 100%;
     margin-bottom: 3rem;
     font-size: 3.5rem;
 
@@ -77,7 +77,7 @@ export const H1 = styled.h1`
     }
 
     ${Media.MobileL}{
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 `
 
@@ -93,7 +93,7 @@ export const Description = styled.p`
     }
 
     ${Media.MobileL}{
-        font-size: 0.8rem;
+        font-size: 1.2rem;
     }
 `
 
