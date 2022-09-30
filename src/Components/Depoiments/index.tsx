@@ -26,26 +26,26 @@ const Depoiments = () => {
     return(
     
             <C.Container >
-            <C.Box ref={carrousel}>
-                {Depoiment.map((item) => (
-                    <C.Card key={item.id}>
-                        <C.Header>
-                            <span>{item.name}</span>
-                            <C.Star>
-                                <i> <AiFillStar/></i>
-                                <i> <AiFillStar/></i>
-                                <i> <AiFillStar/></i>
-                                <i> <AiFillStar/></i>
-                                <i> <AiFillStar/></i>
-                            </C.Star>
-                        </C.Header>
-                        <C.Depoiment>
-                            <p>{item.descriptin}</p>
-                        </C.Depoiment>
-                    </C.Card>
-                ))}
-            </C.Box>
-            <C.Buttons>
+                <C.Box ref={carrousel}>
+                    {Depoiment.map((item) => (
+                        <C.Card key={item.id}>
+                            <C.Header>
+                                <span>{item.name}</span>
+                                <C.Star>
+                                    <i> <AiFillStar/></i>
+                                    <i> <AiFillStar/></i>
+                                    <i> <AiFillStar/></i>
+                                    <i> <AiFillStar/></i>
+                                    <i> <AiFillStar/></i>
+                                </C.Star>
+                            </C.Header>
+                            <C.Depoiment>
+                                <p>{item.descriptin}</p>
+                            </C.Depoiment>
+                        </C.Card>
+                    ))}
+                </C.Box>
+                <C.Buttons>
                     <button onClick={handleLeftClick}>{<MdKeyboardArrowLeft/>}</button>
                     <button onClick={handleRightClick}>{<MdKeyboardArrowRight/>}</button>
                 </C.Buttons>

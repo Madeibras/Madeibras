@@ -7,7 +7,7 @@ const SocialMidia = () => {
     return(
             <C.Icons>
                 {Midia.map((item) => (
-                    <Link key={item.id} to={item.url} ><li > {item.icon} </li></Link>
+                    <a key={item.id} href={item.url} ><span> {item.icon} </span></a>
                 ))}
             </C.Icons>
     )

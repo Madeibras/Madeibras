@@ -5,6 +5,7 @@ const Media = {
     Laptop:  "@media(max-width: 1374px)",
     Tablet:  "@media(max-width: 768px)",
     MobileL: "@media(max-width: 425px)",
+    MobileM: "@media(max-width: 375px)",
     MobileS: "@media(max-width: 320px)"
 }
 
@@ -13,7 +14,6 @@ export const Container = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
     margin-top: 10%;
     overflow: hidden;
     background-color: ${(props) => props.theme.body};
@@ -23,12 +23,100 @@ export const Container = styled.section`
         position: relative;
         width: 100%;
         height: 100%;
-        margin: 0 auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         margin-top: 10%;
+    }
+
+    img:nth-child(3){
+        position: absolute;
+        top: 0;
+        left: 25%;
+        
+        ${Media.Tablet}{
+            width: 400px;
+            top: 40%;
+            left: -5%;
+        }
+
+        ${Media.MobileL}{
+            width: 300px;
+            top: 55%;
+            left: -10%;
+        }
+
+        ${Media.MobileM}{
+            width: 300px;
+            top: 55%;
+        }
+
+        ${Media.MobileS}{
+            width: 250px;
+            top: 65%;
+        }
+    }   
+
+    img:nth-child(4){
+        position: absolute;
+        left: 17%;
+        bottom: 10%;
+
+        ${Media.Laptop}{
+            left: 22%;
+        }
+        
+        ${Media.Tablet}{
+            top: 30%;
+            left: 68%;
+        }
+        
+        ${Media.MobileL}{
+            top: 40%;
+            left: 75%;
+        }
+
+        ${Media.MobileM}{
+            top: 45%;
+        }
+
+        ${Media.MobileS}{
+            top: 50%;
+            left: 70%;
+        }
+    }
+
+    img:nth-child(5){
+        position: absolute;
+        left: 2%;
+        bottom: 30%;
+        opacity: 1;
+
+        ${Media.Laptop}{
+            left: 2%;
+            top: 50%;
+        }
+        
+        ${Media.Tablet}{
+            top: 15%;
+            left: 8%;
+        }
+        
+        ${Media.MobileL}{
+            top: 15%;
+            left: 8%;
+        }
+
+        ${Media.MobileM}{
+            top: 20%;
+            left: 8%;
+        }
+
+        ${Media.MobileS}{
+            top: 22%;
+            left: 2%;
+        }
     }
 `
 
@@ -88,6 +176,11 @@ export const Description = styled.p`
     font-weight: 500;
     color: ${(props) => props.theme.color};
 
+    span{
+        color: #8AAB30;
+        font-weight: 700;
+    }
+
     ${Media.Laptop}{
         text-align: center;
     }
@@ -101,6 +194,7 @@ export const Vetor = styled.img`
     width: 100%;
     animation: fadeInRight 1.2s ease-in-out;
 
+    z-index: 10;
     ${Media.Tablet}{
         margin-top: 2rem;
     }

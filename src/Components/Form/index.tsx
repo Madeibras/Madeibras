@@ -57,7 +57,7 @@ const Form = () => {
     {active && (
          <C.Container>
          <C.BoxImg>
-             <img src='Assets/Slide/imgForm.png' alt='' />
+             <img src='Assets/Slide/Form.png' alt='' />
          </C.BoxImg>
  
          <C.Form ref={form} onSubmit={HandleClick}>
@@ -80,7 +80,7 @@ const Form = () => {
                  id='email'
                  name='email'
                  type='email'
-                 placeHolder='Seu nome'
+                 placeHolder='Seu E-mail'
                  backgroundColor='#FFFFFF'
                  color='#555555'
                  value={email}

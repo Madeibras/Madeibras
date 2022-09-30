@@ -11,18 +11,18 @@ export const Midia: Midia[] = [
     {
         id: 1,
         icon: <AiOutlineFacebook/>,
-        url: '/'
+        url: 'https://www.facebook.com/madeibras/'
     },
 
     {
         id: 2,
         icon: <AiOutlineInstagram/>,
-        url: '/'
+        url: 'https://www.instagram.com/madeibras/'
     },
 
     {
         id: 3,
         icon: <AiOutlineWhatsApp/>,
-        url: '/'
+        url: 'https://api.whatsapp.com/send/?phone=5511947564437&text&type=phone_number&app_absent=0'
     }
 ]

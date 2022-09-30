@@ -23,7 +23,7 @@ export const Icon = styled.img`
 
 export const Txt = styled.span`
     font-family: 'Poppins';
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     font-weight: 600;
     color: ${(props) => props.theme.color};
     border-bottom: 4px solid ${(props) => props.theme.color};

@@ -37,7 +37,7 @@ export const Box = styled.div`
 
 export const Header = styled.div`
     position: absolute;
-    top: -25%;
+    top: -35%;
     left: 25.5%;
     border-radius: 10px 10px 0 10px;
 `

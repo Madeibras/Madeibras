@@ -21,27 +21,30 @@ const AboutWork = () => {
 
     return(
     <>
+    <C.H1>
+        Há 44 anos oferecendo as melhores soluções em madeiras. 
+    </C.H1>
     {counter && (
         <C.Container >
             <C.Box>
-                <img src='./Assets/Card/Calendario.svg' alt='' /> 
+                <img src='./Assets/Card/tronco.svg' alt='' /> 
                 <C.Description>
                     <h2> <CountUp start={0} end={200} duration={2} delay={0}/> m3</h2>
-                    <p>Oferecendo as melhores soluções em madeiras desde 1978</p>
+                    <p>Estoque de madeira à pronta entrega.</p>
                 </C.Description>
             </C.Box>
             <C.Box>
-                <img src='./Assets/Card/Atendimento.svg' alt='' /> 
+                <img src='./Assets/Card/atendimento.png' alt='' /> 
                 <C.Description>
                     <h2 ><CountUp start={0} end={2500} duration={2} delay={0}/> <strong><BsArrowUpShort/></strong></h2>
-                    <p>Atendimento ao cliente </p>
+                    <p>Agilidade no seu atendimento via WhatsApp. </p>
                 </C.Description>
             </C.Box>
             <C.Box>
                 <img src='./Assets/Card/Caminhaoo.svg' alt='' /> 
                 <C.Description>
                     <h2><CountUp start={0} end={700} duration={2} delay={0}/> <strong><BsArrowUpShort/></strong></h2>
-                    <p>Entregas na Grande São Paulo</p>
+                    <p>Sua entrega mais rápida, com maior eficiência</p>
                 </C.Description>
             </C.Box>
         </C.Container>

@@ -21,8 +21,8 @@ const SalesCard = () => {
                       <p>{item.Info}</p>
                   </C.Info>
                   <C.BoxButton>
-                      <C.Btn onClick={() => open(item.WhatsApp)} > <AiOutlineWhatsApp/></C.Btn>
-                      <C.Btn onClick={() => open(item.Email)}> <AiOutlineMail/> </C.Btn>
+                      {/* <C.Btn onClick={() => open(item.WhatsApp)} > <AiOutlineWhatsApp/></C.Btn>
+                      <C.Btn onClick={() => open(item.Email)}> <AiOutlineMail/> </C.Btn> */}
                   </C.BoxButton>
               </C.Box>
           ))} 

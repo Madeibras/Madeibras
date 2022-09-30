@@ -11,6 +11,8 @@ const Contacts = ({id}: IProps) => {
                     <C.Icon> {item.icon} </C.Icon>
                     <C.Name> {item.name} </C.Name>
                     <C.Description> {item.description} </C.Description>
+                    <C.Description> {item.info} </C.Description>
+                    <C.Description> {item.info2} </C.Description>
                 </C.Box>
             ))}
             </C.Container>

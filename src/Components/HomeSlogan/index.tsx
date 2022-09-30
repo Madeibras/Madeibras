@@ -1,7 +1,7 @@
 import Button from 'Components/Button'
 import SocialMidia from './SocialMidia/Index'
 import * as C from './style'
-import Vectors from './Vectors'
+
 
 
 export default function HomeSlogan() {
@@ -14,8 +14,8 @@ export default function HomeSlogan() {
     return(
         <C.Container>
             <C.Box>           
-                <C.H1>COMPRAR MADEIRAS NUNCA FOI TÃO FACÍL. </C.H1>
-                <C.Description>Atendimento online, com as melhores condições do mercado. Você ganha em qualidade, agilidade e maior eficiência para seus projetos</C.Description>
+                <C.H1>COMPRAR MADEIRA NUNCA FOI TÃO FACÍL</C.H1>
+                <C.Description>Atendimento online, com as melhores condições do mercado. Você ganha em <span>qualidade</span>, <span>agilidade</span> e maior <span>eficiência</span> para seus projetos.</C.Description>
                 <Button 
                     boxShadow='#ccc'
                     backgroundColor='#77B74D'
@@ -25,8 +25,10 @@ export default function HomeSlogan() {
                 >Orçamento agora!</Button> 
                 <SocialMidia/>
             </C.Box>
-            <Vectors/>
-            <C.Vetor src='Assets/img/VetorMadeibras.png' alt=''/>
+            <C.Vetor src='Assets/img/VetorMadeibras1.svg' alt=''/>
+            <img src="Assets/img/Group 70.png" alt="Vetorização" />
+            <img src="Assets/img/PilhaMadeira.png" alt="Vetor Madeira" />
+            <img src="Assets/img/troncos.png" alt="Vetor Madeira" />
         </C.Container>
     )
 }

@@ -3,110 +3,136 @@ import 'animate.css';
 
 const Media = {
     Laptop:  "@media(max-width: 1024px)",
-    Tablet:  "@media(min-width: 768px)",
+    Tablet:  "@media(max-width: 768px)",
     MobileL: "@media(max-width: 425px)",
-    MobileM: "@media(min-width: 375px)",
-    MobileS: "@media(min-width: 320px)"
+    MobileM: "@media(max-width: 375px)",
+    MobileS: "@media(max-width: 320px)"
 }
 
+export const H1 = styled.h1`
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Poppins';
+    margin-bottom: 5rem;
+    font-weight: 500;
+    color: ${(props) => props.theme.color};
+
+    
+    ${Media.Laptop}{
+        font-size: 1.6rem;
+    }
+
+    ${Media.MobileL}{
+        font-size: 1.4rem;
+    }
+
+    ${Media.MobileM}{
+        font-size: 1.1rem;
+    }
+`
 
 export const Container = styled.div`
-    max-width: 90%;
-    height: 300px;
+    max-width: 100%;
+    height: auto;
     margin: 0 auto;
     border-radius: 20px;
-    background-image: url('Assets/Card/BackgroundCard.png');
-    background-size: cover;
-    background-position: 25%;
-    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     opacity: 0.8;
     margin-bottom: 4rem;
    
 
-    ${Media.Tablet}{
+    ${Media.Laptop}{
+        width: 80%;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: row;
+        flex-direction: column;
     }
 
-    ${Media.MobileS}{
-        height: auto;
-    }
+  
 `
 
 export const Box = styled.div`
     position: relative;
-    width: 90%;
+    width: 100%;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-family: 'Poppins';
-    border-bottom: 4px solid #A6CE39;
+    background-color: ${(props) => props.theme.card};
+    color: ${(props) => props.theme.color};
+    margin: 0 40px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #A6CE39;
 
-    ${Media.Tablet}{
-        padding: 25px;
-        border-bottom: none;
-
-            &::before{
-            position: absolute;
-            right: -5px;
-            content: '';
-            width: 5px;
-            height: 200px;
-            background-color: #A6CE39;
-        }
+    ${Media.Laptop}{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 40px 0;
     }
 
-    ${Media.MobileS}{
-        padding: 20px;
+    ${Media.MobileL}{
+        width: 90%;
+        height: 280px;
     }
 
-
+    ${Media.MobileM}{
+        width: 100%;
+        
+    }
     &:nth-child(3){
-        border: none;
-
         img{
-            width: 170px;
-        }
+            width: 180px;
 
-        &::before{
-            display: none;
+            ${Media.Tablet}{
+                width: 150px;
+            }
+
+            ${Media.MobileL}{
+                width: 130px;
+            }
         }
     }
 
     img{
+        width: 90px;
+        height: auto;
         animation: fadeInDown;
         animation-duration: 1s;
 
-        ${Media.Tablet}{
+        ${Media.Laptop}{
             width: 80px;
-            height: 80px;
         }
 
-        ${Media.MobileS}{
-           
+        ${Media.Tablet}{
+            width: 70px;
+        }
+
+        ${Media.MobileL}{
+            width: 65px;
         }
     }
-
-    
 `
 
 export const Description = styled.section`
     position: relative;
     text-align: center;
-    color: #fff;
     animation: fadeInDown;
     animation-duration: 1s;
 
     h2{
         position: relative;
-        font-size: 3rem;
+        font-size: 2.8rem;
         padding-top: 1rem;
 
        span{
@@ -114,17 +140,21 @@ export const Description = styled.section`
             &::before{
                 content: '+';
                 position: absolute;
-                left: -30px;
+                left: -25px;
             }
        }
         
 
         ${Media.Laptop}{
-            font-size: 2rem;
+            font-size: 2.5rem;
+        }
+
+        ${Media.Tablet}{
+            font-size: 2.4rem;
         }
 
         ${Media.MobileL}{
-            font-size: 2.4rem;
+            font-size: 1.8rem;
         }
 
         strong{
@@ -134,17 +164,23 @@ export const Description = styled.section`
     }
 
     p{
+        width: 90%;
+        margin: auto;
         opacity: 0.8;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         padding-top: 1rem;
 
         ${Media.Laptop}{
-            font-size: 1rem;
+            font-size: 1.5rem;
+          
         }
 
+        ${Media.Tablet}{
+            font-size: 1.2rem;
+        }
 
         ${Media.MobileL}{
-            font-size: 0.8rem;
+            font-size: 0.9rem;
         }
     }
 `

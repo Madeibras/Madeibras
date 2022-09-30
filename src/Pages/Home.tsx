@@ -25,6 +25,10 @@ export default function Home() {
         name="NOSSO TRABALHO"/>
 
         <AboutWork/>
+
+        <Title 
+         id="About"
+        name="ENTREGAS"/>
         <Slide/>
         
         <Title name="PRODUTOS"/>
@@ -39,7 +43,6 @@ export default function Home() {
         />
         <SalesCard/>
 
-        <Title name="CONTATOS" />
         <Contacts id="Contact" />
 
         <Title name="FALE CONOSCO" />

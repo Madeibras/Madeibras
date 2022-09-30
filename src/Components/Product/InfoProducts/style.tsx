@@ -83,7 +83,7 @@ export const Descriptions = styled.div`
 
     p{
         width: 80%;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
 
         ${Media.Laptop}{
             text-align: center;
@@ -95,7 +95,7 @@ export const Descriptions = styled.div`
         }
 
         ${Media.MobileS}{
-            font-size: 1rem;
+            font-size: 0.7rem;
         }
     }    
 

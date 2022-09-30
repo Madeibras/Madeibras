@@ -68,8 +68,10 @@ export const Box = styled.div<IProps>`
 
 
     ${Media.MobileL}{
+        width: 90%;
         flex-direction: row;
         transform: scaleX(-1);
+        border-radius: 10px;
     }
 `
 

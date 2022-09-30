@@ -33,6 +33,7 @@ export const Box = styled.div`
 
 export const Card = styled.div`
     min-width: 500px;
+    height: 100%;
     scroll-snap-align: start;
     box-shadow: 6px 6px 2px #cccbcb;
     font-family: 'Poppins';
@@ -65,7 +66,7 @@ export const Header = styled.div`
         }
 
         ${Media.MobileS}{
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
     }
 `
@@ -87,8 +88,13 @@ export const Star = styled.div`
 
 export const Depoiment = styled.div`
     width: 100%;
+    height: 280px;
     background-color: ${(props) => props.theme.cardDepoiment};
     color: #fff;
+
+    ${Media.MobileL}{
+        height: 300px;
+    }
 
     p{
         font-size: 1.3rem;
@@ -96,7 +102,7 @@ export const Depoiment = styled.div`
         font-weight: 500;
 
         ${Media.MobileL}{
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
     }
 `
@@ -118,5 +124,14 @@ export const Buttons = styled.div`
         font-weight: 600;
         cursor: pointer;
         font-size: 5rem;
+        opacity: 0.4;
+
+        &:hover:nth-child(1){
+            opacity: 1;
+        }
+
+        &:hover:nth-child(2){
+            opacity: 1;
+        }
     }
 `

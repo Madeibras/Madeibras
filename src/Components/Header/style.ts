@@ -18,6 +18,8 @@ export const Header = styled.header`
     align-items: center;
     box-sizing: border-box;
     animation: fadeInDown 0.8s ease-in-out;
+
+    z-index: 20;
     
 `
 
@@ -66,7 +68,6 @@ export const Ul = styled.ul`
     align-content: center;  
 
    
-
     ${Media.Tablets}{
         display: none;
     }
@@ -86,7 +87,7 @@ export const UlNav = styled.ul`
     z-index: 20;
     box-sizing: border-box;
     transition: all 0.2s ease-in-out;
-    z-index: 40;
+    z-index: 69;
     ${Media.Tablet}{
         display: none;
     }
