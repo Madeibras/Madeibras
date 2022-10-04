@@ -33,6 +33,10 @@ export const Box = styled.div`
     border-radius: 19px;
     
     animation: fadeInUp 1s ease-in-out;
+
+    ${Media.MobileL}{
+        margin-top: 15%;
+    }
 `
 
 export const Header = styled.div`

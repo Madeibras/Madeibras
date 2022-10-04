@@ -1,6 +1,5 @@
 import DarkMode from 'Components/DarkMode'
 import { Lists } from 'Mock/List'
-import {Link} from 'react-router-dom'
 import * as C from './style'
 
 const Nav =  () => (

@@ -12,7 +12,7 @@ const InfoProducts = ({SallesMenu}: IProps) => {
     return (
     <div>
         {SallesMenu.map((item: SallesCard) => (
-            <C.Box>
+            <C.Box id={item.Link}>
                 <C.BoxImg>
                    <img src={item.img} alt={item.alt}/>
                 </C.BoxImg>

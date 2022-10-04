@@ -14,6 +14,12 @@ export const Container = styled.div`
     align-items: center;
     margin-top: 7rem;
     margin-bottom: 7rem;   
+
+    
+    ${Media.MobileL} {
+          margin-top: 4rem;
+        margin-bottom: 4rem;  
+    }
 `
 
 export const Icon = styled.img`

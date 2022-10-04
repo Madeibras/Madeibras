@@ -10,11 +10,12 @@ type Categorys = typeof Card[0]
 
 const Product = ({id}: IProps) => {
 
-    const [activeCategory, setActiveCategory] = useState<any>(undefined)
+    const [activeCategory, setActiveCategory] = useState<any>(false)
 
     const selectFilter = (category: Categorys) => {
         if(activeCategory !== category){
             setActiveCategory(category.id)
+            
             return;
         }else{
             setActiveCategory(null)
@@ -29,14 +30,14 @@ const Product = ({id}: IProps) => {
         <>
             <C.Container id={id}>
                 {Card.map((item) => (
-                    <C.Box
+                    <a href={item.link}><C.Box
                     onClick={() => selectFilter(item)}
                     isActive={activeCategory === item.id ? true : false}
                     key={item.id}>
                         <C.Title> {item.name} </C.Title>
                         <img src={item.img} alt={item.img} />
-                        <C.Button onClick={() => selectFilter(item)}>Ver Mais</C.Button>
-                    </C.Box>
+                        <C.Button onClick={() => selectFilter(item)}> Ver Mais </C.Button>
+                    </C.Box></a>
                     ))}
                 </C.Container>
             <InfoProducts SallesMenu={FilterSalles} />

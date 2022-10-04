@@ -8,7 +8,8 @@
         "description": "Sua aplicação é utilizada na Construção Civil, nas áreas estruturais, internas, usos temporários, caixaria para início de obra, formas para concreto, entre outras diversas aplicações. A madeira de Pinus Verde é uma excelente escolha, pois apresenta um ótimo custo benefício.",
         "category": 1,
         "thead": [],
-        "tbody": []
+        "tbody": [],
+        "Link": "pinus"
     },
 
     {
@@ -127,14 +128,15 @@
     },
 
     {
-        "id": 1,
+        "id": 6,
         "img": "Assets/Sallers/Plastificado.png",
         "alt": "Plastificado",
         "titulo": "PLASTIFICADO",
         "description": "Também conhecida como madeirite plastificado, esse tipo de chapa é composto por um número ímpar de camadas de compensado sobrepostas, e com prensagem feita com cola branca. O que diferencia esse madeirite de outras opções é o fato de que nessa versão o material recebe aplicação de um polímero que plastifica a superfície da chapa, o que deixa o material impermeável, com acabamento liso e mais resistente. Em geral, as chapas de compensado plastificadas costumam ter entre cinco e 13 lâminas sobrepostas, o que determina também a espessura da placa. O uso do compensado plastificado pode ser adotado em formas de lajes e construções com concreto armado, ajudando a reduzir a perda de água do concreto e os riscos de fissuras. ",
         "category": 2,
         "thead": [],
-        "tbody": []
+        "tbody": [],
+        "Link": "plastificado"
     },
 
     {
@@ -170,18 +172,19 @@
     },
 
     {
-        "id": 1,
+        "id": 7,
         "img": "Assets/Sallers/Madeirite.png",
-        "alt": "Pregos",
+        "alt": "Madeirite",
         "titulo": "MADEIRITE",
         "description": "A chapa de compensado resinada, também chamada de madeirite de cola branca ou madeirite resinado, é formada por chapas finas de madeira compensadas unidas por cola, dispostas de modo que as próprias fibras se cruzem. Esse tipo de chapa tem como principal característica a coloração rosa, que se deve às substâncias utilizadas para deixar a placa mais firme, já que o material é menos resistente. Essa é uma das versões mais baratas de compensado e costuma ser bastante utilizada em projetos simples e rápidos em canteiros de obra e reformas. As chapas de compensado resinadas são utilizadas em fôrmas de concreto não aparente, paredes, canteiros de obra e barracas. ",
         "category": 3,
         "thead": [],
-        "tbody": []
+        "tbody": [],
+        "Link": "madeirite"
     },
 
     {
-        "id": 7,
+        "id": 8,
         "img": "Assets/Sallers/Madeirite_cm.png",
         "alt": "Madeirite",
         "category": 3,
@@ -217,18 +220,19 @@
     },
 
     {
-        "id": 1,
+        "id": 9,
         "img": "Assets/Sallers/Roliço.jpg",
-        "alt": "Pregos",
+        "alt": "Pontalete",
         "titulo": "PONTALETE",
         "description": "Os Pontaletes de madeira roliço são frequentemente utilizados na construção civil, para realizar o escoramento de lajes, pés de andaimes, fechamento de obras e construção de barracos provisórios nas obras.",
         "category": 4,
         "thead": [],
-        "tbody": []
+        "tbody": [],
+        "Link": "pontalete"
     },
 
     {
-        "id": 8,
+        "id": 10,
         "img": "Assets/Sallers/Pontalete_Rolico.png",
         "alt": "Pregos",
         "category": 4,
