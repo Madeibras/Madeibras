@@ -15,7 +15,7 @@ export const H1 = styled.h1`
     text-align: center;
     font-size: 2rem;
     font-family: 'Poppins';
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     font-weight: 500;
     color: ${(props) => props.theme.color};
 

@@ -34,7 +34,7 @@ const AboutWork = () => {
                 </C.Description>
             </C.Box>
             <C.Box>
-                <img src='./Assets/Card/atendimento.png' alt='' /> 
+                <img src='./Assets/Card/Atendimento.png' alt='' /> 
                 <C.Description>
                     <h2 ><CountUp start={0} end={2500} duration={2} delay={0}/> <strong><BsArrowUpShort/></strong></h2>
                     <p>Agilidade no seu atendimento via WhatsApp. </p>
