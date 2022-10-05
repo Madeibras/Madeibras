@@ -22,7 +22,7 @@ export const Container = styled.section`
     padding: 30px;
 
     ${Media.MobileL}{
-        padding: 16px;
+        padding: 0px;
     }
 
     ${Media.Laptop}{
@@ -55,8 +55,8 @@ export const Box = styled.div<IProps>`
         height: 100%;
 
         ${Media.MobileL}{
-            width: 180px;
-            height: 120px;
+            width: 100%;
+            height: 100px;
             border-radius: 10px;
         }
 
@@ -87,7 +87,7 @@ export const Title = styled.h2`
     border-top-right-radius: 25px;
 
     ${Media.MobileL}{
-        font-size: 1rem;
+        font-size: 0.8rem;
         background: none;
         color: #384044;
         transform: scaleX(-1);

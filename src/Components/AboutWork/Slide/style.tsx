@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
 const Media = {
-    MobileS: "@media(max-width: 425px)"
+    Tablet: "@media(max-width: 768px)",
+    MobileL: "@media(max-width: 425px)",
+    MobileM: "@media(max-width: 375px)"
 }
 
 export const Container = styled.div`
     position: relative;
-    width: 85%;
+    width: 100%;
     height: 80%;
     margin: auto;
 `
@@ -29,17 +31,27 @@ export const Box = styled.div`
 export const CardImg = styled.div`
     width: 100%;
     scroll-snap-align: start;
+    padding-right: 20px;
+
+    ${Media.Tablet}{
+        padding: 10px;
+    }
 
    img{
-        width: 100vw;
+        width: 85vw;
         height: 100%;
 
-        ${Media.MobileS}{
-            width: 95vw;
+        ${Media.Tablet}{
+            height: 50vh;
+        }
+
+        ${Media.MobileL}{
+            width: 80vw;
             height: 45vh;
-            padding-right: 12px;
         }
    }
+
+   
 `
 
 export const Buttons = styled.div`
@@ -54,7 +66,7 @@ export const Buttons = styled.div`
 
     z-index: 10;
 
-    ${Media.MobileS}{
+    ${Media.Tablet}{
         display: none;
     }
 `

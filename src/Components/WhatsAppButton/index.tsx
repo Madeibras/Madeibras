@@ -21,11 +21,10 @@ const WhatsAppButton = () => {
         return Math.floor(Math.random() * (max - min + 1) + min)
     }
 
-    const geRandom =  Numbers[getRandom(0, Numbers.length - 1)]
+    const geRandom = Numbers[getRandom(0, Numbers.length - 1)]
 
     const openWhatsApp = () =>{
         window.open(geRandom, '_blank')
-        console.log(geRandom)
     }
 
     return(

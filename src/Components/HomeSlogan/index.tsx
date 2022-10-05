@@ -2,13 +2,31 @@ import Button from 'Components/Button'
 import SocialMidia from './SocialMidia/Index'
 import * as C from './style'
 
+const Numbers = [
+    //Romualdo
+    'https://wa.me/5511958851545',
+    //Gabriele
+    'https://wa.me/5511940881707',
+    //Joyce
+    'https://wa.me/5511969760878',
+    //Arthur
+    'https://wa.me/5511934421941',
+    //Rodrigo
+    'https://wa.me/5511960189904',
+]
 
 
 export default function HomeSlogan() {
 
-    const openWhatsApp = (url: string) =>{
-        window.open(url, '_blank')
-        console.log(url)
+    const getRandom = (min: number , max: number) => {
+        return Math.floor(Math.random() * (max - min + 1) + min)
+    }
+
+    const geRandom = Numbers[getRandom(0, Numbers.length - 1)]
+
+
+    const openWhatsApp = () =>{
+        window.open(geRandom, '_blank')
     }
 
     return(
@@ -21,7 +39,7 @@ export default function HomeSlogan() {
                     backgroundColor='#77B74D'
                     txtColor='#fff'
                     backgroundHover='#5d7320'
-                    onClick={() => openWhatsApp('https://wa.me/5511947564437')}
+                    onClick={() => openWhatsApp()}
                 >Orçamento agora!</Button> 
                 <SocialMidia/>
             </C.Box>
