@@ -8,10 +8,11 @@ export const Container = styled.div`
     position: relative;
     width: 100%;
     display: grid;
+    margin: auto;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     justify-items: center;
     align-items: center;
-    margin: auto;
+  
     row-gap: 150px;
     font-family: 'Poppins';
     background-image: url('Assets/Sallers/Background_Sallers.png');

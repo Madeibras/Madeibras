@@ -10,11 +10,11 @@ const Media = {
 
 export const Box = styled.div`
     font-family: 'Poppins';
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px 0;
+    margin: auto;
 
     ${Media.Laptop}{
         flex-direction: column;
@@ -23,11 +23,11 @@ export const Box = styled.div`
 `
 
 export const BoxImg = styled.div`
-    margin: 25px;
+    margin: 25px 0 25px 0;
 
     img{
-        width: 500px;
-        height: 400px;
+        width: 450px;
+        height: 350px;
 
         ${Media.Laptop}{
             width: 300px;
@@ -97,30 +97,27 @@ export const Descriptions = styled.div`
         ${Media.MobileS}{
             font-size: 0.7rem;
         }
-    }    
-
-    
+    }
 `
 
 export const Table = styled.table`
     width: 100%;
     height: 100%;
   
-    border-spacing: 30px 40px;
+    border-spacing: 30px 25px;
     
     thead{
         text-align: left; 
         color: ${(props) => props.theme.color};
 
         th{
-            font-size: 1.5rem;
+            font-size: 1.2rem;
 
             ${Media.MobileL}{
                 font-size: 0.8rem;
             }
 
             ${Media.MobileS}{
-                
                 font-size: 0.7rem;
             }
         }
@@ -143,8 +140,8 @@ export const Measure = styled.tr`
     th{
         font-size: 1.5rem;
         position: relative;
-        width: 200px;
-        height: 70px;
+        width: 160px;
+        height: 65px;
         
         ${Media.Laptop}{
             font-size: 1rem;
@@ -164,11 +161,12 @@ export const Measure = styled.tr`
             content: 'X';
             font-size: 1rem;
             right: -20px;
+            top: 20px;
             color: #121213;
         }
 
         &:nth-child(3)::before{
                 display: none;
-            }
+        }
     }
 `

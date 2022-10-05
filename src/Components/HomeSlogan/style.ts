@@ -10,7 +10,8 @@ const Media = {
 }
 
 export const Container = styled.section`
-    width: 100%;
+    width: 90%;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,7 +122,7 @@ export const Container = styled.section`
 `
 
 export const Box = styled.div`
-    width: 100%;
+    width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -147,7 +148,7 @@ export const Box = styled.div`
 export const H1 = styled.h1`
     width: 100%;
     margin-bottom: 3rem;
-    font-size: 3.5rem;
+    font-size: 3rem;
 
     background: -webkit-radial-gradient(bottom, ${(props) => props.theme.primaryGradient} 0%, ${(props) => props.theme.secondGradient} 100%);
     background: radial-gradient(to top, ${(props) => props.theme.primaryGradient} 0%, ${(props) => props.theme.secondGradient} 100%);
@@ -171,7 +172,7 @@ export const H1 = styled.h1`
 
 export const Description = styled.p`
     width: 90%;
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin-bottom: 3.5rem;
     font-weight: 500;
     color: ${(props) => props.theme.color};
@@ -191,7 +192,7 @@ export const Description = styled.p`
 `
 
 export const Vetor = styled.img`
-    width: 100%;
+    width: 50%;
     animation: fadeInRight 1.2s ease-in-out;
 
     z-index: 10;

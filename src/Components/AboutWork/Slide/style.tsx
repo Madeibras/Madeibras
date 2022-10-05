@@ -6,14 +6,16 @@ const Media = {
 
 export const Container = styled.div`
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 85%;
+    height: 80%;
+    margin: auto;
 `
 
 export const Box = styled.div`
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
+    align-items: center;
     overflow-x: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -30,7 +32,7 @@ export const CardImg = styled.div`
 
    img{
         width: 100vw;
-        height: 100vh;
+        height: 100%;
 
         ${Media.MobileS}{
             width: 95vw;

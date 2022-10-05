@@ -11,10 +11,11 @@ const Media = {
 }
 
 export const Container = styled.section`
-    width: 100%;
+    width: 90%;
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    margin: auto;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 30px;
     justify-content: space-around;
     align-items: center;
@@ -25,7 +26,7 @@ export const Container = styled.section`
     }
 
     ${Media.Laptop}{
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     }
 `
 
@@ -79,6 +80,7 @@ export const Title = styled.h2`
     width: 100%;
     text-align: center;
     background-color: #384044;
+    font-size: 1.2rem;
     color: #FFFF;
     padding: 10px;
     border-top-left-radius: 25px;

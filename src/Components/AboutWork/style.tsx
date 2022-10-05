@@ -13,7 +13,7 @@ export const H1 = styled.h1`
     width: 80%;
     margin: auto;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-family: 'Poppins';
     margin-bottom: 3rem;
     font-weight: 500;
@@ -34,7 +34,7 @@ export const H1 = styled.h1`
 `
 
 export const Container = styled.div`
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
     margin: 0 auto;
     border-radius: 20px;
@@ -60,7 +60,7 @@ export const Container = styled.div`
 export const Box = styled.div`
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,7 +92,7 @@ export const Box = styled.div`
     }
     &:nth-child(3){
         img{
-            width: 180px;
+            width: 140px;
 
             ${Media.Tablet}{
                 width: 150px;
@@ -105,7 +105,7 @@ export const Box = styled.div`
     }
 
     img{
-        width: 90px;
+        width: 65px;
         height: auto;
         animation: fadeInDown;
         animation-duration: 1s;

@@ -8,12 +8,13 @@ const Media = {
 }
 
 export const Container = styled.div`
-    max-width: 100%;
+    max-width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 15px;
     padding: 16px;
+    margin: auto;
     font-family: 'Poppins';
     margin-bottom: 10%;
     animation: bounceInUp 1.5s ease-in-out;
