@@ -8,7 +8,10 @@ const Mensage = ({
     value, 
     rows,
     type,
-    onChange}: Iinputs) => (
+    id,
+    name,
+    onChange, 
+    ...rest }: Iinputs) => (
     <C.Text 
         type={type}
         rows={rows}
@@ -17,6 +20,9 @@ const Mensage = ({
         placeholder={placeHolder}
         value={value}
         onChange={onChange}
+        id={id}
+        name={name} 
+        {...rest}
     >    
 
     </C.Text>

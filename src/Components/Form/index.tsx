@@ -14,7 +14,7 @@ const Form = () => {
     
     const form = useRef<any>();
 
-    console.log(name, email)
+    console.log(name, email, message)
 
     const HandleClick = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -94,6 +94,7 @@ const Form = () => {
              <Mensage 
                  id='message'
                  name='message'
+                 type='text'
                  rows={10}
                  placeHolder='Tire sua dúvida'
                  backgroundColor='#FFFFFF'
