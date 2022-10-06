@@ -2,11 +2,10 @@ import * as C from './style'
 import  Card  from 'Mock/Card.json'
 import InfoProducts from './InfoProducts'
 import Salles from 'Mock/Salles.json'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { IProps } from 'Types/Card'
 
 type Categorys = typeof Card[0]
-
 
 const Product = ({id}: IProps) => {
 

@@ -34,7 +34,7 @@ export const Li = styled.li `
 `
 
 export const Span = styled.span`
-    font-size: 1.15rem;
+    
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -49,12 +49,10 @@ export const Span = styled.span`
         }
 
         ${Media.MobileS}{
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
     }
-
-   
 `
 
 export const Icon = styled.i`

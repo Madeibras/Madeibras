@@ -7,4 +7,5 @@ export type Iprops = {
     children: ReactNode 
     boxShadow?: string
     primary?: boolean
+    backgroundGradient?: string
 }& React.ButtonHTMLAttributes<HTMLButtonElement>

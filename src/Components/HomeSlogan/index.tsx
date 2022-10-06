@@ -1,5 +1,6 @@
 import Button from 'Components/Button'
 import SocialMidia from './SocialMidia/Index'
+import {IProps} from './Types/Props'
 import * as C from './style'
 
 const Numbers = [
@@ -16,7 +17,7 @@ const Numbers = [
 ]
 
 
-export default function HomeSlogan() {
+export default function HomeSlogan({title, description, img, backgroundColorButton, backgroundColorHoverButton} :IProps) {
 
     const getRandom = (min: number , max: number) => {
         return Math.floor(Math.random() * (max - min + 1) + min)
@@ -32,18 +33,17 @@ export default function HomeSlogan() {
     return(
         <C.Container>
             <C.Box>           
-                <C.H1>COMPRAR MADEIRA NUNCA FOI TÃO FACÍL</C.H1>
-                <C.Description>Atendimento online, com as melhores condições do mercado. Você ganha em <span>qualidade</span>, <span>agilidade</span> e maior <span>eficiência</span> para seus projetos.</C.Description>
+                <C.H1>{title}</C.H1>
+                <C.Description>{description}</C.Description>
                 <Button 
-                    boxShadow='#ccc'
-                    backgroundColor='#77B74D'
+                    backgroundColor={backgroundColorButton}
                     txtColor='#fff'
-                    backgroundHover='#5d7320'
+                    backgroundHover={backgroundColorHoverButton}
                     onClick={() => openWhatsApp()}
                 >Orçamento agora!</Button> 
                 <SocialMidia/>
             </C.Box>
-            <C.Vetor src='Assets/img/VetorMadeibras1.svg' alt=''/>
+            <C.Vetor src={img} alt=''/>
             <img src="Assets/img/Group 70.png" alt="Vetorização" />
             <img src="Assets/img/PilhaMadeira.png" alt="Vetor Madeira" />
             <img src="Assets/img/troncos.png" alt="Vetor Madeira" />

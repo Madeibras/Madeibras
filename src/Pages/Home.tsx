@@ -12,19 +12,26 @@ import Title from "Components/Title";
 import ButtonTopWidth from "Components/ButtonTopWidth";
 import WhatsAppButton from "Components/WhatsAppButton";
 import Cookies from "Components/Cookies";
+import { PinusCard } from "Mock/About";
 
 export default function Home() {
 
   return (
     <div>
       <Header id="Home"/>
-      <HomeSlogan/>
+      <HomeSlogan 
+        img='Assets/img/VetorMadeibras1.svg'
+        title="COMPRAR MADEIRA NUNCA FOI TÃO FACÍL"
+        description="Atendimento online, com as melhores condições do mercado. Você ganha em qualidade, agilidade e maior eficiência para seus projetos."
+        backgroundColorButton="#77B74D"
+        backgroundColorHoverButton="#517c34"
+      />
 
         <Title 
          id="About"
         name="NOSSO TRABALHO"/>
 
-        <AboutWork/>
+        <AboutWork />
 
         <Title 
          id="About"
