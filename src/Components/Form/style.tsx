@@ -55,7 +55,7 @@ export const BoxImg = styled.div`
         height: 450px;
 
         ${Media.MobileM}{
-            height: 400px;
+            height: 100%;
         }
     }
 

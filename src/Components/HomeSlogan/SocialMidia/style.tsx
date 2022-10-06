@@ -30,6 +30,11 @@ export const Icons = styled.ul`
         ${Media.Tablet}{
             justify-content: center;
             margin-right: 0;
+            font-size: 3rem;
+        }
+
+        ${Media.MobileS}{
+            font-size: 2.5rem;
         }
 
         &:hover{

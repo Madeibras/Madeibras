@@ -86,16 +86,16 @@ export const Descriptions = styled.div`
         font-size: 1.2rem;
 
         ${Media.Laptop}{
-            text-align: center;
+            text-align: left;
             width: 100%;
         }
 
         ${Media.MobileL}{
-            font-size: 1.4rem;
+            font-size: 1.1rem;
         }
 
         ${Media.MobileS}{
-            font-size: 0.7rem;
+            font-size: 0.8rem;
         }
     }
 `
@@ -150,7 +150,7 @@ export const Measure = styled.tr`
         }
 
         ${Media.MobileL}{
-            font-size: 1rem;
+            font-size: 0.8rem;
             width: 60px;
             height: 50px;
         }

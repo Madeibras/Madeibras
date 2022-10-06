@@ -183,11 +183,20 @@ export const Description = styled.p`
     }
 
     ${Media.Laptop}{
+        text-align: left;
+    }
+
+    ${Media.Tablet}{
         text-align: center;
+        font-size: 1.4rem;
     }
 
     ${Media.MobileL}{
         font-size: 1.2rem;
+    }
+
+    ${Media.MobileM}{
+        font-size: 1rem;
     }
 `
 
@@ -197,6 +206,7 @@ export const Vetor = styled.img`
 
     z-index: 10;
     ${Media.Tablet}{
+        width: 100%;
         margin-top: 2rem;
     }
 `
