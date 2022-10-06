@@ -29,6 +29,8 @@ export const Li = styled.li `
         margin-bottom: 1.6rem;
         color: #fff;
     }
+
+    
 `
 
 export const Span = styled.span`
@@ -40,15 +42,16 @@ export const Span = styled.span`
 
     a{
         color: #6FB742;
-    }
 
-    ${Media.Tablet}{
-        font-size: 2rem;
-        color: #fff;
-
-        a{
-            color: #ffffff;
+        ${Media.Tablet}{
+            font-size: 2rem;
+            color: #fff;
         }
+
+        ${Media.MobileS}{
+            font-size: 1.4rem;
+        }
+
     }
 
    
@@ -65,5 +68,9 @@ export const Icon = styled.i`
     ${Media.Tablet}{
         font-size: 2rem;
         color: #fff;
+    }
+
+    ${Media.MobileS}{
+        font-size: 1.5rem;
     }
 `

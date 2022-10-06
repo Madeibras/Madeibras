@@ -4,7 +4,7 @@ const Media = {
     Tablet:  "@media(max-width: 768px)",
     MobileL: "@media(max-width: 425px)",
     MobileM: "@media(min-width: 375px)",
-    MobileS: "@media(min-width: 320px)"
+    MobileS: "@media(max-width: 425px)"
 }
 
 export const Container = styled.div`
@@ -25,6 +25,11 @@ export const Container = styled.div`
         justify-content: center;
         align-items: center;
     }
+
+    ${Media.MobileS}{
+        max-width: 100%;
+    }
+
 
     input{
         background-color: ${(props) => props.theme.card};
@@ -48,8 +53,10 @@ export const Container = styled.div`
 export const BoxImg = styled.div`
     width: 50%;
     height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     img{
-        
         border-radius: 15px;
         object-fit: cover;
         width: 100%;

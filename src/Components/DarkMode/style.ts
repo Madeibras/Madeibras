@@ -8,7 +8,6 @@ const Media = {
 }
 
 export const BoxDarkMode = styled.button`
-    
     text-align: center;
     width: auto;
     padding-top: 0;
@@ -27,5 +26,9 @@ export const BoxDarkMode = styled.button`
         padding-bottom: 25px;
         font-size: 2.5rem;
         color: #fff;
+    }
+
+    ${Media.MobileM}{
+        font-size: 2rem;
     }
 `
