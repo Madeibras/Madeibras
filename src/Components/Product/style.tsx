@@ -39,7 +39,7 @@ export const Box = styled.div<IProps>`
     align-items: center;
     background-color: ${(props) => props.theme.card};
     
-    border-radius: 25px;
+    border-radius: 10px;
     font-family: 'Poppins';
 
     animation: fadeInUp 1.3s ease-in-out;
@@ -83,8 +83,8 @@ export const Title = styled.h2`
     font-size: 1.2rem;
     color: #FFFF;
     padding: 10px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 
     ${Media.MobileL}{
         font-size: 0.8rem;

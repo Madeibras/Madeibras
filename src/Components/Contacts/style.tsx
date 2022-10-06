@@ -48,6 +48,14 @@ export const Box = styled.div`
     padding: 16px;
     animation: fadeInDown 0.8s ease-in-out;
 
+    ${Media.Laptop} {
+        border-bottom: 4px solid #6FB742;
+
+        &:nth-child(4){
+            border: none;
+        }
+    }
+
     &::before{
         content: '';
         position: absolute;
@@ -58,6 +66,7 @@ export const Box = styled.div`
        
         ${Media.Laptop}{
             display: none;
+           
         }
     }
 

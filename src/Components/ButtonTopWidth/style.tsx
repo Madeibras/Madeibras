@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 
 const Media = {
-    MobileM: "@media(max-width: 375px)"
+    MobileL: "@media(max-width: 425px)"
 }
 
 const animation = keyframes`
@@ -33,10 +33,11 @@ export const Button = styled.button`
     border-radius: 50px;
     font-size: 2.5rem;
 
-    ${Media.MobileM}{
+    ${Media.MobileL}{
         width: 50px;
         height: 50px;
-        font-size: 2rem;
+        font-size: 1.4rem;
+        bottom: 35px;
         left: 20px;
     }
 
@@ -47,7 +48,7 @@ export const Button = styled.button`
         color: #a1ff0b;
         background-color: #f3f3f3;
 
-        ${Media.MobileM}{
+        ${Media.MobileL}{
             width: 52px;
             height: 52px;
             font-size: 2rem;

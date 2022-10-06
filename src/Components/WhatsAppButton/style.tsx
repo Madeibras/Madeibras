@@ -1,7 +1,8 @@
 import styled, { keyframes } from 'styled-components'
 
 const Media = {
-    MobileS: "@media(max-width: 375px)"
+    MobileL: "@media(max-width: 425px)",
+    MobileM: "@media(max-width: 375px)"
 }
 
 const animationInfinite = keyframes`
@@ -29,18 +30,15 @@ export const Button = styled.div`
     font-family: 'Poppins';
     position: fixed;
     border-radius: 50%;
-
     padding: 8px;
     bottom: 30px;
-    right: 30px;
+    right: 20px;
     background-color: #6ff71b;
     animation: ${animationInfinite} 1s infinite alternate;
     z-index: 30;
-    
-   
 
     span{
-            display: none;
+        display: none;
     }
    
 
@@ -72,7 +70,8 @@ export const Btn = styled.button`
     align-items: center;
     cursor: pointer;
     
-    ${Media.MobileS}{
-        font-size: 3rem;
+    ${Media.MobileL}{
+        font-size: 2.5rem;
     }
+
 `

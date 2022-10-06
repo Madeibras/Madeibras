@@ -3,7 +3,8 @@ import styled from 'styled-components'
 const Media = {
     Laptop: "@media(max-width: 1024px)",
     MobileL: "@media(max-width: 580px)",
-    MobileS: "@media(max-width: 375px)"
+    MobileM: "@media(max-width: 375px)",
+    MobileS: "@media(max-width: 320px)"
 }
 
 
@@ -61,7 +62,6 @@ export const Category = styled.div`
 export const Measurements = styled.div`
     width: 100%;
     height: 100%;
-    
 `
 
 export const Descriptions = styled.div`
@@ -94,7 +94,7 @@ export const Descriptions = styled.div`
             font-size: 1.1rem;
         }
 
-        ${Media.MobileS}{
+        ${Media.MobileM}{
             font-size: 0.8rem;
         }
     }
@@ -104,9 +104,18 @@ export const Table = styled.table`
     width: 100%;
     height: 100%;
   
-    border-spacing: 30px 25px;
+    border-spacing: 25px 25px;
+
+    ${Media.MobileM}{
+        border-spacing: 20px 20px;
+    }
+
+    ${Media.MobileL}{
+        border-spacing: 20px 15px;
+    }
     
     thead{
+        
         text-align: left; 
         color: ${(props) => props.theme.color};
 
@@ -114,11 +123,11 @@ export const Table = styled.table`
             font-size: 1.2rem;
 
             ${Media.MobileL}{
-                font-size: 0.8rem;
+                font-size: 0.6rem;
             }
 
-            ${Media.MobileS}{
-                font-size: 0.7rem;
+            ${Media.MobileM}{
+                font-size: 0.5rem;
             }
         }
     }
@@ -138,21 +147,27 @@ export const Measure = styled.tr`
     }
 
     th{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         position: relative;
         width: 160px;
         height: 65px;
         
         ${Media.Laptop}{
             font-size: 1rem;
-            width: 70px;
+            width: 140px;
             height: 60px;   
         }
 
         ${Media.MobileL}{
             font-size: 0.8rem;
-            width: 60px;
-            height: 50px;
+            width: 90px;
+            height: 45px;
+        }
+
+        ${Media.MobileM}{
+            width: 70px;
+            font-size: 0.6rem;
+            height: 45px;
         }
 
 
@@ -163,6 +178,18 @@ export const Measure = styled.tr`
             right: -20px;
             top: 20px;
             color: #121213;
+
+            ${Media.MobileL}{
+                font-size: 0.8rem;
+                top: 12px;
+                right: -15px;
+            }
+
+            ${Media.MobileM}{
+                top: 10px;
+                right: -15px;
+            }
+
         }
 
         &:nth-child(3)::before{
