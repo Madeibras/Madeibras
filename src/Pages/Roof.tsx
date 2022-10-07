@@ -33,7 +33,7 @@ export default function Roof() {
             />
 
             <Title 
-            img="Assets/Favicon/brasaoRoof.png"
+            img="Assets/Favicon/BrasaoRoof.png"
             name="NOSSO TRABALHO"/>
 
             <AboutWork primary 
@@ -41,23 +41,23 @@ export default function Roof() {
             SallesCard={RoofCard}/>
 
             <Title
-            img="Assets/Favicon/brasaoRoof.png"
+            img="Assets/Favicon/BrasaoRoof.png"
             name="PRODUTOS"/>
 
             <ProductsRoof/>
 
             <Title 
-            img="Assets/Favicon/brasaoRoof.png"
+            img="Assets/Favicon/BrasaoRoof.png"
             name="GALERIA"/>
             <Gallery/>
 
             <Title 
-            img="Assets/Favicon/brasaoRoof.png"
+            img="Assets/Favicon/BrasaoRoof.png"
             name=" AVALIAÇÕES"/>
             <Depoiments/>
 
             <Title 
-            img="Assets/Favicon/brasaoRoof.png"
+            img="Assets/Favicon/BrasaoRoof.png"
             name="TIME DE VENDAS" 
             />
             <SalesCard/>
@@ -68,7 +68,7 @@ export default function Roof() {
             id="Contact" />
 
             <Title 
-            img="Assets/Favicon/brasaoRoof.png"
+            img="Assets/Favicon/BrasaoRoof.png"
             name="FALE CONOSCO" />
 
             <Form />
