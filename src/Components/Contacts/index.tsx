@@ -2,13 +2,13 @@ import * as C from './style'
 import {Contact} from 'Mock/Contacts'
 import { IProps } from 'Types/Card'
 
-const Contacts = ({id}: IProps) => { 
+const Contacts = ({id, Color, ColorBorder}: IProps) => { 
     return(
     <>
         <C.Container id={id}>
             {Contact.map((item) => (
-                <C.Box key={item.id}>
-                    <C.Icon> {item.icon} </C.Icon>
+                <C.Box key={item.id} ColorBorder={ColorBorder} > 
+                    <C.Icon Color={Color} > {item.icon} </C.Icon>
                     <C.Name> {item.name} </C.Name>
                     <C.Description> {item.description} </C.Description>
                     <C.Description> {item.info} </C.Description>

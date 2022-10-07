@@ -33,29 +33,33 @@ export const Container = styled.section`
 
     img:nth-child(3){
         position: absolute;
-        top: 0;
-        left: 25%;
+        left: 2%;
+        bottom: 30%;
+        opacity: 1;
+
+        ${Media.Laptop}{
+            left: 2%;
+            top: 50%;
+        }
         
         ${Media.Tablet}{
-            width: 400px;
-            top: 40%;
-            left: -5%;
+            top: 15%;
+            left: 8%;
         }
-
+        
         ${Media.MobileL}{
-            width: 300px;
-            top: 55%;
-            left: -10%;
+            top: 15%;
+            left: 8%;
         }
 
         ${Media.MobileM}{
-            width: 300px;
-            top: 55%;
+            top: 20%;
+            left: 8%;
         }
 
         ${Media.MobileS}{
-            width: 250px;
-            top: 65%;
+            top: 22%;
+            left: 2%;
         }
     }   
 
@@ -90,33 +94,12 @@ export const Container = styled.section`
 
     img:nth-child(5){
         position: absolute;
-        left: 2%;
-        bottom: 30%;
-        opacity: 1;
+        width: 45%;
+        right: 0;
+        top: 10%;
 
         ${Media.Laptop}{
-            left: 2%;
-            top: 50%;
-        }
-        
-        ${Media.Tablet}{
-            top: 15%;
-            left: 8%;
-        }
-        
-        ${Media.MobileL}{
-            top: 15%;
-            left: 8%;
-        }
-
-        ${Media.MobileM}{
-            top: 20%;
-            left: 8%;
-        }
-
-        ${Media.MobileS}{
-            top: 22%;
-            left: 2%;
+            display: none;
         }
     }
 `
@@ -152,7 +135,6 @@ export const H1 = styled.h1`
 
     background: -webkit-radial-gradient(bottom, ${(props) => props.theme.primaryGradient} 0%, ${(props) => props.theme.secondGradient} 100%);
     background: radial-gradient(to top, ${(props) => props.theme.primaryGradient} 0%, ${(props) => props.theme.secondGradient} 100%);
-
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
 
@@ -206,6 +188,7 @@ export const Vetor = styled.img`
 
     z-index: 10;
     ${Media.Tablet}{
+        padding: 10px;
         width: 100%;
         margin-top: 2rem;
     }

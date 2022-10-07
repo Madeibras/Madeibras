@@ -12,40 +12,64 @@ import ProductsRoof from "Components/Product/ProductsRoof";
 import SalesCard from "Components/SalesCard";
 import Title from "Components/Title";
 import WhatsAppButton from "Components/WhatsAppButton";
+import { RoofCard } from "Mock/About";
 
 
 export default function Roof() {
     return (
         <div>
-            <Header/>
+            <Header 
+            img="Assets/img/backgroundRoof.svg"
+            id="Home"/>
+
             <HomeSlogan 
-            img='Assets/img/telhaVetor.png'
-            title="MADEIRA PARA TELHADO" 
-            description="Atendimento online, com as melhores condições do mercado. Você ganha em qualidade, agilidade e maior eficiência para seus projeto"
-            backgroundColorButton="#47c77c"
-            backgroundColorHoverButton="#2b6461"
+                img='Assets/img/telhaVetor.png'
+                title="MADEIRA PARA TELHADO" 
+                description="Atendimento online, com as melhores condições do mercado. Você ganha em qualidade, agilidade e maior eficiência para seus projeto."
+                backgroundColorButton="#69E087"
+                backgroundColorHoverButton="#48ad61"
+                backgroundVetor="Assets/img/BackRoof.png"
+                ColorIcons="#69E087"
             />
 
-            <Title name="NOSSO TRABALHO"/>
-            <AboutWork/>
+            <Title 
+            img="Assets/Favicon/brasaoRoof.png"
+            name="NOSSO TRABALHO"/>
 
-            <Title name="PRODUTOS"/>
+            <AboutWork primary 
+            boxShadowColor="#8FD993"
+            SallesCard={RoofCard}/>
+
+            <Title
+            img="Assets/Favicon/brasaoRoof.png"
+            name="PRODUTOS"/>
+
             <ProductsRoof/>
 
-            <Title name="GALERIA"/>
+            <Title 
+            img="Assets/Favicon/brasaoRoof.png"
+            name="GALERIA"/>
             <Gallery/>
 
-            <Title name=" AVALIAÇÕES"/>
+            <Title 
+            img="Assets/Favicon/brasaoRoof.png"
+            name=" AVALIAÇÕES"/>
             <Depoiments/>
 
             <Title 
-                name="TIME DE VENDAS" 
+            img="Assets/Favicon/brasaoRoof.png"
+            name="TIME DE VENDAS" 
             />
             <SalesCard/>
 
-            <Contacts id="Contact" />
+            <Contacts 
+            Color="#69E087"
+            ColorBorder="#69E087"
+            id="Contact" />
 
-            <Title name="FALE CONOSCO" />
+            <Title 
+            img="Assets/Favicon/brasaoRoof.png"
+            name="FALE CONOSCO" />
 
             <Form />
 

@@ -1,13 +1,14 @@
 import * as C from './style'
 import CountUp from 'react-countup'
 import { useEffect, useState } from 'react'
-import { PinusCard } from 'Mock/About'
 
 interface IProps {
-    RenderCard?: any
+    SallesCard?: any
+    primary?: boolean
+    boxShadowColor?: string
 }
 
-const AboutWork = ({RenderCard}: IProps) => {
+const AboutWork = ({SallesCard, primary, boxShadowColor}: IProps) => {
 
     const [counter, setCounter] = useState(false)
 
@@ -30,11 +31,14 @@ const AboutWork = ({RenderCard}: IProps) => {
     </C.H1>
     {counter && (
         <C.Container>
-            {PinusCard.map((item: any) => (
-                <C.Box>
-                    <img src={item.img} alt='' /> 
-                    <C.Description>
+            {SallesCard.map((item: any) => (
+                <C.Box boxShadowColor={boxShadowColor}>
+                    <C.BoxImg>
+                        <img src={item.img} alt={item.title} /> 
+                    </C.BoxImg>
+                    <C.Description primary={primary}>
                         <h2> <CountUp start={item.start} end={item.end} duration={2} delay={0}/></h2>
+                        <h3>{item.title}</h3>
                         <p>{item.subTitle}</p>
                     </C.Description>
                 </C.Box>

@@ -7,5 +7,8 @@ export type IProps = {
     description?: string
     img?: string
     children?: ReactNode
+    boxShadowColor?: string
+    Color?: string
+    ColorBorder?: string
     onClick?: React.MouseEventHandler<HTMLButtonElement> 
 }

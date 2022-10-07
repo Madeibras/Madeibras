@@ -5,6 +5,11 @@ const Media = {
     MobileS: "@media(max-width: 425px)"
 }
 
+interface IProps {
+    Color?: string
+    ColorBorder?: string
+}
+
 export const Container = styled.div`
     min-width: 100%;
     min-height: auto;
@@ -35,7 +40,7 @@ export const Iframe = styled.div`
     }
 `
 
-export const Box = styled.div`
+export const Box = styled.div<IProps>`
     position: relative;
     width: 100%;
     row-gap: 5px;
@@ -62,7 +67,7 @@ export const Box = styled.div`
         right: 0;
         height: 125px;
         width: 3px;
-        background-color: #6FB742;
+        background-color: ${(props) => props.ColorBorder};
        
         ${Media.Laptop}{
             display: none;
@@ -75,9 +80,9 @@ export const Box = styled.div`
     }   
 `
 
-export const Icon = styled.i`
+export const Icon = styled.i<IProps>`
     font-size: 3rem;
-    color: #6FB742;
+    color: ${(props) => props.Color};
 `
 
 export const Name = styled.span`

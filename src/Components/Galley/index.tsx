@@ -1,11 +1,21 @@
+import * as C from './style'
+
+const Media = {
+
+}
 
 const Gallery = () => {
     return(
-        <div>
-            <div>
-                 
-            </div>  
-        </div>
+        <C.Container>
+            <C.Box>
+                <img src='Assets/Slide/Canteiro.png' alt="" />
+                <img src='Assets/Slide/Canteiro.png' alt="" />
+            </C.Box>  
+            <C.Box>
+                <img src='Assets/Slide/Canteiro.png' alt="" />
+                <img src='Assets/Slide/Canteiro.png' alt="" />
+            </C.Box>  
+        </C.Container>
     )
 }
 

@@ -29,16 +29,12 @@ export const Li = styled.li `
         margin-bottom: 1.6rem;
         color: #fff;
     }
-
-    
 `
 
 export const Span = styled.span`
-    
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    color: #6FB742;
 
     a{
         color: #6FB742;
@@ -59,7 +55,7 @@ export const Icon = styled.i`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.25em;
+    font-size: 1.25rem;
     padding-right: 0.5rem;
     color: #6FB742;
 

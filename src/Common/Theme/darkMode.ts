@@ -2,7 +2,7 @@ export const themes = {
     light: {
       body: "#F8F6F6 ",
       color: "#000000",
-      card: "#FFFFFF ",
+      card: "#FFFFFF",
       description: "#928A8A",
       cardDepoiment: "#A6CE39",
       headerCard : "#FFFFFF",

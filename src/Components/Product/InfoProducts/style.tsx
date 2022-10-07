@@ -7,8 +7,6 @@ const Media = {
     MobileS: "@media(max-width: 320px)"
 }
 
-
-
 export const Box = styled.div`
     font-family: 'Poppins';
     width: 80%;

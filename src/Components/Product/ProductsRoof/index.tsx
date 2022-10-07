@@ -7,14 +7,13 @@ const ProductsRoof = () => {
         <C.Container>
         {Products.map((item) => (
             <C.Box>
-                <C.SubTitle>
-                    <h2>Madeira Cambará</h2>
-                </C.SubTitle>
                 <C.CardProducts>
                     <C.BoxImg>
                         <img src={item.img} alt={item.title} />
                     </C.BoxImg>
+                    
                     <C.Title>
+                        <h2>Madeira Cambará</h2>
                         <p>{item.description}</p>
                     </C.Title>
                 </C.CardProducts>

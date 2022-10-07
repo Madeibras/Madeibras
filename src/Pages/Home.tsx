@@ -18,41 +18,59 @@ export default function Home() {
 
   return (
     <div>
-      <Header id="Home"/>
+      <Header 
+      img="Assets/img/background.svg"
+      id="Home"/>
       <HomeSlogan 
         img='Assets/img/VetorMadeibras1.svg'
-        title="COMPRAR MADEIRA NUNCA FOI TÃO FACÍL"
-        description="Atendimento online, com as melhores condições do mercado. Você ganha em qualidade, agilidade e maior eficiência para seus projetos."
+        title="COMPRAR MADEIRAS NUNCA FOI TÃO FACÍL"
+        description="Atendimento online, com as melhores condições do mercado. Você ganha em qualidade, agilidade e maior eficiência para seus projetos. "
         backgroundColorButton="#77B74D"
         backgroundColorHoverButton="#517c34"
+        backgroundVetor="Assets/img/VetorHome.png"
+        ColorIcons="#77B74D"
       />
 
         <Title 
-         id="About"
-        name="NOSSO TRABALHO"/>
-
-        <AboutWork />
+          img="Assets/Favicon/favicon.ico"
+          id="About"
+          name="NOSSO TRABALHO"/>
+          <AboutWork 
+          boxShadowColor="#A6CE39"
+          SallesCard={PinusCard}
+        />
 
         <Title 
+        img="Assets/Favicon/favicon.ico"
          id="About"
         name="ENTREGAS"/>
         <Slide/>
         
-        <Title name="PRODUTOS"/>
+        <Title 
+        img="Assets/Favicon/favicon.ico"
+        name="PRODUTOS"/>
 
         <Product id="Product"/>
 
-        <Title name=" AVALIAÇÕES"/>
+        <Title 
+        img="Assets/Favicon/favicon.ico"
+        name=" AVALIAÇÕES"/>
         <Depoiments/>
 
         <Title 
+        img="Assets/Favicon/favicon.ico"
           name="TIME DE VENDAS" 
         />
         <SalesCard/>
 
-        <Contacts id="Contact" />
+        <Contacts 
+        Color="#77B74D"
+        ColorBorder="#77B74D"
+        id="Contact" />
 
-        <Title name="FALE CONOSCO" />
+        <Title 
+        img="Assets/Favicon/favicon.ico"
+        name="FALE CONOSCO" />
 
         <Form />
 

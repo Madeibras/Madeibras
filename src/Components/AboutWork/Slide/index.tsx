@@ -7,7 +7,6 @@ import {MdKeyboardArrowLeft, MdKeyboardArrowRight} from 'react-icons/md'
 const Slide = () => {
 
     const carrousel = useRef <any | null>(null)
- 
     const  handleLeftClick = (e: React.MouseEvent<HTMLElement>) => {
         e.preventDefault()
 

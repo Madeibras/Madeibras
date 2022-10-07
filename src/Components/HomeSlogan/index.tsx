@@ -16,8 +16,7 @@ const Numbers = [
     'https://wa.me/5511960189904',
 ]
 
-
-export default function HomeSlogan({title, description, img, backgroundColorButton, backgroundColorHoverButton} :IProps) {
+export default function HomeSlogan({title, description, img, backgroundVetor,backgroundColorButton, backgroundColorHoverButton, ColorIcons} :IProps) {
 
     const getRandom = (min: number , max: number) => {
         return Math.floor(Math.random() * (max - min + 1) + min)
@@ -41,12 +40,12 @@ export default function HomeSlogan({title, description, img, backgroundColorButt
                     backgroundHover={backgroundColorHoverButton}
                     onClick={() => openWhatsApp()}
                 >Orçamento agora!</Button> 
-                <SocialMidia/>
+                <SocialMidia Color={ColorIcons} />
             </C.Box>
-            <C.Vetor src={img} alt=''/>
-            <img src="Assets/img/Group 70.png" alt="Vetorização" />
+            <C.Vetor src={img} alt='Vetor Madeibras'/>
             <img src="Assets/img/PilhaMadeira.png" alt="Vetor Madeira" />
             <img src="Assets/img/troncos.png" alt="Vetor Madeira" />
+            <img src={backgroundVetor} alt="Background Madeibras" />
         </C.Container>
     )
 }

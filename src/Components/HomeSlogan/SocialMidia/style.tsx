@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 const Media = {
     Tablet:  "@media(max-width: 768px)",
     MobileL: "@media(min-width: 425px)",
@@ -7,7 +6,11 @@ const Media = {
     MobileS: "@media(min-width: 320px)"
 }
 
-export const Icons = styled.ul`
+interface IProps {
+    Color?: string
+}
+
+export const Icons = styled.ul<IProps>`
     width: 80%;
     display: flex;
     justify-content: space-between;
@@ -22,7 +25,7 @@ export const Icons = styled.ul`
     }
 
     a{
-        color: #6FB742;
+        color: ${(props) => props.Color};
         font-size: 3rem;
         cursor: pointer;
         
