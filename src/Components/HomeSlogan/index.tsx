@@ -24,7 +24,6 @@ export default function HomeSlogan({title, description, img, backgroundVetor,bac
 
     const geRandom = Numbers[getRandom(0, Numbers.length - 1)]
 
-
     const openWhatsApp = () =>{
         window.open(geRandom, '_blank')
     }
