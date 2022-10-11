@@ -1,7 +1,8 @@
 import Button from 'Components/Button'
-import { useEffect, useState } from 'react'
+import { useRef, useState } from 'react'
 import { AiFillCloseCircle } from 'react-icons/ai'
 import {FaArrowAltCircleRight, FaArrowAltCircleLeft} from 'react-icons/fa'
+
 import * as C from './style'
 
 type ICards = typeof Cards[0]
@@ -71,10 +72,33 @@ const ImagensSlide = [
         category: 4
     },
 
+    {
+        id: 7,
+        title: "dasdasdasd",
+        img: 'Assets/Slide/Canteiro3.png',
+        category: 2
+    },
+
     
 ]
 
 const Gallery = () => {
+
+    const carrousel = useRef <any | null>(null)
+ 
+    const  handleLeftClick = (e: React.MouseEvent<HTMLElement>) => {
+        e.preventDefault()
+
+        carrousel.current.scrollLeft -= carrousel.current.offsetWidth
+    }
+
+    const handleRightClick = (e: React.MouseEvent<HTMLElement>) => {
+        e.preventDefault()
+  
+        carrousel.current.scrollLeft += carrousel.current.offsetWidth
+
+        console.log(carrousel)
+    }
 
     const [active, setActive] = useState< number | boolean | null | ICards>(null)
 
@@ -92,11 +116,9 @@ const Gallery = () => {
     ImagensSlide.filter((item: any) =>  item.category === active) : []
 
 
-   
-
     return(
         <C.Container>
-            <C.Box>
+            <C.Box >
                 {Cards.map((item, i) => (
                     <img
                     onClick={() => FilteredIndex(item)} 
@@ -106,9 +128,7 @@ const Gallery = () => {
 
             {active ? (
                 <C.PoupUp>
-                  
-                    <C.CardPoupUp >
-                       
+                    <C.CardPoupUp ref={carrousel}>
                         {filterSalles.map((item: any) => (
                             <C.BoxImg key={item.id}>
                                 <img src={item.img} alt={item.title} />  
@@ -117,8 +137,8 @@ const Gallery = () => {
                     </C.CardPoupUp>
                     <C.Actions>
                         <span onClick={() => setActive(false)}><AiFillCloseCircle /></span>
-                        <Button type='button' onClick={() => {}}><FaArrowAltCircleLeft/></Button>
-                        <Button type='button' onClick={() => {}}><FaArrowAltCircleRight/></Button>
+                        <Button type='button' onClick={ handleLeftClick}><FaArrowAltCircleLeft/></Button>
+                        <Button type='button' onClick={ handleRightClick}><FaArrowAltCircleRight/></Button>
                     </C.Actions>
                 </C.PoupUp>
             ) : <></>}

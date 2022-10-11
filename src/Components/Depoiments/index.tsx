@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from 'react'
+import { useRef} from 'react'
 import {AiFillStar} from 'react-icons/ai'
 import Depoiment from 'Mock/Depoiments.json'
 import * as C from './style'

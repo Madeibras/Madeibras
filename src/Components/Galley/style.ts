@@ -67,7 +67,7 @@ export const PoupUp = styled.div`
     background-color:rgba(000, 000, 000, 0.4);
     z-index: 200;
     
-  
+   
 `
 
 export const CardPoupUp = styled.div`
@@ -78,17 +78,15 @@ export const CardPoupUp = styled.div`
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     overflow-x: auto;
-
     &::-webkit-scrollbar{
         height: 0px;
     }
     transform: translate(-50%, -50%);
-    background-color: #F4F4F4;
+    background-color: #c4c4c4;
     border-radius: 8px;
     top: 50%;
     left: 50%;
     transition: all 0.2 ease-in-out;
-
 
     ${Media.Tablet}{
         height: 500px;
@@ -106,7 +104,7 @@ export const CardPoupUp = styled.div`
 export const BoxImg = styled.div`
     width: 100%;
     height: 600px;
-    padding: 10px; 
+    padding: 5px; 
 
     ${Media.Tablet}{
         height: 500px;
@@ -123,6 +121,7 @@ export const BoxImg = styled.div`
     img{
         width: 85vw;;
         height: 100%;
+        border-radius: 15px;
     }
 `
 
@@ -133,26 +132,45 @@ export const Actions = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
     color: #F4F4F4;
     top: 45%;
-    left: 2%;
-    
-    ${Media.Tablet}{
-        display: none;
-    }
+    left: 3%;
 
     button{
         font-size: 4rem;
+        
+        ${Media.Tablet}{
+            display: none;
+        }
     }
 
     span{
-        position: absolute;
-        color: #FFFFFF;
-        right: 26px;
-        top: 32%;
+        position: fixed;
+        color: #f4f4f4;
+        right: 6%;
+        top: 12%;
         font-size: 1.6rem;
         z-index: 100;
         cursor: pointer;
+
+        &:hover{
+            color: red;
+        }
+
+        ${Media.Tablet}{
+            right: 10%;
+            top: 14%;
+        }
+
+        ${Media.MobileL}{
+            right: 8%;
+            top: 25%;
+        }
+
+        ${Media.MobileM}{
+            right: 8%;
+            top: 32%;
+        }
     }
 `
+
