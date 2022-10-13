@@ -32,52 +32,61 @@ export default function Home() {
         ColorIcons="#77B74D"
       />
 
-        <Title 
-          img="Assets/Favicon/favicon.ico"
-          id="About"
-          name="NOSSO TRABALHO"/>
-          <AboutWork 
-          boxShadowColor="#A6CE39"
-          SallesCard={PinusCard}
-        />
+      <Title 
+        img="Assets/Favicon/favicon.ico"
+        id="About"
+        name="NOSSO TRABALHO"/>
 
-        <Title 
+      <AboutWork 
+        boxShadowColor="#A6CE39"
+        SallesCard={PinusCard}
+      />
+
+      <Title 
         img="Assets/Favicon/favicon.ico"
          id="About"
-        name="ENTREGAS"/>
-        <Slide/>
-        
-        <Title 
+        name="ENTREGAS"
+      />
+
+      <Slide/>
+      
+      <Title 
         img="Assets/Favicon/favicon.ico"
-        name="PRODUTOS"/>
+        name="PRODUTOS"
+      />
 
-        <Product id="Product"/>
+      <Product id="Product"/>
 
-        <Title 
+      <Title 
         img="Assets/Favicon/favicon.ico"
-        name=" AVALIAÇÕES"/>
-        <Depoiments/>
+        name=" AVALIAÇÕES"
+      />
 
-        <Title 
+      <Depoiments/>
+
+      <Title 
         img="Assets/Favicon/favicon.ico"
-          name="TIME DE VENDAS" 
-        />
-        <SalesCard/>
+        name="TIME DE VENDAS" 
+      />
 
-        <Contacts 
+      <SalesCard/>
+
+      <Contacts 
         Color="#77B74D"
         ColorBorder="#77B74D"
-        id="Contact" />
+        id="Contact" 
+      />
 
-        <Title 
+      <Title 
         img="Assets/Favicon/favicon.ico"
-        name="FALE CONOSCO" />
+        name="FALE CONOSCO" 
+      />
 
-        <Form />
+      <Form />
 
-        <ButtonTopWidth/>
-        <WhatsAppButton/>
-        <Cookies/>
+      <ButtonTopWidth/>
+      <WhatsAppButton/>
+      <Cookies/>
       <Footer/>
     </div>
   );

@@ -10,22 +10,22 @@ type ICards = typeof Cards[0]
 const Cards = [
     {
         id: 1,
-        img: 'Assets/Slide/Canteiro.png'        
+        img: 'Assets/Sallers/MadeiraCambara.jpg'        
     },
 
     {
         id: 2,
-        img: 'Assets/Slide/Canteiro.png'
+        img: 'Assets/Sallers/TelhaOndulada.jpg'
     },
 
     {
         id: 3,
-        img: 'Assets/Slide/Canteiro.png'
+        img: 'Assets/Sallers/TelhaFibrocimento.jpg'
     },
 
     {
         id: 4,
-        img: 'Assets/Slide/Canteiro.png'
+        img: 'Assets/Sallers/ForroSerrado.jpg'
     }
 ]
 
@@ -122,7 +122,7 @@ const Gallery = () => {
                 {Cards.map((item, i) => (
                     <img
                     onClick={() => FilteredIndex(item)} 
-                    key={i} src='Assets/Slide/Canteiro.png' alt="" />
+                    key={i} src={item.img} alt="" />
                 ))}
             </C.Box>  
 
@@ -137,8 +137,8 @@ const Gallery = () => {
                     </C.CardPoupUp>
                     <C.Actions>
                         <span onClick={() => setActive(false)}><AiFillCloseCircle /></span>
-                        <Button type='button' onClick={ handleLeftClick}><FaArrowAltCircleLeft/></Button>
-                        <Button type='button' onClick={ handleRightClick}><FaArrowAltCircleRight/></Button>
+                        <Button type='button' onClick={handleLeftClick}><FaArrowAltCircleLeft/></Button>
+                        <Button type='button' onClick={handleRightClick}><FaArrowAltCircleRight/></Button>
                     </C.Actions>
                 </C.PoupUp>
             ) : <></>}

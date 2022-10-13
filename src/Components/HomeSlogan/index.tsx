@@ -25,7 +25,8 @@ export default function HomeSlogan({title, description, img, backgroundVetor,bac
     const geRandom = Numbers[getRandom(0, Numbers.length - 1)]
 
     const openWhatsApp = () =>{
-        window.open(geRandom, '_blank')
+        // window.open(geRandom, '_blank')
+        
     }
 
     return(
@@ -33,6 +34,7 @@ export default function HomeSlogan({title, description, img, backgroundVetor,bac
             <C.Box>           
                 <C.H1>{title}</C.H1>
                 <C.Description>{description}</C.Description>
+                
                 <Button 
                     backgroundColor={backgroundColorButton}
                     txtColor='#fff'

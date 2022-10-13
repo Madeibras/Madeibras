@@ -13,7 +13,7 @@ const ProductsRoof = () => {
                     </C.BoxImg>
                     
                     <C.Title>
-                        <h2>Madeira Cambará</h2>
+                        <h2>{item.title}</h2>
                         <p>{item.description}</p>
                     </C.Title>
                 </C.CardProducts>

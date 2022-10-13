@@ -10,8 +10,8 @@ export default function RouterDOM () {
         <Router>
             <GlobalStyle />
             <Routes>
-                <Route path="/Telhado" element={<Home/>} />
-                <Route path="/" element={<Roof/>} />
+                <Route path="/" element={<Home/>} />
+                <Route path="/Telhado" element={<Roof/>} />
             </Routes>
         </Router>
     )

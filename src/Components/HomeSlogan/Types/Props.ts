@@ -6,4 +6,5 @@ export interface IProps {
     backgroundVetor?: string
     backgroundColorButton?: string
     backgroundColorHoverButton?: string
+    Link?: string
 }

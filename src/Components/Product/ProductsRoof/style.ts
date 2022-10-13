@@ -108,7 +108,7 @@ export const Title = styled.div`
     }
 
     p{
-        font-size: 1.3rem;
+        font-size: 1.1rem;
 
         ${Media.Tablet}{
             font-size: 1rem;
