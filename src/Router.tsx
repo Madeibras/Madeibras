@@ -4,12 +4,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Roof from "Pages/Roof"
 
 
-export default function RouterDOM () {
+export default function RouterDOM (props: any) {
 
     return (
-        <Router>
+        <Router basename={props.basename}>
             <GlobalStyle />
-            <Routes>
+            <Routes >
                 <Route path="/" element={<Home/>} />
                 <Route path="/Telhado" element={<Roof/>} />
             </Routes>

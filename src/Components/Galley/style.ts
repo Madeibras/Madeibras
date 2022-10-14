@@ -23,23 +23,18 @@ export const Box = styled.div`
     gap: 10px;
     align-items: center;
     justify-content: center;
-
+   
     ${Media.MobileM}{
         width: 90%;
         margin: auto;
     }
 
     img{
+        position: relative;
         width: 100%;
         height: 350px;
         object-fit: cover;
         border-radius: 15px;
-        cursor: pointer;
-
-        &:hover{
-            transition: all 0.2s ease-in;
-            opacity: 0.8;
-        }
 
         ${Media.Tablet}{
             height: 250px;
@@ -54,6 +49,38 @@ export const Box = styled.div`
             height: 120px;
             border-radius: 8px;
         }
+    }
+`
+
+export const CardsInfo = styled.div`
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-family: 'Poppins';
+    opacity: 0.6;
+    cursor: pointer;
+  
+    p{
+        position: absolute;
+        width: 100%;    
+        top: 45%;
+        right: 0;
+        color: #F4F4F4;
+        font-size: 2rem;
+        font-weight: 600;
+
+        ${Media.Tablet}{
+            font-size: 1.2rem;
+        }
+
+        ${Media.MobileM}{
+            font-size: 0.7rem;
+        }
+    }
+
+    &:hover{
+        transition: all 0.2s ease-in;
+        opacity: 1;
     }
 `
 
@@ -102,6 +129,7 @@ export const CardPoupUp = styled.div`
 `
 
 export const BoxImg = styled.div`
+    position: relative;
     width: 100%;
     height: 600px;
     padding: 5px; 
@@ -123,6 +151,8 @@ export const BoxImg = styled.div`
         height: 100%;
         border-radius: 15px;
     }
+
+    
 `
 
 

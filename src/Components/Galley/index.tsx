@@ -2,6 +2,7 @@ import Button from 'Components/Button'
 import { useRef, useState } from 'react'
 import { AiFillCloseCircle } from 'react-icons/ai'
 import {FaArrowAltCircleRight, FaArrowAltCircleLeft} from 'react-icons/fa'
+import hexToRgba from 'hex-to-rgba'
 
 import * as C from './style'
 
@@ -10,22 +11,26 @@ type ICards = typeof Cards[0]
 const Cards = [
     {
         id: 1,
-        img: 'Assets/Sallers/MadeiraCambara.jpg'        
+        img: 'Assets/Sallers/MadeiraCambara.jpg',
+        title: "Vigamento Cambará"  
     },
 
     {
         id: 2,
-        img: 'Assets/Sallers/TelhaOndulada.jpg'
+        img: 'Assets/Sallers/TelhaOndulada.jpg',
+        title: "Telha cerâmica"  
     },
 
     {
         id: 3,
-        img: 'Assets/Sallers/TelhaFibrocimento.jpg'
+        img: 'Assets/Sallers/TelhaFibrocimento.jpg',
+        title: "Telha ondulada"  
     },
 
     {
         id: 4,
-        img: 'Assets/Sallers/ForroSerrado.jpg'
+        img: 'Assets/Sallers/ForroSerrado.jpg',
+        title: "Forro"  
     }
 ]
 
@@ -120,12 +125,12 @@ const Gallery = () => {
         <C.Container>
             <C.Box >
                 {Cards.map((item, i) => (
-                    <div>
-                        <img
+                    <C.CardsInfo  >
+                        <img 
                         onClick={() => FilteredIndex(item)} 
                         key={i} src={item.img} alt="" />
-                        <p>dasdasdasd</p>
-                    </div>
+                        <p>{item.title}</p>
+                    </C.CardsInfo>
                 ))}
             </C.Box>  
 
@@ -135,7 +140,6 @@ const Gallery = () => {
                         {filterSalles.map((item: any) => (
                             <C.BoxImg key={item.id}>
                                 <img src={item.img} alt={item.title} />  
-                              
                             </C.BoxImg>
                         ))}
                     </C.CardPoupUp>
