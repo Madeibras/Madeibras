@@ -1,8 +1,8 @@
 import * as C from './style'
 import  SlideImg  from 'Mock/Slide.json'
 import { useRef } from 'react'
-
 import {MdKeyboardArrowLeft, MdKeyboardArrowRight} from 'react-icons/md'
+
 
 const Slide = () => {
 
@@ -20,6 +20,7 @@ const Slide = () => {
 
         console.log(carrousel)
     }
+      
 
     return(
         <C.Container>

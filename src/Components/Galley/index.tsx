@@ -120,9 +120,12 @@ const Gallery = () => {
         <C.Container>
             <C.Box >
                 {Cards.map((item, i) => (
-                    <img
-                    onClick={() => FilteredIndex(item)} 
-                    key={i} src={item.img} alt="" />
+                    <div>
+                        <img
+                        onClick={() => FilteredIndex(item)} 
+                        key={i} src={item.img} alt="" />
+                        <p>dasdasdasd</p>
+                    </div>
                 ))}
             </C.Box>  
 
@@ -132,6 +135,7 @@ const Gallery = () => {
                         {filterSalles.map((item: any) => (
                             <C.BoxImg key={item.id}>
                                 <img src={item.img} alt={item.title} />  
+                              
                             </C.BoxImg>
                         ))}
                     </C.CardPoupUp>
