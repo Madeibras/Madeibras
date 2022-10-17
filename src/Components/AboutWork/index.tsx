@@ -27,7 +27,7 @@ const AboutWork = ({SallesCard, primary, boxShadowColor}: IProps) => {
     return(
     <>
     <C.H1>
-        Há 44 anos oferecendo as melhores soluções em madeiras. 
+        A Madeibrás, há 44 anos oferecendo as melhores soluções para cada etapa de sua construção, seja ela pequena, média ou grande. 
     </C.H1>
     {counter && (
         <C.Container>

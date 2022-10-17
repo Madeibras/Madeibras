@@ -24,8 +24,8 @@ export default function Home() {
       id="Home"/>
       <HomeSlogan 
         img='Assets/img/VetorMadeibras1.svg'
-        title="COMPRAR MADEIRAS NUNCA FOI TÃO FACÍL"
-        description="Atendimento online, com as melhores condições do mercado. Você ganha em qualidade, agilidade e maior eficiência para seus projetos. "
+        title="MADEIRAS PARA CONSTRUÇÃO"
+        description="Atendimento online, com as melhores condições do mercado. Comprar madeiras nunca foi tão fácil."
         backgroundColorButton="#77B74D"
         backgroundColorHoverButton="#517c34"
         backgroundVetor="Assets/img/VetorHome.png"

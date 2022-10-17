@@ -6,7 +6,7 @@ export const PinusCard = [
         img: './Assets/Card/Tronco.svg',
         start: 0, 
         end: 200,
-        subTitle: "Estoques de madeiras à pronta entrega."
+        subTitle: "Estoque à pronta entrega"
     },
 
     {
@@ -22,7 +22,7 @@ export const PinusCard = [
         img: './Assets/Card/Caminhao.svg',
         start: 0, 
         end: 700,
-        subTitle: "Agilidade no seu atendimento via WhatsApp."
+        subTitle: "Compromisso com prazo de entrega"
     },
 ]
 
@@ -45,6 +45,6 @@ export const RoofCard = [
         id: 3,
         img: './Assets/Card/Acabamento.svg',
         title: "Acabamento",
-        subTitle: "Aparelhamento nas 4 faces."
+        subTitle: "Aparelhamento nas quatros faces"
     },
 ]

@@ -7,13 +7,13 @@
     },
     {
         "id": 2,
-        "name": "CHAPA PLASTIFICADA",
+        "name": "COMPENSADO PLASTIFICADO",
         "img": "Assets/Sallers/Plastificado_cm.png",
         "link": "#plastificado"
     },
     {
         "id": 3,
-        "name": "CHAPA RESINADA",
+        "name": "COMPENSADO RESINADO",
         "img": "Assets/Sallers/Madeirite_cm.png",
         "link": "#madeirite"
     },

@@ -40,6 +40,6 @@ export const Txt = styled.span`
         }
 
     ${Media.MobileL} {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 `

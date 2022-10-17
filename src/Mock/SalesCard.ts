@@ -28,7 +28,7 @@ export const SalesCards: ISalesCards[] = [
     {
         id: 3,
         img: "Assets/SallesCard/Gabriele.jpg",
-        name: 'Gabriele',
+        name: 'Gabriele Santos',
         Info: 'Vendedora',
         WhatsApp: 'https://wa.me/5511940881707',
         Email: "mailto:gabriele@madeibras.com.br"

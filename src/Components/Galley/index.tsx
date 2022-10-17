@@ -30,7 +30,7 @@ const Cards = [
     {
         id: 4,
         img: 'Assets/Sallers/ForroSerrado.jpg',
-        title: "Forro"  
+        title: "Forro De Madeira"  
     }
 ]
 

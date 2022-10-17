@@ -80,7 +80,7 @@ export const Title = styled.h2`
     width: 100%;
     text-align: center;
     background-color: #384044;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #FFFF;
     padding: 10px;
     border-top-left-radius: 10px;

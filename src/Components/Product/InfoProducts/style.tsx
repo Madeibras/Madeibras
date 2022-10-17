@@ -15,6 +15,8 @@ export const Box = styled.div`
     align-items: center;
     margin: auto;
 
+    margin-top: 60px;
+
     ${Media.Laptop}{
         flex-direction: column;
         justify-content: center;
@@ -60,6 +62,7 @@ export const Category = styled.div`
 export const Measurements = styled.div`
     width: 100%;
     height: 100%;
+
 `
 
 export const Descriptions = styled.div`

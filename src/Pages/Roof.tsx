@@ -25,7 +25,7 @@ export default function Roof() {
             <HomeSlogan 
                 img='Assets/img/telhaVetor.png'
                 title="MADEIRA PARA TELHADO" 
-                description="Atendimento online, com as melhores condições do mercado. Você ganha em qualidade, agilidade e maior eficiência para seus projeto."
+                description="Atendimento online, com as melhores condições do mercado. Comprar madeiras nunca foi tão fácil."
                 backgroundColorButton="#69E087"
                 backgroundColorHoverButton="#48ad61"
                 backgroundVetor="Assets/img/BackRoof.png"
@@ -53,7 +53,7 @@ export default function Roof() {
 
             <Title 
             img="Assets/Favicon/BrasaoRoof.png"
-            name=" AVALIAÇÕES"/>
+            name="O QUE DIZEM NOSSOS CLIENTES"/>
             <Depoiments/>
 
             <Title 
