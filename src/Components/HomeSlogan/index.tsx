@@ -1,46 +1,27 @@
 import Button from 'Components/Button'
 import SocialMidia from './SocialMidia/Index'
 import {IProps} from './Types/Props'
+import { useContext } from 'react'
+import { WhatsAppContext } from '../../Common/WhatsApp.d'
 import * as C from './style'
 
-const Numbers = [
-    //Romualdo
-    'https://wa.me/5511958851545',
-    //Gabriele
-    'https://wa.me/5511940881707',
-    //Joyce
-    'https://wa.me/5511969760878',
-    //Arthur
-    'https://wa.me/5511934421941',
-    //Rodrigo
-    'https://wa.me/5511960189904',
-]
 
 export default function HomeSlogan({title, description, img, backgroundVetor,backgroundColorButton, backgroundColorHoverButton, ColorIcons} :IProps) {
 
-    const getRandom = (min: number , max: number) => {
-        return Math.floor(Math.random() * (max - min + 1) + min)
-    }
-
-    const geRandom = Numbers[getRandom(0, Numbers.length - 1)]
-
-    const openWhatsApp = () =>{
-        // window.open(geRandom, '_blank')
-        
-    }
+    const open = useContext(WhatsAppContext)
 
     return(
         <C.Container>
             <C.Box>           
                 <C.H1>{title}</C.H1>
                 <C.Description>{description}</C.Description>
-                
                 <Button 
                     backgroundColor={backgroundColorButton}
                     txtColor='#fff'
                     backgroundHover={backgroundColorHoverButton}
-                    onClick={() => openWhatsApp()}
-                >Orçamento agora!</Button> 
+                    onClick={() => open?.openWhatsApp()}
+                >Orçamento agora!
+                </Button> 
                 <SocialMidia Color={ColorIcons} />
             </C.Box>
             <C.Vetor src={img} alt='Vetor Madeibras'/>

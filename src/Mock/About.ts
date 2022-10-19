@@ -14,7 +14,7 @@ export const PinusCard = [
         img: './Assets/Card/Atendimento.svg',
         start: 0, 
         end: 2500,
-        subTitle: "Agilidade no seu atendimento via WhatsApp."
+        subTitle: "Agilidade no seu atendimento via WhatsApp"
     },
 
     {
@@ -31,14 +31,14 @@ export const RoofCard = [
         id: 1,
         img: './Assets/Card/Vector.svg',
         title: "Resistência",
-        subTitle: "Madeiras com qualidade e procedência."
+        subTitle: "Madeiras com qualidade e procedência"
     },
 
     {
         id: 2,
         img: './Assets/Card/TelhadoVetor.svg',
         title: "Durabilidade",
-        subTitle: "Telhas certificadas pela ABNT."
+        subTitle: "Telhas certificadas pela ABNT"
     },
 
     {

@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react'
+import React, {createContext,useState} from 'react'
 import { ThemeProvider } from "styled-components";
 import {themes} from './Theme/darkMode'
 
@@ -8,7 +8,7 @@ interface IContext {
   setTheme: React.Dispatch<React.SetStateAction<string>>
 }
 
-export const ThemeContext = React.createContext<IContext | null>(null);
+export const ThemeContext = createContext<IContext | null>(null);
 
 export const DarkThemeProvider = ({ children }: { children: React.ReactNode }) => {
     const [theme, setTheme] = useState("light")

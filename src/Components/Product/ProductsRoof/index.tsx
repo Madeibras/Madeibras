@@ -1,10 +1,11 @@
 import { Products } from 'Mock/ProductsRoof'
+import { IProps } from 'Types/Card'
 import * as C from './style'
 
-const ProductsRoof = () => {
+const ProductsRoof = ({id}: IProps) => {
     return(
         <>
-        <C.Container>
+        <C.Container id={id}>
         {Products.map((item) => (
             <C.Box>
                 <C.CardProducts>

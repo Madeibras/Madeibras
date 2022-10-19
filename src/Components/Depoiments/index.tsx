@@ -1,4 +1,5 @@
-import { useRef} from 'react'
+import { useContext} from 'react'
+import { CarrouselContext } from 'Common/Carrousel.d'
 import {AiFillStar} from 'react-icons/ai'
 import Depoiment from 'Mock/Depoiments.json'
 import * as C from './style'
@@ -7,26 +8,12 @@ import {MdKeyboardArrowLeft, MdKeyboardArrowRight} from 'react-icons/md'
 
 const Depoiments = () => {
 
-    const carrousel = useRef <any | null>(null)
- 
-    const  handleLeftClick = (e: React.MouseEvent<HTMLElement>) => {
-        e.preventDefault()
-
-        carrousel.current.scrollLeft -= carrousel.current.offsetWidth
-    }
-
-    const handleRightClick = (e: React.MouseEvent<HTMLElement>) => {
-        e.preventDefault()
-  
-        carrousel.current.scrollLeft += carrousel.current.offsetWidth
-
-        console.log(carrousel)
-    }
+    const SlideShow = useContext(CarrouselContext)
 
     return(
     
             <C.Container >
-                <C.Box ref={carrousel}>
+                <C.Box ref={SlideShow?.carrousel}>
                     {Depoiment.map((item) => (
                         <C.Card key={item.id}>
                             <C.Header>
@@ -46,8 +33,8 @@ const Depoiments = () => {
                     ))}
                 </C.Box>
                 <C.Buttons>
-                    <button onClick={handleLeftClick}>{<MdKeyboardArrowLeft/>}</button>
-                    <button onClick={handleRightClick}>{<MdKeyboardArrowRight/>}</button>
+                    <button onClick={SlideShow?.handleLeftClick}>{<MdKeyboardArrowLeft/>}</button>
+                    <button onClick={SlideShow?.handleRightClick}>{<MdKeyboardArrowRight/>}</button>
                 </C.Buttons>
             </C.Container>
         )

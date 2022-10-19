@@ -19,7 +19,7 @@ export default function Header({id, img}: IProps){
                 <img src="Assets/img/LogoBranca.png" alt="Logo" />
             </C.BoxImg>
             <C.Ul>
-                <Nav/>  
+                <Nav id={id}/>  
             </C.Ul>
                 
             <BurguerButton
@@ -28,7 +28,7 @@ export default function Header({id, img}: IProps){
 
             {isOpen ? 
                 <C.UlNav>
-                    <Nav/>
+                    <Nav id={id}/>
                 </C.UlNav>: <></>}
         </C.Header>
     </>

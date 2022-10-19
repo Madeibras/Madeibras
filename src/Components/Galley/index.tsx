@@ -1,10 +1,11 @@
 import Button from 'Components/Button'
-import { useRef, useState } from 'react'
+import { useContext, useState } from 'react'
+import { CarrouselContext } from 'Common/Carrousel.d'
 import { AiFillCloseCircle } from 'react-icons/ai'
 import {FaArrowAltCircleRight, FaArrowAltCircleLeft} from 'react-icons/fa'
-import hexToRgba from 'hex-to-rgba'
 
 import * as C from './style'
+import { CategoryContext } from 'Common/Category.d'
 
 type ICards = typeof Cards[0]
 
@@ -89,54 +90,42 @@ const ImagensSlide = [
 
 const Gallery = () => {
 
-    const carrousel = useRef <any | null>(null)
- 
-    const  handleLeftClick = (e: React.MouseEvent<HTMLElement>) => {
-        e.preventDefault()
-
-        carrousel.current.scrollLeft -= carrousel.current.offsetWidth
-    }
-
-    const handleRightClick = (e: React.MouseEvent<HTMLElement>) => {
-        e.preventDefault()
-  
-        carrousel.current.scrollLeft += carrousel.current.offsetWidth
-
-        console.log(carrousel)
-    }
-
+    const slideShow = useContext(CarrouselContext)
+    
     const [active, setActive] = useState< number | boolean | null | ICards>(null)
 
     const FilteredIndex = (index: ICards) => {
         if(active !== index){
             setActive(index.id)
-            return
+            
         }else {
             setActive(null)
-            return
+    
         }
     }
+
+    const Category = useContext(CategoryContext)
 
     const filterSalles = active ? 
     ImagensSlide.filter((item: any) =>  item.category === active) : []
 
-
     return(
         <C.Container>
             <C.Box >
-                {Cards.map((item, i) => (
+                {Cards.map((item) => 
                     <C.CardsInfo  >
                         <img 
                         onClick={() => FilteredIndex(item)} 
-                        key={i} src={item.img} alt="" />
+                        key={item.id}
+                        src={item.img} alt={item.title} />
                         <p>{item.title}</p>
                     </C.CardsInfo>
-                ))}
+                )}
             </C.Box>  
 
             {active ? (
                 <C.PoupUp>
-                    <C.CardPoupUp ref={carrousel}>
+                    <C.CardPoupUp ref={slideShow?.carrousel}>
                         {filterSalles.map((item: any) => (
                             <C.BoxImg key={item.id}>
                                 <img src={item.img} alt={item.title} />  
@@ -145,8 +134,8 @@ const Gallery = () => {
                     </C.CardPoupUp>
                     <C.Actions>
                         <span onClick={() => setActive(false)}><AiFillCloseCircle /></span>
-                        <Button type='button' onClick={handleLeftClick}><FaArrowAltCircleLeft/></Button>
-                        <Button type='button' onClick={handleRightClick}><FaArrowAltCircleRight/></Button>
+                        <Button type='button' onClick={slideShow?.handleLeftClick}><FaArrowAltCircleLeft/></Button>
+                        <Button type='button' onClick={slideShow?.handleRightClick}><FaArrowAltCircleRight/></Button>
                     </C.Actions>
                 </C.PoupUp>
             ) : <></>}

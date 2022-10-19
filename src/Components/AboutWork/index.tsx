@@ -3,12 +3,13 @@ import CountUp from 'react-countup'
 import { useEffect, useState } from 'react'
 
 interface IProps {
+    id: string
     SallesCard?: any
     primary?: boolean
     boxShadowColor?: string
 }
 
-const AboutWork = ({SallesCard, primary, boxShadowColor}: IProps) => {
+const AboutWork = ({SallesCard, primary, boxShadowColor, id}: IProps) => {
 
     const [counter, setCounter] = useState(false)
 
@@ -26,13 +27,13 @@ const AboutWork = ({SallesCard, primary, boxShadowColor}: IProps) => {
 
     return(
     <>
-    <C.H1>
-        A Madeibrás, há 44 anos oferecendo as melhores soluções para cada etapa de sua construção, seja ela pequena, média ou grande. 
+    <C.H1 id={id}>
+        A <span>Madeibrás</span>, há 44 anos oferecendo as melhores soluções para cada etapa de sua construção, seja ela pequena, média ou grande. 
     </C.H1>
     {counter && (
         <C.Container>
             {SallesCard.map((item: any) => (
-                <C.Box boxShadowColor={boxShadowColor}>
+                <C.Box key={item.id} boxShadowColor={boxShadowColor}>
                     <C.BoxImg>
                         <img src={item.img} alt={item.title} /> 
                     </C.BoxImg>
@@ -43,7 +44,6 @@ const AboutWork = ({SallesCard, primary, boxShadowColor}: IProps) => {
                     </C.Description>
                 </C.Box>
             ))}
-           
         </C.Container>
     )}
         

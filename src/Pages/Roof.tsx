@@ -13,14 +13,15 @@ import SalesCard from "Components/SalesCard";
 import Title from "Components/Title";
 import WhatsAppButton from "Components/WhatsAppButton";
 import { RoofCard } from "Mock/About";
+import { IProps } from "Types/Card";
 
 
-export default function Roof() {
+export default function Roof({id}: IProps) {
     return (
         <div>
             <Header 
             img="Assets/img/backgroundRoof.svg"
-            id="Home"/>
+            id={id}/>
 
             <HomeSlogan 
                 img='Assets/img/telhaVetor.png'
@@ -38,13 +39,15 @@ export default function Roof() {
 
             <AboutWork primary 
             boxShadowColor="#8FD993"
-            SallesCard={RoofCard}/>
+            SallesCard={RoofCard}
+            id="About"
+            />
 
             <Title
             img="Assets/Favicon/BrasaoRoof.png"
             name="PRODUTOS"/>
 
-            <ProductsRoof/>
+            <ProductsRoof id="Product"/>
 
             <Title 
             img="Assets/Favicon/BrasaoRoof.png"

@@ -30,7 +30,6 @@ const InfoProducts = ({SallesMenu}: IProps) => {
                                     <th>{item.Comprimento}</th>
                                 </>
                             ))}
-                        
                         </thead>
                         <tbody>
                             {item.tbody.map((item) => (

@@ -4,18 +4,23 @@ import { Link } from 'react-router-dom'
 
 const imgs = [
     {
+        id: 1,
         img: "Assets/Pagaments/Pix.png",
     },
     {
+        id: 2,
         img: "Assets/Pagaments/Visa.png",
     },
     {
+        id: 3,
         img: "Assets/Pagaments/MasterCard.png",
     },
     {
+        id: 4,
         img: "Assets/Pagaments/Elo.png",
     },
     {
+        id: 5,
         img: "Assets/Pagaments/Rede.png",
     },
 ]
@@ -43,7 +48,7 @@ export default function Footer () {
                     <div>
                         <p>Formas de pagamentos:</p>
                             {imgs.map((item) => (
-                                <img src={item.img} alt="" />
+                                <img key={item.id} src={item.img} alt="" />
                             ))}
                     </div>
                 </C.Pagaments>

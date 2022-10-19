@@ -24,7 +24,10 @@ export const H1 = styled.h1`
     font-weight: 500;
     color: ${(props) => props.theme.color};
 
-    
+    span{
+        color: #86d455;
+    }
+
     ${Media.Laptop}{
         font-size: 1.6rem;
     }

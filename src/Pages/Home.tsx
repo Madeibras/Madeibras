@@ -13,15 +13,16 @@ import ButtonTopWidth from "Components/ButtonTopWidth";
 import WhatsAppButton from "Components/WhatsAppButton";
 import Cookies from "Components/Cookies";
 import { PinusCard } from "Mock/About";
-import { Link } from "react-router-dom";
+import { IProps } from "Types/Card";
 
-export default function Home() {
+export default function Home({id}: IProps) {
 
   return (
     <div>
       <Header 
       img="Assets/img/background.svg"
-      id="Home"/>
+      id={id}/>
+      
       <HomeSlogan 
         img='Assets/img/VetorMadeibras1.svg'
         title="MADEIRAS PARA CONSTRUÇÃO"
@@ -38,13 +39,14 @@ export default function Home() {
         name="NOSSO TRABALHO"/>
 
       <AboutWork 
+        id="About"
         boxShadowColor="#A6CE39"
         SallesCard={PinusCard}
       />
 
       <Title 
         img="Assets/Favicon/favicon.ico"
-         id="About"
+        
         name="ENTREGAS"
       />
 

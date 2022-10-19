@@ -4,6 +4,7 @@ import InfoProducts from './InfoProducts'
 import Salles from 'Mock/Salles.json'
 import { useState } from 'react'
 import { IProps } from 'Types/Card'
+import { NavHashLink } from 'react-router-hash-link';
 
 type Categorys = typeof Card[0]
 
@@ -14,7 +15,6 @@ const Product = ({id}: IProps) => {
     const selectFilter = (category: Categorys) => {
         if(activeCategory !== category){
             setActiveCategory(category.id)
-            
             return;
         }else{
             setActiveCategory(null)
@@ -29,17 +29,18 @@ const Product = ({id}: IProps) => {
         <>
             <C.Container id={id}>
                 {Card.map((item) => (
-                    <a href={item.link}><C.Box
+                   <NavHashLink to={`/Construcao/${item.link}`} key={item.id}>
+                    <C.Box
                     onClick={() => selectFilter(item)}
-                    isActive={activeCategory === item.id ? true : false}
-                    key={item.id}>
+                    isActive={activeCategory === item.id ? true : false}>
                         <C.Title> {item.name} </C.Title>
                         <img src={item.img} alt={item.img} />
                         <C.Button onClick={() => selectFilter(item)}> Ver Mais </C.Button>
-                    </C.Box></a>
+                    </C.Box>
+                    </NavHashLink>
                     ))}
                 </C.Container>
-            <InfoProducts SallesMenu={FilterSalles} />
+            <InfoProducts SallesMenu={FilterSalles}  />
         </>
     )
 }
