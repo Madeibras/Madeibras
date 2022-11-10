@@ -3,9 +3,7 @@ import { useContext, useState } from 'react'
 import { CarrouselContext } from 'Common/Carrousel.d'
 import { AiFillCloseCircle } from 'react-icons/ai'
 import {FaArrowAltCircleRight, FaArrowAltCircleLeft} from 'react-icons/fa'
-
 import * as C from './style'
-import { CategoryContext } from 'Common/Category.d'
 
 type ICards = typeof Cards[0]
 
@@ -34,6 +32,8 @@ const Cards = [
         title: "Forro De Madeira"  
     }
 ]
+
+type IImagensSlide = typeof ImagensSlide[0]
 
 const ImagensSlide = [
     {
@@ -90,21 +90,18 @@ const ImagensSlide = [
 
 const Gallery = () => {
 
-    const slideShow = useContext(CarrouselContext)
+     const slideShow = useContext(CarrouselContext)
     
     const [active, setActive] = useState< number | boolean | null | ICards>(null)
 
     const FilteredIndex = (index: ICards) => {
         if(active !== index){
             setActive(index.id)
-            
         }else {
             setActive(null)
     
         }
     }
-
-    const Category = useContext(CategoryContext)
 
     const filterSalles = active ? 
     ImagensSlide.filter((item: any) =>  item.category === active) : []
@@ -126,7 +123,7 @@ const Gallery = () => {
             {active ? (
                 <C.PoupUp>
                     <C.CardPoupUp ref={slideShow?.carrousel}>
-                        {filterSalles.map((item: any) => (
+                        {filterSalles.map((item: IImagensSlide) => (
                             <C.BoxImg key={item.id}>
                                 <img src={item.img} alt={item.title} />  
                             </C.BoxImg>

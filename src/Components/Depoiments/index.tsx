@@ -11,7 +11,6 @@ const Depoiments = () => {
     const SlideShow = useContext(CarrouselContext)
 
     return(
-    
             <C.Container >
                 <C.Box ref={SlideShow?.carrousel}>
                     {Depoiment.map((item) => (

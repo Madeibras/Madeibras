@@ -1,16 +1,28 @@
 import * as C from './style'
 import  SlideImg  from 'Mock/Slide.json'
 import {MdKeyboardArrowLeft, MdKeyboardArrowRight} from 'react-icons/md'
-import { useContext } from 'react'
-import { CarrouselContext } from 'Common/Carrousel.d'
+import { useRef } from 'react'
+
 
 const Slide = () => {
       
-    const slideShow = useContext(CarrouselContext)
+    const carrousel = useRef <any | null>(null)
+
+    const  handleLeftClick = (e: React.MouseEvent<HTMLElement>) => {
+        e.preventDefault()
+        carrousel.current.scrollLeft -= carrousel.current.offsetWidth
+    }
+
+    const handleRightClick = (e: React.MouseEvent<HTMLElement>) => {
+        e.preventDefault()
+        carrousel.current.scrollLeft += carrousel.current.offsetWidth
+
+        console.log(carrousel)
+    }
 
     return(
         <C.Container>
-            <C.Box ref={slideShow?.carrousel}>
+            <C.Box ref={carrousel}>
                 {SlideImg.map((item) => ( 
                     <C.CardImg key={item.id}>
                         <img src={item.img} alt='Foto Madeibras' />
@@ -18,8 +30,8 @@ const Slide = () => {
                 ))}
             </C.Box>
             <C.Buttons>
-                <C.BtnLeft onClick={slideShow?.handleLeftClick}><MdKeyboardArrowLeft/></C.BtnLeft>
-                <C.BtnRight onClick={slideShow?.handleRightClick}><MdKeyboardArrowRight/> </C.BtnRight>
+                <C.BtnLeft onClick={handleLeftClick}><MdKeyboardArrowLeft/></C.BtnLeft>
+                <C.BtnRight onClick={handleRightClick}><MdKeyboardArrowRight/> </C.BtnRight>
             </C.Buttons>
         </C.Container>
     )

@@ -14,15 +14,15 @@ export const WhatsAppProvider = ({children}: ContextProviderProps) => {
 
     const Numbers = [
         //Romualdo
-        'https://wa.me/5511958851545',
+        'https://wa.me/5511958851545?text=Olá quero fazer um orçamento!',
         //Gabriele
-        'https://wa.me/5511940881707',
+        'https://wa.me/5511940881707?text=Olá quero fazer um orçamento!',
         //Joyce
-        'https://wa.me/5511969760878',
+        'https://wa.me/5511969760878?text=Olá quero fazer um orçamento!',
         //Arthur
-        'https://wa.me/5511934421941',
+        'https://wa.me/5511934421941?text=Olá quero fazer um orçamento!',
         //Rodrigo
-        'https://wa.me/5511960189904',
+        'https://wa.me/5511960189904?text=Olá quero fazer um orçamento!',
     ]
 
     const getRandom = (min: number , max: number) => {

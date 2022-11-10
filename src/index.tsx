@@ -1,4 +1,5 @@
 import { CarrouselProvider } from 'Common/Carrousel.d';
+import { CategoryProvider } from 'Common/Category.d';
 import { WhatsAppProvider } from 'Common/WhatsApp.d';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -12,13 +13,15 @@ const root = ReactDOM.createRoot(
 
 root.render(
     <React.StrictMode>
-        <WhatsAppProvider>
-          <CarrouselProvider>
-            <DarkThemeProvider>
-                <RouterDOM basename={baseUrl} />
-            </DarkThemeProvider>
-          </CarrouselProvider>
-        </WhatsAppProvider>
+      <CategoryProvider>
+          <WhatsAppProvider>
+            <CarrouselProvider>
+              <DarkThemeProvider>
+                  <RouterDOM basename={baseUrl} />
+              </DarkThemeProvider>
+            </CarrouselProvider>
+          </WhatsAppProvider>
+        </CategoryProvider>
     </React.StrictMode>
   
 );
