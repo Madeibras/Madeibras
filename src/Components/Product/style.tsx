@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 interface IProps{
     isActive: boolean
-    otherProducts?: string | boolean
 }
 
 const Media = {
@@ -52,49 +51,10 @@ export const Box = styled.div<IProps>`
         box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
     `}
 
-    ${(props) => props.otherProducts && `
-        position: relative;
-        width: 85%;
-        height: 250px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 18px;
-        opacity: 0.7;
-        cursor: pointer;
-        transform: scaleX(-1);
-
-        ${Media.MobileL}{
-            width: 85%;
-            height: auto;
-            margin-top: 20px;
-        }
-
-            &:hover{ 
-                transition: all 0.2s ease-in;
-                opacity: 1;
-            }
-
-        h2{
-            position: absolute;
-            color: #FFFF;
-            font-size: 2rem;
-            transform: scaleX(-1);
-
-            ${Media.MobileL}{
-                font-size: 1.2rem;
-            }
-        }
-
-        img{
-            border-radius: 18px;
-        }
-    `}
-
     img{
         width: 100%;
         height: 100%;
+        
 
         ${Media.MobileL}{
             width: 100%;
@@ -115,6 +75,24 @@ export const Box = styled.div<IProps>`
         flex-direction: row;
         transform: scaleX(-1);
         border-radius: 10px;
+    }
+`
+
+export const SubTitle = styled.h2`
+    font-family: 'Poppins';
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px;
+`
+
+export const Cards = styled.section`
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    ${Media.MobileL} {
+        justify-content: center;
+        flex-direction: column
     }
 `
 

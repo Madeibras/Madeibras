@@ -40,7 +40,7 @@ export const Privacy = styled.div`
 `
 
 export const BoxButton = styled.div`
-    width: 100%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;

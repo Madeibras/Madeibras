@@ -13,7 +13,7 @@ export const PinusCard = [
         id: 2,
         img: './Assets/Card/Atendimento.svg',
         start: 0, 
-        end: 2500,
+        end: (2500),
         subTitle: "Agilidade no seu atendimento via WhatsApp"
     },
 

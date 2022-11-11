@@ -6,10 +6,27 @@ import { useState } from 'react'
 import { IProps } from 'Types/Card'
 import { NavHashLink } from 'react-router-hash-link';
 import { useNavigate } from 'react-router-dom'
+import MiniCard from 'Components/Cards/MiniCards'
+import {BsFillDoorClosedFill} from 'react-icons/bs'
+import { MdRoofing } from 'react-icons/md'
 
 type Categorys = typeof Card[0]
 
 const Product = ({id}: IProps) => {
+
+    const Cards = [
+        {
+            icon: <MdRoofing />,
+            title: 'TELHADOS',
+            rota: '/Telhado'
+        },
+
+        {
+            icon: <BsFillDoorClosedFill />,
+            title: 'PORTAS',
+            rota: '/Porta'
+        }
+    ]
 
     const navigate = useNavigate()
     const [activeCategory, setActiveCategory] = useState<any>(false)
@@ -41,10 +58,15 @@ const Product = ({id}: IProps) => {
                     </NavHashLink>
                     ))}
                 </C.Container>
-                <C.Box isActive={false} otherProducts onClick={() => navigate('/Telhado')}>
-                    <h2>OUTROS PRODUTOS</h2>
-                    <img src='https://imagens-revista-pro.vivadecora.com.br/uploads/2021/07/madeira-de-reflorestamento-toras-na-floresta-foto-Potencial-Florestal.jpeg' alt='Imagem de outros produtos' />
-                </C.Box>
+                <C.SubTitle>Outros Produtos</C.SubTitle>
+                <C.Cards>
+                    {Cards.map(item =>  
+                    <MiniCard 
+                    title={item.title}
+                    icon={item.icon}
+                    onClick={() => navigate(item.rota)} />)}
+                </C.Cards>
+                
             <InfoProducts SallesMenu={FilterSalles}  />
         </>
     )
