@@ -58,14 +58,14 @@ const Product = ({id}: IProps) => {
                     </NavHashLink>
                     ))}
                 </C.Container>
-                <C.SubTitle>Outros Produtos</C.SubTitle>
+                {/* <C.SubTitle>Outros Produtos</C.SubTitle>
                 <C.Cards>
                     {Cards.map(item =>  
                     <MiniCard 
                     title={item.title}
                     icon={item.icon}
                     onClick={() => navigate(item.rota)} />)}
-                </C.Cards>
+                </C.Cards> */}
                 
             <InfoProducts SallesMenu={FilterSalles}  />
         </>
