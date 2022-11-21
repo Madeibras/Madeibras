@@ -58,9 +58,8 @@ const Gallery = () => {
         <C.Container>
             <C.Box >
                 {Cards.map((item) =>
-                    <C.CardsInfo  >
+                    <C.CardsInfo  onClick={() => FilteredIndex(item)}>
                         <img
-                            onClick={() => FilteredIndex(item)}
                             key={item.id}
                             src={item.img} alt="" />
                         <p>{item.title}</p>

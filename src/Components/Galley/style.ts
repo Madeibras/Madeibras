@@ -66,6 +66,7 @@ export const CardsInfo = styled.div`
         top: 45%;
         right: 0;
         color: #F4F4F4;
+        background: #000;
         font-size: 2rem;
         font-weight: 600;
 
