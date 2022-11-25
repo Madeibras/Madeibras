@@ -56,9 +56,9 @@ const Slide = () => {
     return (
         <C.Container>
             <C.Box ref={carrousel}>
-                {list.map((item: IPropSlide) => (
+                {SlideImg.map((item: any) => (
                     <C.CardImg key={item.id}>
-                        <img src={url + item.image} alt='Foto Madeibras' />
+                        <img src={item.img} alt='Foto Madeibras' />
                         <button type='button' onClick={() => HandleDelete(item.id)}>Deletar</button>
                     </C.CardImg>
                 ))}

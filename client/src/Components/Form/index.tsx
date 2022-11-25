@@ -32,7 +32,7 @@ const Form = () => {
           setEmail('')
           setmessage('')
        }else if(!emailRegex.test(email) && email !== ''){
-        setError('E-mail não é invalido')
+            setError('E-mail não é invalido')
        }
     }
 

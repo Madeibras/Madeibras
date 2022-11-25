@@ -12,7 +12,7 @@ export default function FormsAddImg() {
     })
     const [imagem, setImagem] = useState('')
 
-    const HandleClick = async (e: React.FormEvent<HTMLInputElement>) => {
+    const HandleClick = async (e: any) => {
         e.preventDefault()
 
         const formData = new FormData();
@@ -43,7 +43,7 @@ export default function FormsAddImg() {
 
     return (
         <div>
-            <C.Form onSubmit={() => HandleClick} encType="multipart/form-data">
+            <C.Form onSubmit={HandleClick} encType="multipart/form-data">
                 <Input
                     name="imagem"
                     type="file"
