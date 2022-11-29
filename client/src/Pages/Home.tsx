@@ -87,7 +87,7 @@ export default function Home({ id }: IProps) {
       />
 
       <Form />
-      {/* <FormsAddImg/> */}
+      <FormsAddImg/>
       <ButtonTopWidth />
       <WhatsAppButton />
       <Cookies />

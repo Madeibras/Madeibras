@@ -7,6 +7,7 @@ import axios from 'axios'
 const Slide = () => {
 
     const [list, setList] = useState([])
+    const [editImg, setEditImg] = useState()
     const [url, setUrl] = useState('')
     
     const getImagens = async () => {
@@ -54,6 +55,7 @@ const Slide = () => {
                 {SlideImg.map((item: any) => (
                     <C.CardImg key={item.id}>
                         <img src={item.img} alt='Foto Madeibras' />
+                        <button type='button' onClick={() => HandleDelete(item.id)}>Deletar</button>
                         <button type='button' onClick={() => HandleDelete(item.id)}>Deletar</button>
                     </C.CardImg>
                 ))}

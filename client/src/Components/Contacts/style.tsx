@@ -54,7 +54,7 @@ export const Box = styled.div<IProps>`
     animation: fadeInDown 0.8s ease-in-out;
 
     ${Media.Laptop} {
-        border-bottom: 4px solid #6FB742;
+        border-bottom: 4px solid rgb(111, 183, 66);
 
         &:nth-child(4){
             border: none;

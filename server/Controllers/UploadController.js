@@ -56,7 +56,6 @@ export const updateUpload = (req, res) => {
         })
         return res.status(200).json({
             msg: "Sucesso ao editar a imagem",
-            url: "http://localhost:8080/files/upload/"
         })
     })
 }
