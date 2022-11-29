@@ -24,8 +24,8 @@ export default function HomeSlogan({ title,
                     backgroundColor={backgroundColorButton}
                     txtColor='#fff'
                     backgroundHover={backgroundColorHoverButton}
-                    onClick={() => open?.openWhatsApp()}
-                >Orçamento agora!
+                    onClick={() => open?.openWhatsApp()}>
+                        Orçamento agora!
                 </Button>
                 <SocialMidia Color={ColorIcons} />
             </C.Box>

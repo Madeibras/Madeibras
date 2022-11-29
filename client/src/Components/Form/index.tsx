@@ -6,13 +6,14 @@ import { useState } from 'react'
 import emailjs from '@emailjs/browser';
 import * as C from './style'
 
+
 const Form = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [message, setmessage] = useState('')
     const [error, setError] = useState('')
     
-    const form = useRef<any>();
+    const form = useRef() as React.MutableRefObject<HTMLFormElement>;
 
     console.log(name, email, message)
 

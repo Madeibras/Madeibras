@@ -1,10 +1,11 @@
 import * as C from './style'
 import CountUp from 'react-countup'
 import { useEffect, useState } from 'react'
+import { ISallesCard } from 'Types/ISallesCard'
 
 interface IProps {
     id: string
-    SallesCard?: any
+    SallesCard?: ISallesCard[]
     primary?: boolean
     boxShadowColor?: string
 }
@@ -20,7 +21,6 @@ const AboutWork = ({SallesCard, primary, boxShadowColor, id}: IProps) => {
             }else{
                 setCounter(false)
             }
-
             console.log(window.scrollY)
         })
     })
@@ -32,13 +32,13 @@ const AboutWork = ({SallesCard, primary, boxShadowColor, id}: IProps) => {
     </C.H1>
     {counter && (
         <C.Container>
-            {SallesCard.map((item: any) => (
+            {SallesCard!.map((item) => (
                 <C.Box key={item.id} boxShadowColor={boxShadowColor}>
                     <C.BoxImg>
                         <img src={item.img} alt={item.title} /> 
                     </C.BoxImg>
                     <C.Description primary={primary}>
-                        <h2> <CountUp start={item.start} end={item.end} duration={2} delay={0}/></h2>
+                        <h2> <CountUp start={item.start} end={item.end!} duration={2} delay={0}/> {item.Measure} </h2>
                         <h3>{item.title}</h3>
                         <p>{item.subTitle}</p>
                     </C.Description>

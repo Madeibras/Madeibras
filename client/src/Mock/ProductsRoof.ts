@@ -1,6 +1,5 @@
 
 export const Products = [
-    
     {
         id: 1,
         title: "Madeira Cambará",

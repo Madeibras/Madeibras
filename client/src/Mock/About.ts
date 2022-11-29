@@ -1,11 +1,13 @@
+import { ISallesCard } from "Types/ISallesCard"
 
 
-export const PinusCard = [
+export const PinusCard: ISallesCard[] = [
     {
         id: 1,
         img: './Assets/Card/Tronco.svg',
         start: 0, 
         end: 200,
+        Measure: "M3",
         subTitle: "Estoque à pronta entrega"
     },
 
@@ -26,7 +28,7 @@ export const PinusCard = [
     },
 ]
 
-export const RoofCard = [
+export const RoofCard: ISallesCard[] = [
     {
         id: 1,
         img: './Assets/Card/Vector.svg',

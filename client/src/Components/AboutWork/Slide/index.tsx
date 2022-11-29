@@ -4,14 +4,9 @@ import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
 import { useEffect, useRef, useState } from 'react'
 import axios from 'axios'
 
-interface IPropSlide {
-    image: string
-    id: number
-}
-
 const Slide = () => {
 
-    const [list, setList] = useState<IPropSlide[]>([])
+    const [list, setList] = useState([])
     const [url, setUrl] = useState('')
     
     const getImagens = async () => {

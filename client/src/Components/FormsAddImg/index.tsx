@@ -18,8 +18,8 @@ export default function FormsAddImg() {
         const formData = new FormData();
         formData.append('image', imagem);
 
-            if(!imagem.length){
-                setStatus({
+        if (!imagem.length) {
+            setStatus({
                 type: 'Envie alguma imagem ',
                 active: false
             })

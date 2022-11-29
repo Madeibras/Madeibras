@@ -17,17 +17,15 @@ import { PinusCard } from "Mock/About";
 import { IProps } from "Types/Card";
 import { useState } from "react";
 
-export default function Home({id}: IProps) {
-
-  
+export default function Home({ id }: IProps) {
 
   return (
     <div>
-      <Header 
-      img="Assets/img/background.svg"
-      id={id}/>
-      
-      <HomeSlogan 
+      <Header
+        img="Assets/img/background.svg"
+        id={id} />
+
+      <HomeSlogan
         img='Assets/img/VetorMadeibras1.svg'
         title="MADEIRAS PARA CONSTRUÇÃO"
         description="Atendimento online, com as melhores condições do mercado. Comprar madeiras nunca foi tão fácil."
@@ -37,63 +35,63 @@ export default function Home({id}: IProps) {
         ColorIcons="#77B74D"
       />
 
-      <Title 
+      <Title
         img="Assets/Favicon/favicon.ico"
         id="About"
-        name="NOSSO TRABALHO"/>
+        name="NOSSO TRABALHO" />
 
-      <AboutWork 
+      <AboutWork
         id="About"
         boxShadowColor="#A6CE39"
         SallesCard={PinusCard}
       />
 
-      <Title 
+      <Title
         img="Assets/Favicon/favicon.ico"
-        
+
         name="ENTREGAS"
       />
 
       <Slide />
-      
-      <Title 
+
+      <Title
         img="Assets/Favicon/favicon.ico"
         name="PRODUTOS"
       />
 
-      <Product id="Product"/>
+      <Product id="Product" />
 
-      <Title 
+      <Title
         img="Assets/Favicon/favicon.ico"
         name=" AVALIAÇÕES"
       />
 
-      <Depoiments/>
+      <Depoiments />
 
-      <Title 
+      <Title
         img="Assets/Favicon/favicon.ico"
-        name="TIME DE VENDAS" 
+        name="TIME DE VENDAS"
       />
 
-      <SalesCard/>
+      <SalesCard />
 
-      <Contacts 
+      <Contacts
         Color="#77B74D"
         ColorBorder="#77B74D"
-        id="Contact" 
+        id="Contact"
       />
 
-      <Title 
+      <Title
         img="Assets/Favicon/favicon.ico"
-        name="FALE CONOSCO" 
+        name="FALE CONOSCO"
       />
-      
+
       <Form />
       {/* <FormsAddImg/> */}
-      <ButtonTopWidth/>
-      <WhatsAppButton/>
-      <Cookies/>
-      <Footer/>
+      <ButtonTopWidth />
+      <WhatsAppButton />
+      <Cookies />
+      <Footer />
     </div>
   );
 }

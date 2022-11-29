@@ -1,6 +1,4 @@
-import React from "react"
 import * as C from './style'
-
 import { IMiniCards } from "Types/MiniCards"
 
 const MiniCard = ({icon, title, onClick}: IMiniCards) => {
