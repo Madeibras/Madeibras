@@ -31,6 +31,22 @@ export const addUplaod = (req, res) => {
     }
 }
 
+export const updateUpload = (req, res) => {
+    const id = req.params.id
+    const files = req.file.filename;
+
+    db.query("UPDATE tb_imagens SET `image` = ? WHERE `id` = ?", [files, id], (err) => {
+        if(err) return res.status(400).json({
+            error: err,
+            msg: "Não foi possivel editar essa imagem"
+        })
+        return res.status(200).json({
+            sucess: req.file.filename,
+            msg: "Sucesso ao editar a imagem",
+        })
+    })
+}
+
 export const deleteUpload = (req, res) => {
 
     db.query("DELETE FROM tb_imagens WHERE `id` = ?", [req.params.id],
@@ -45,17 +61,3 @@ export const deleteUpload = (req, res) => {
         })
 }
 
-export const updateUpload = (req, res) => {
-    const id = req.params.id
-    const files = req.files.filename
-
-    db.query("UPDATE tb_imagens SET `image` = ? WHERE `id` = ?", [files, id], (err) => {
-        if(err) return res.status(400).json({
-            error: err,
-            msg: "Não foi possivel editar essa imagem"
-        })
-        return res.status(200).json({
-            msg: "Sucesso ao editar a imagem",
-        })
-    })
-}

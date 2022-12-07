@@ -21,7 +21,6 @@ const AboutWork = ({SallesCard, primary, boxShadowColor, id}: IProps) => {
             }else{
                 setCounter(false)
             }
-            console.log(window.scrollY)
         })
     })
 

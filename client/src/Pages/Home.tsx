@@ -16,9 +16,14 @@ import FormsAddImg from "Components/FormsAddImg";
 import { PinusCard } from "Mock/About";
 import { IProps } from "Types/Card";
 import { useState } from "react";
+import { ISlide } from "Types/ISlide";
 
 export default function Home({ id }: IProps) {
 
+  const [editImg, setEditImg] = useState('')
+  const [active, setActive] = useState(false)
+  const [list, setList] = useState<ISlide[]>([])
+  
   return (
     <div>
       <Header
@@ -52,7 +57,7 @@ export default function Home({ id }: IProps) {
         name="ENTREGAS"
       />
 
-      <Slide />
+      <Slide setEditImg={setEditImg} editImg={editImg} setActive={setActive} list={list} setList={setList} />
 
       <Title
         img="Assets/Favicon/favicon.ico"
@@ -87,7 +92,7 @@ export default function Home({ id }: IProps) {
       />
 
       <Form />
-      <FormsAddImg/>
+      <FormsAddImg list={list} setList={setList}  editImg={editImg} setEditImg={setEditImg} active={active} setActive={setActive} />
       <ButtonTopWidth />
       <WhatsAppButton />
       <Cookies />

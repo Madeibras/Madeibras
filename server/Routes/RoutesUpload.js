@@ -9,6 +9,6 @@ router.post('/', upload.single('image'), addUplaod)
 
 router.delete('/:id', deleteUpload)
 
-router.put('/:id' ,updateUpload)
+router.put('/:id', upload.single('image') ,updateUpload)
 
 export default router

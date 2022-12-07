@@ -38,6 +38,7 @@ export const CardImg = styled.div`
     }
 
    img{
+        position: relative;
         width: 85vw;
         height: 100%;
 
@@ -49,10 +50,36 @@ export const CardImg = styled.div`
             width: 80vw;
             height: 45vh;
         }
-   }
-
-   
+   } 
 `
+
+export const divBtns = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #474242;
+    box-shadow: border-box;
+   border-radius: 0 0 10px 10px;
+    
+    button{
+        font-size: 2rem;
+        margin: 10px 20px 0 10px;
+        cursor: pointer;
+        color: #e5e3e3;
+        
+    }
+
+    button:nth-child(1):hover{
+        color: red;
+    }
+
+    button:nth-child(2):hover{
+        color: #45d725;
+    }
+
+
+`
+
 
 export const Buttons = styled.div`
     position: absolute;

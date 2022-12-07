@@ -5,17 +5,25 @@ export default function Login() {
 
     const [form, setForm] = useState({
         email: '',
-        senha: ''
+        password: ''
+    })
+    const [error, setError] = useState({
+        errorEmail: false,
+        errorPassword: false
     })
 
     const onChange = (e: any) => {
         setForm({...form, [e.target.name]: e.target.value})
     }
 
+    const handleClick = (e: any) => {
+        e.preventDefault()
+        
+    }
+
   return (
     <>
-    <img src="" alt="" />
-    <C.Form>
+    <C.Form onSubmit={handleClick}>
          <legend>Login</legend>
             <C.Inputs>
                 <label>E-mail:</label>
@@ -27,16 +35,18 @@ export default function Login() {
                     value={form.email}
                 />
             </C.Inputs>
+            {error.errorEmail && <p>Esse valor não pode ser vazio</p>}
             <C.Inputs>
-                <label>Senha:</label>
+                <label>password:</label>
                 <input 
                     type="password" 
                     name="password" 
-                    placeholder="Senha"
+                    placeholder="senha"
                     onChange={onChange}
-                    value={form.senha}
+                    value={form.password}
                 />
             </C.Inputs>
+            {error.errorPassword && <p>Esse valor não pode ser vazio</p>}
             <input type="submit" value="Entrar" />
     </C.Form>
     </>

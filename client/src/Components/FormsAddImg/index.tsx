@@ -1,17 +1,26 @@
+import * as C from './styles'
 import Button from 'Components/Button'
 import axios from 'axios'
-import { useState } from 'react'
-import * as C from './styles'
 import { AiOutlineFileAdd } from 'react-icons/ai'
+import { useState } from 'react'
+import { ISlide } from 'Types/ISlide'
 
-export default function FormsAddImg() {
+interface IProps {
+    editImg: any
+    setEditImg: React.Dispatch<React.SetStateAction<string>>
+    setActive: React.Dispatch<React.SetStateAction<boolean>>
+    active: boolean
+    setList: React.Dispatch<React.SetStateAction<ISlide[]>>
+    list: ISlide[]
+}
+
+export default function FormsAddImg({ editImg, setEditImg, setActive, active, list, setList }: IProps) {
     const [status, setStatus] = useState({
         type: '',
         color: '',
         active: false
     })
     const [imagem, setImagem] = useState<any>('')
-    const [active, setActive] = useState(false)
 
     const HandleClick = async (e: any) => {
         e.preventDefault()
@@ -26,30 +35,43 @@ export default function FormsAddImg() {
                 active: false
             })
         }
+        if (editImg) {
+            await axios.put(`http://localhost:8080/${editImg.id}`, formData)
+                .then((response) => {
+                    console.log(response.data)
+                    setStatus({
+                        type: 'sucess',
+                        color: 'green',
+                        active: false
+                    })
+                    setList(list.map((item, index) => editImg.id === index ? response.data : item))
+                }).catch((err) => console.log(err))
+        } else {
+            await axios.post("http://localhost:8080/", formData)
+                .then((response) => {
+                    console.log(response)
+                    setStatus({
+                        type: 'sucess',
+                        color: 'green',
+                        active: false
+                    })
+                }).catch((err) => {
+                    console.log(err)
+                    setStatus({
+                        type: 'error',
+                        color: 'red',
+                        active: false
+                    })
+                });
+        }
 
-        await axios.post("http://localhost:8080/", formData)
-            .then((response) => {
-                console.log(response)
-                setStatus({
-                    type: 'Imagem upada com sucesso',
-                    color: 'green',
-                    active: false
-                })
-            }).catch((err) => {
-                console.log(err)
-                setStatus({
-                    type: 'error',
-                    color: 'red',
-                    active: false
-                })
-            });
     }
 
     return (
         <>
             {active && <C.Box>
                 <C.Container>
-                    <C.Form onSubmit={HandleClick} encType="multipart/form-data">
+                    <C.Form onSubmit={HandleClick} encType="multipart/form-data" method='POST'>
                         <C.RenderImg htmlFor="file">
                             {imagem ? <img src={URL.createObjectURL(imagem)} alt="" /> : <AiOutlineFileAdd />}
                         </C.RenderImg>

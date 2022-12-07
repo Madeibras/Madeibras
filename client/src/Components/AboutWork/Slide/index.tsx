@@ -1,13 +1,20 @@
 import * as C from './style'
-import SlideImg from 'Mock/Slide.json'
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
+import {BsFillTrashFill, BsPencilSquare} from 'react-icons/bs'
 import { useEffect, useRef, useState } from 'react'
 import axios from 'axios'
+import { ISlide } from 'Types/ISlide'
 
-const Slide = () => {
+interface IProps {
+    editImg: string
+    setEditImg: React.Dispatch<React.SetStateAction<string>>
+    setActive: React.Dispatch<React.SetStateAction<boolean>>
+    setList: React.Dispatch<React.SetStateAction<ISlide[]>>
+    list: ISlide[]
+}
 
-    const [list, setList] = useState([])
-    const [editImg, setEditImg] = useState()
+const Slide = ({editImg, setEditImg, setActive, setList, list}: IProps) => {
+
     const [url, setUrl] = useState('')
     
     const getImagens = async () => {
@@ -35,6 +42,11 @@ const Slide = () => {
         }
     }
 
+    const HandleEdit = (item: any) => {
+        setActive(true)
+        setEditImg({...item})
+    }
+
     const carrousel = useRef<any | null>(null)
 
     const handleLeftClick = (e: React.MouseEvent<HTMLElement>) => {
@@ -52,11 +64,13 @@ const Slide = () => {
     return (
         <C.Container>
             <C.Box ref={carrousel}>
-                {SlideImg.map((item: any) => (
+                {list.map((item: any) => (
                     <C.CardImg key={item.id}>
-                        <img src={item.img} alt='Foto Madeibras' />
-                        <button type='button' onClick={() => HandleDelete(item.id)}>Deletar</button>
-                        <button type='button' onClick={() => HandleDelete(item.id)}>Deletar</button>
+                        <img src={url + item.image} alt='Foto Madeibras' />
+                        <C.divBtns>
+                            <button title='Button' type='button' onClick={() => HandleDelete(item.id!)}> <BsFillTrashFill/> </button>
+                            <button title='Button' type='button' onClick={() => HandleEdit(item)}> <BsPencilSquare/> </button>
+                        </C.divBtns>
                     </C.CardImg>
                 ))}
             </C.Box>
