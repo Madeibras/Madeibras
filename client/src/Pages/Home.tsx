@@ -92,7 +92,7 @@ export default function Home({ id }: IProps) {
       />
 
       <Form />
-      <FormsAddImg list={list} setList={setList}  editImg={editImg} setEditImg={setEditImg} active={active} setActive={setActive} />
+      {/* <FormsAddImg list={list} setList={setList}  editImg={editImg} setEditImg={setEditImg} active={active} setActive={setActive} /> */}
       <ButtonTopWidth />
       <WhatsAppButton />
       <Cookies />

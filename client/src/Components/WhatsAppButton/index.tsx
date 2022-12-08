@@ -9,7 +9,7 @@ const WhatsAppButton = () => {
 
     return(
         <C.Button>
-                <C.Btn onClick={() => Open?.openWhatsApp()}><AiOutlineWhatsApp/></C.Btn>
+                <C.Btn type='button' id='botao-flutuante' onClick={() => Open?.openWhatsApp()}><AiOutlineWhatsApp/></C.Btn>
                 <span>Orçamento</span>
         </C.Button>
     )
