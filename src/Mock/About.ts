@@ -8,7 +8,7 @@ export const PinusCard: ISallesCard[] = [
         start: 0, 
         end: 200,
         Measure: "M3",
-        subTitle: "Estoque à pronta entrega"
+        subTitle: "Estoque a pronta-entrega"
     },
 
     {
