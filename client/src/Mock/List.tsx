@@ -1,7 +1,7 @@
 import {MdHomeFilled, MdGroup, MdInventory, MdLocalPhone} from 'react-icons/md'
 
 
-interface IList {
+export interface IList {
     id: number;
     name: string;
     icon: JSX.Element;

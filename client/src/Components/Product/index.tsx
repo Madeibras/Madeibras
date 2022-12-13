@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom'
 import MiniCard from 'Components/Cards/MiniCards'
 import {BsFillDoorClosedFill} from 'react-icons/bs'
 import { MdRoofing } from 'react-icons/md'
+import ReactGa from 'react-ga'
 
 type Categorys = typeof Card[0]
 
@@ -29,10 +30,23 @@ const Product = ({id}: IProps) => {
     ]
 
     const navigate = useNavigate()
+    
+    const eventCards = (item: any) => {
+        ReactGa.event({
+            category: item.title,
+            action: "Outros produtos"
+        })
+        navigate(item.rota)
+    }
 
     const [activeCategory, setActiveCategory] = useState<boolean | string | null | number | Object>(false)
     const selectFilter = (category: Categorys) => {
         if(activeCategory !== category){
+            ReactGa.event({
+                category: category.name,
+                action: "Butão dos cards"
+            })
+
             setActiveCategory(category.id)
             return;
         }else{
@@ -59,14 +73,14 @@ const Product = ({id}: IProps) => {
                     </NavHashLink>
                     ))}
                 </C.Container>
-                {/* <C.SubTitle>Outros Produtos</C.SubTitle>
+                <C.SubTitle>Outros Produtos</C.SubTitle>
                 <C.Cards>
                     {Cards.map(item =>  
                     <MiniCard 
                     title={item.title}
                     icon={item.icon}
-                    onClick={() => navigate(item.rota)} />)}
-                </C.Cards> */}
+                    onClick={() => eventCards(item)} />)}
+                </C.Cards>
                 
             <InfoProducts SallesMenu={FilterSalles}  />
         </>

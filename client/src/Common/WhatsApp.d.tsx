@@ -1,4 +1,5 @@
 import React, {createContext} from "react";
+import ReactGa from 'react-ga'
 
 type ContextProviderProps = {
     children: React.ReactNode
@@ -32,9 +33,12 @@ export const WhatsAppProvider = ({children}: ContextProviderProps) => {
     const geRandom = Numbers[getRandom(0, Numbers.length - 1)]
 
     const openWhatsApp = () =>{
-         window.open(geRandom, '_blank')  
+        ReactGa.event({
+            category: 'Button',
+            action: 'Butão WhatsApp'
+        })
+        window.open(geRandom, '_blank')  
     }
-
 
     return(
         <WhatsAppContext.Provider value={{openWhatsApp}}>

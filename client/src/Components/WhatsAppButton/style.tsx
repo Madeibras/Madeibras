@@ -62,7 +62,7 @@ export const Button = styled.div`
     }
 `
 
-export const Btn = styled.button`
+export const Btn = styled.a`
     color: #F4F4F4;
     font-size: 4rem;
     display: flex;
