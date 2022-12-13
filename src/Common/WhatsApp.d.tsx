@@ -35,7 +35,7 @@ export const WhatsAppProvider = ({children}: ContextProviderProps) => {
     const openWhatsApp = () =>{
         ReactGa.event({
             category: 'Button',
-            action: 'Butão WhatsApp'
+            action: 'Botão WhatsApp'
         })
         window.open(geRandom, '_blank')  
     }
