@@ -17,6 +17,7 @@ import { PinusCard } from "Mock/About";
 import { IProps } from "Types/Card";
 import { useState } from "react";
 import { ISlide } from "Types/ISlide";
+import { Sliders } from "Mock/Sliders";
 
 export default function Home({ id }: IProps) {
 
@@ -57,7 +58,7 @@ export default function Home({ id }: IProps) {
         name="ENTREGAS"
       />
 
-      <Slide setEditImg={setEditImg} editImg={editImg} setActive={setActive} list={list} setList={setList} />
+      <Slide setEditImg={setEditImg} editImg={editImg} setActive={setActive} list={Sliders} setList={setList} />
 
       <Title
         img="Assets/Favicon/favicon.ico"

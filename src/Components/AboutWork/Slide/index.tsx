@@ -66,11 +66,11 @@ const Slide = ({editImg, setEditImg, setActive, setList, list}: IProps) => {
             <C.Box ref={carrousel}>
                 {list.map((item: any) => (
                     <C.CardImg key={item.id}>
-                        <img src={url + item.image} alt='Foto Madeibras' />
-                        <C.divBtns>
+                        <img src={item.image} alt='Foto Madeibras' />
+                        {/* <C.divBtns>
                             <button title='Button' type='button' onClick={() => HandleDelete(item.id!)}> <BsFillTrashFill/> </button>
                             <button title='Button' type='button' onClick={() => HandleEdit(item)}> <BsPencilSquare/> </button>
-                        </C.divBtns>
+                        </C.divBtns> */}
                     </C.CardImg>
                 ))}
             </C.Box>
