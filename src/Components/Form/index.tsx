@@ -5,8 +5,10 @@ import { useEffect, useRef } from 'react'
 import { useState } from 'react'
 import emailjs from '@emailjs/browser';
 import * as C from './style'
+import { useNavigate } from 'react-router-dom'
 
 const Form = () => {
+    const navigate = useNavigate()
     const [name, setName] = useState('')
     const [email, setEmail] = useState<any>('')
     const [message, setmessage] = useState('')
@@ -50,6 +52,8 @@ const Form = () => {
             setName('')
             setEmail('')
             setmessage('')
+
+            navigate('/obrigado')
         }
     }
 
