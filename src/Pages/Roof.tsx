@@ -13,19 +13,17 @@ import SalesCard from "Components/SalesCard";
 import Title from "Components/Title";
 import WhatsAppButton from "Components/WhatsAppButton";
 import { RoofCard } from "Mock/About";
-import { IProps } from "Types/Card";
 
-
-export default function Roof({id}: IProps) {
+export default function Roof() {
     return (
         <div>
-            <Header 
-            img="Assets/img/backgroundRoof.svg"
-            id={id}/>
+            <Header
+                img="Assets/img/backgroundRoof.svg"
+                id="/Telhado" />
 
-            <HomeSlogan 
+            <HomeSlogan
                 img='Assets/img/telhaVetor.png'
-                title="MADEIRA PARA TELHADO" 
+                title="MADEIRA PARA TELHADO"
                 description="Atendimento online, com as melhores condições do mercado. Comprar madeiras nunca foi tão fácil."
                 backgroundColorButton="#69E087"
                 backgroundColorHoverButton="#48ad61"
@@ -33,54 +31,54 @@ export default function Roof({id}: IProps) {
                 ColorIcons="#69E087"
             />
 
-            <Title 
-            img="Assets/Favicon/BrasaoRoof.png"
-            name="NOSSO TRABALHO"/>
+            <Title
+                img="Assets/Favicon/BrasaoRoof.png"
+                name="NOSSO TRABALHO" />
 
-            <AboutWork 
-            primary 
-            boxShadowColor="#8FD993"
-            SallesCard={RoofCard}
-            id="About"
+            <AboutWork
+                primary
+                boxShadowColor="#8FD993"
+                SallesCard={RoofCard}
+                id="About"
             />
 
             <Title
-            img="Assets/Favicon/BrasaoRoof.png"
-            name="PRODUTOS"/>
+                img="Assets/Favicon/BrasaoRoof.png"
+                name="PRODUTOS" />
 
-            <ProductsRoof id="Product"/>
+            <ProductsRoof id="Product" />
 
-            <Title 
-            img="Assets/Favicon/BrasaoRoof.png"
-            name="GALERIA"/>
-            <Gallery/>
+            <Title
+                img="Assets/Favicon/BrasaoRoof.png"
+                name="GALERIA" />
+            <Gallery />
 
-            <Title 
-            img="Assets/Favicon/BrasaoRoof.png"
-            name="O QUE DIZEM NOSSOS CLIENTES"/>
-            <Depoiments/>
+            <Title
+                img="Assets/Favicon/BrasaoRoof.png"
+                name="O QUE DIZEM NOSSOS CLIENTES" />
+            <Depoiments />
 
-            <Title 
-            img="Assets/Favicon/BrasaoRoof.png"
-            name="TIME DE VENDAS" 
+            <Title
+                img="Assets/Favicon/BrasaoRoof.png"
+                name="TIME DE VENDAS"
             />
-            <SalesCard/>
+            <SalesCard />
 
-            <Contacts 
-            Color="#69E087"
-            ColorBorder="#69E087"
-            id="Contact" />
+            <Contacts
+                Color="#69E087"
+                ColorBorder="#69E087"
+                id="Contact" />
 
-            <Title 
-            img="Assets/Favicon/BrasaoRoof.png"
-            name="FALE CONOSCO" />
+            <Title
+                img="Assets/Favicon/BrasaoRoof.png"
+                name="FALE CONOSCO" />
 
             <Form />
 
-            <ButtonTopWidth/>
-            <WhatsAppButton/>
-            <Cookies/>
-            <Footer/>
+            <ButtonTopWidth />
+            <WhatsAppButton />
+            <Cookies />
+            <Footer />
         </div>
     )
 }

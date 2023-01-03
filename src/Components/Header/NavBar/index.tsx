@@ -1,13 +1,13 @@
 import DarkMode from 'Components/DarkMode'
 import * as C from './style'
-import { IList, Lists } from 'Mock/List'
+import { Lists } from 'Mock/List'
 import { HashLink } from 'react-router-hash-link'
 import { IProps } from 'Types/Card'
 import ReactGa from 'react-ga'
 
 const Nav = ({ id }: IProps) => {
 
-    const filterNav = (item: any) => {
+    const filterNav = (item: string) => {
         ReactGa.event({
             category: item,
             action: 'Botao da navbar'

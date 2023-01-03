@@ -7,6 +7,7 @@ import { IProps } from 'Types/Card'
 export default function Header({ id, img }: IProps) {
 
     const [isOpen, setIsOpen] = useState(false)
+    
     return (
         <>
             <C.Header id={id}>

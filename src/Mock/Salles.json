@@ -1,5 +1,4 @@
 [
-
     {
         "id": 1,
         "img": "Assets/Sallers/Pinus_cm.png",
@@ -11,12 +10,11 @@
         "tbody": [],
         "Link": "pinus"
     },
-
     {
         "id": 2,
         "titulo": "TABÚA",
         "img": "Assets/Sallers/Pinus_cm.png",
-        "alt": "Tabua de pinus", 
+        "alt": "Tabua de pinus",
         "category": 1,
         "thead": [
             {
@@ -31,22 +29,18 @@
                 "Espessura": "1,9cm",
                 "comprimento": "3,00m"
             },
-
             {
                 "largura": "25cm",
                 "Espessura": "1,9cm",
                 "comprimento": "3,00m"
             },
-
             {
                 "largura": "20cm",
                 "Espessura": "1,9cm",
                 "comprimento": "3,00m"
             }
         ]
-
     },
-
     {
         "id": 3,
         "titulo": "SARRAFO",
@@ -66,22 +60,18 @@
                 "Espessura": "1,9cm",
                 "comprimento": "3,00m"
             },
-
             {
                 "largura": "10cm",
                 "Espessura": "1,9cm",
                 "comprimento": "3,00m"
             },
-
             {
                 "largura": "5cm",
                 "Espessura": "1,9cm",
                 "comprimento": "3,00m"
             }
         ]
-
     },
-    
     {
         "id": 4,
         "titulo": "PONTALETE",
@@ -103,8 +93,6 @@
             }
         ]
     },
-
-
     {
         "id": 5,
         "titulo": "VIGA",
@@ -126,7 +114,6 @@
             }
         ]
     },
-
     {
         "id": 6,
         "img": "Assets/Sallers/Plastificado.png",
@@ -138,7 +125,6 @@
         "tbody": [],
         "Link": "plastificado"
     },
-
     {
         "id": 6,
         "titulo": "Chapa Plastificada",
@@ -168,10 +154,8 @@
                 "Espessura": "220 cm",
                 "comprimento": "110cm"
             }
-           
         ]
     },
-
     {
         "id": 7,
         "img": "Assets/Sallers/Madeirite.png",
@@ -183,7 +167,6 @@
         "tbody": [],
         "Link": "madeirite"
     },
-
     {
         "id": 8,
         "titulo": "Chapa Resinada ",
@@ -220,7 +203,6 @@
             }
         ]
     },
-
     {
         "id": 9,
         "img": "Assets/Sallers/Rolico.jpg",
@@ -232,7 +214,6 @@
         "tbody": [],
         "Link": "pontalete"
     },
-
     {
         "id": 10,
         "titulo": "Pontalete Roliço",

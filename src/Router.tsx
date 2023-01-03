@@ -20,8 +20,8 @@ export default function RouterDOM (props: any) {
         <Router basename={props.basename}>
             <GlobalStyle />
             <Routes >
-                <Route path="/Construcao" element={<Home id="/Construcao" />} />
-                <Route path="/Telhado" element={<Roof id="/Telhado" />} />
+                <Route path="/Construcao" element={<Home/>} />
+                <Route path="/Telhado" element={<Roof />} />
                 <Route path="/Loginadm" element={<Login />} />
                 <Route path="/obrigado" element={<ThankPage />} />
             </Routes>

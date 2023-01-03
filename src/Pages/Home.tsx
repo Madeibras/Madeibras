@@ -18,17 +18,17 @@ import { IProps } from "Types/Card";
 import { useState } from "react";
 import { ISlide } from "Types/ISlide";
 
-export default function Home({ id }: IProps) {
+export default function Home() {
 
   const [editImg, setEditImg] = useState('')
   const [active, setActive] = useState(false)
   const [list, setList] = useState<ISlide[]>([])
-  
+
   return (
     <div>
       <Header
         img="Assets/img/background.svg"
-        id={id} />
+        id="/Construcao" />
 
       <HomeSlogan
         img='Assets/img/VetorMadeibras1.svg'
