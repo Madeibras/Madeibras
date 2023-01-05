@@ -15,6 +15,7 @@ import Cookies from "Components/Cookies";
 import FormsAddImg from "Components/FormsAddImg";
 import { PinusCard } from "Mock/About";
 import { IProps } from "Types/Card";
+import token from '../http/Token'
 import { useState } from "react";
 import { ISlide } from "Types/ISlide";
 
@@ -92,7 +93,7 @@ export default function Home() {
       />
 
       <Form />
-      {/* <FormsAddImg list={list} setList={setList}  editImg={editImg} setEditImg={setEditImg} active={active} setActive={setActive} /> */}
+      {token != null && <FormsAddImg list={list} setList={setList}  editImg={editImg} setEditImg={setEditImg} active={active} setActive={setActive} />}
       <ButtonTopWidth />
       <WhatsAppButton />
       <Cookies />

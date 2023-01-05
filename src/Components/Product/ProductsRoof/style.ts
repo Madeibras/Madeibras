@@ -20,7 +20,9 @@ export const Box = styled.div`
     margin: auto;
     color: ${(props) => props.theme.color};
 
-   
+    a{
+        color: ${(props) => props.theme.color};
+    }
 
     &:nth-child(2){
        transform: scaleX(-1);
@@ -88,6 +90,7 @@ export const Title = styled.div`
     position: relative;
     width: 50%;   
     padding: 16px;
+ 
 
     ${Media.Laptop}{
         width: 100%;

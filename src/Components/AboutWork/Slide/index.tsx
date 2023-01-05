@@ -1,9 +1,10 @@
 import * as C from './style'
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
-import {BsFillTrashFill, BsPencilSquare} from 'react-icons/bs'
+import { BsFillTrashFill, BsPencilSquare } from 'react-icons/bs'
 import { useEffect, useRef, useState } from 'react'
 import axios from 'axios'
 import { ISlide } from 'Types/ISlide'
+import token from '../../../http/Token'
 
 interface IProps {
     editImg: string
@@ -13,10 +14,10 @@ interface IProps {
     list: ISlide[]
 }
 
-const Slide = ({editImg, setEditImg, setActive, setList, list}: IProps) => {
+const Slide = ({ editImg, setEditImg, setActive, setList, list }: IProps) => {
 
     const [url, setUrl] = useState('')
-    
+
     const getImagens = async () => {
         try {
             const res = await axios.get("http://localhost:8080")
@@ -29,22 +30,22 @@ const Slide = ({editImg, setEditImg, setActive, setList, list}: IProps) => {
 
     useEffect(() => {
         getImagens()
-      }, [])
+    }, [])
 
     const HandleDelete = async (id: number) => {
-        try{
+        try {
             await axios.delete(`http://localhost:8080/${id}`)
-            .then(() => {
-                setList(list.filter((item: any) => item.id !== id))
-              })
-        }catch (erro){
+                .then(() => {
+                    setList(list.filter((item: any) => item.id !== id))
+                })
+        } catch (erro) {
             console.log(erro)
         }
     }
 
     const HandleEdit = (item: any) => {
         setActive(true)
-        setEditImg({...item})
+        setEditImg({ ...item })
     }
 
     const carrousel = useRef<any | null>(null)
@@ -67,10 +68,12 @@ const Slide = ({editImg, setEditImg, setActive, setList, list}: IProps) => {
                 {list.map((item: any) => (
                     <C.CardImg key={item.id}>
                         <img src={url + item.image} alt='Foto Madeibras' />
-                        <C.divBtns>
-                            <button title='Button' type='button' onClick={() => HandleDelete(item.id!)}> <BsFillTrashFill/> </button>
-                            <button title='Button' type='button' onClick={() => HandleEdit(item)}> <BsPencilSquare/> </button>
-                        </C.divBtns>
+                        {token != null &&
+                            <C.divBtns>
+                                <button title='Button' type='button' onClick={() => HandleDelete(item.id!)}> <BsFillTrashFill /> </button>
+                                <button title='Button' type='button' onClick={() => HandleEdit(item)}> <BsPencilSquare /> </button>
+                            </C.divBtns>
+                        }
                     </C.CardImg>
                 ))}
             </C.Box>
