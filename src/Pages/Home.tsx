@@ -14,16 +14,16 @@ import WhatsAppButton from "Components/WhatsAppButton";
 import Cookies from "Components/Cookies";
 import FormsAddImg from "Components/FormsAddImg";
 import { PinusCard } from "Mock/About";
-import { IProps } from "Types/Card";
 import token from '../http/Token'
 import { useState } from "react";
 import { ISlide } from "Types/ISlide";
+import { Sliders } from '../Mock/Sliders'
 
 export default function Home() {
 
   const [editImg, setEditImg] = useState('')
   const [active, setActive] = useState(false)
-  const [list, setList] = useState<ISlide[]>([])
+  const [list, setList] = useState<ISlide[]>(Sliders)
 
   return (
     <div>
