@@ -60,17 +60,12 @@ const Slide = ({ editImg, setEditImg, setActive, setList, list }: IProps) => {
         carrousel.current.scrollLeft += carrousel.current.offsetWidth
         console.log(carrousel)
     }
-
     return (
         <C.Container>
             <C.Box ref={carrousel}>
                 {list.map((item: any) => (
                     <C.CardImg key={item.id}>
-<<<<<<< HEAD
-                        <img src={item.image} alt='Foto Madeibras' />
-=======
                         <img src={url + item.filename} alt='Foto Madeibras' />
->>>>>>> 7d1bc58 (upload images)
                         {token != null &&
                             <C.divBtns>
                                 <button title='Button' type='button' onClick={() => HandleDelete(item.id!)}> <BsFillTrashFill /> </button>

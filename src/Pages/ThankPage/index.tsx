@@ -1,8 +1,7 @@
 import { WhatsAppContext } from 'Common/WhatsApp.d';
 import * as C from './styles'
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import { AiFillFacebook, AiFillInstagram, AiOutlineWhatsApp } from 'react-icons/ai'
-import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 export default function ThankPageForm() {
