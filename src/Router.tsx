@@ -3,7 +3,7 @@ import Home from "Pages/Home"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Roof from "Pages/Roof"
 import Login from "Pages/Login/Login"
-import ThankPage from "Pages/ThankPage"
+import ThankPageForm from "Pages/ThankPage"
 import ReactGA from 'react-ga'
 import { useEffect } from "react"
 
@@ -22,8 +22,8 @@ export default function RouterDOM (props: any) {
             <Routes >
                 <Route path="/Construcao" element={<Home/>} />
                 <Route path="/Telhado" element={<Roof />} />
-                <Route path="/Loginadm" element={<Login />} />
-                <Route path="/obrigado" element={<ThankPage />} />
+                <Route path="/Login" element={<Login />} />
+                <Route path="/obrigado" element={<ThankPageForm />} />
             </Routes>
         </Router>
     )

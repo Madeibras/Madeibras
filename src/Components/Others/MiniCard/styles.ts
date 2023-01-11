@@ -33,9 +33,12 @@ export const Box = styled.section`
 
 export const Icon = styled.div`
     background: #20292E;
-    font-size: 1.2rem;
-    padding: 14px 16px;
+    font-size: 1.5rem;
+    padding: 12px 12px;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     ${Media.MobileL}{
         font-size: 0.9rem;

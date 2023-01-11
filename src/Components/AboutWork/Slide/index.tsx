@@ -2,9 +2,9 @@ import * as C from './style'
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
 import { BsFillTrashFill, BsPencilSquare } from 'react-icons/bs'
 import { useEffect, useRef, useState } from 'react'
-import axios from 'axios'
 import { ISlide } from 'Types/ISlide'
 import token from '../../../http/Token'
+import http from '../../../http'
 
 interface IProps {
     editImg: string
@@ -20,8 +20,8 @@ const Slide = ({ editImg, setEditImg, setActive, setList, list }: IProps) => {
 
     const getImagens = async () => {
         try {
-            const res = await axios.get("http://localhost:8080")
-            setList(res.data.imagens)
+            const res = await http.get("/newsGetAlls")
+            setList(res.data.results)
             setUrl(res.data.url)
         } catch (erro) {
             console.log(erro)
@@ -34,9 +34,9 @@ const Slide = ({ editImg, setEditImg, setActive, setList, list }: IProps) => {
 
     const HandleDelete = async (id: number) => {
         try {
-            await axios.delete(`http://localhost:8080/${id}`)
+            await http.delete(`/newsDelete/${id}`)
                 .then(() => {
-                    setList(list.filter((item: any) => item.id !== id))
+                    setList(list.filter((item) => item.id !== id))
                 })
         } catch (erro) {
             console.log(erro)
@@ -58,7 +58,6 @@ const Slide = ({ editImg, setEditImg, setActive, setList, list }: IProps) => {
     const handleRightClick = (e: React.MouseEvent<HTMLElement>) => {
         e.preventDefault()
         carrousel.current.scrollLeft += carrousel.current.offsetWidth
-
         console.log(carrousel)
     }
 
@@ -67,7 +66,11 @@ const Slide = ({ editImg, setEditImg, setActive, setList, list }: IProps) => {
             <C.Box ref={carrousel}>
                 {list.map((item: any) => (
                     <C.CardImg key={item.id}>
+<<<<<<< HEAD
                         <img src={item.image} alt='Foto Madeibras' />
+=======
+                        <img src={url + item.filename} alt='Foto Madeibras' />
+>>>>>>> 7d1bc58 (upload images)
                         {token != null &&
                             <C.divBtns>
                                 <button title='Button' type='button' onClick={() => HandleDelete(item.id!)}> <BsFillTrashFill /> </button>

@@ -16,25 +16,7 @@ export const Box = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    cursor: pointer;
     z-index: 20;
-`
-
-export const Btn = styled.button`
-    position: fixed;
-    right: 30px;
-    bottom: 20%;
-    background: #000;
-    color: #fff;
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 21;
-
-    &:hover{
-        font-size: 0.9rem
-    }
 `
 
 export const Container = styled.div`
@@ -76,6 +58,23 @@ export const RenderImg = styled.label`
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+`
+
+export const Btn = styled.button`
+    position: fixed;
+    right: 25px;
+    bottom: 20%;
+    background: #000;
+    color: #fff;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 21;
+
+    &:hover{
+        font-size: 0.9rem
     }
 `
 
