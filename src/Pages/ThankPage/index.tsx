@@ -3,7 +3,6 @@ import * as C from './styles'
 import { useContext } from 'react'
 import { AiFillFacebook, AiFillInstagram, AiOutlineWhatsApp } from 'react-icons/ai'
 import { useNavigate } from 'react-router-dom';
-
 export default function ThankPageForm() {
 
   const navigate = useNavigate();
