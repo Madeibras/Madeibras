@@ -65,7 +65,7 @@ const Slide = ({ editImg, setEditImg, setActive, setList, list }: IProps) => {
             <C.Box ref={carrousel}>
                 {list.map((item: any) => (
                     <C.CardImg key={item.id}>
-                        <img src={url + item.filename} alt='Foto Madeibras' />
+                        <img src={item.image} alt='Foto Madeibras' />
                         {token != null &&
                             <C.divBtns>
                                 <button title='Button' type='button' onClick={() => HandleDelete(item.id!)}> <BsFillTrashFill /> </button>
