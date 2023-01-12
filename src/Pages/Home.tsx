@@ -17,7 +17,6 @@ import { PinusCard } from "Mock/About";
 import token from '../http/Token'
 import { useState } from "react";
 import { ISlide } from "Types/ISlide";
-import { Sliders } from '../Mock/Sliders'
 
 export default function Home() {
 
