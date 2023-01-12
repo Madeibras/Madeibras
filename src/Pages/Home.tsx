@@ -23,7 +23,7 @@ export default function Home() {
 
   const [editImg, setEditImg] = useState('')
   const [active, setActive] = useState(false)
-  const [list, setList] = useState<ISlide[]>(Sliders)
+  const [list, setList] = useState<ISlide[]>([])
 
   return (
     <div>
