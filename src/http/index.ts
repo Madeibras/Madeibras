@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const http = axios.create({
-    baseURL: "https://api-madeibras.onrender.com" || "http://localhost:8080"
+    baseURL: "https://api-madeibras-production.up.railway.app" || "http://localhost:8080"
 })
 
 http.interceptors.request.use(function (config) {
