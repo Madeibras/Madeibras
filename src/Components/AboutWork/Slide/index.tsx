@@ -18,19 +18,19 @@ const Slide = ({ editImg, setEditImg, setActive, setList, list }: IProps) => {
 
     const [url, setUrl] = useState('')
 
-    const getImagens = async () => {
-        try {
-            const res = await http.get("/newsGetAlls")
-            setList(res.data.results)
-            setUrl(res.data.url)
-        } catch (erro) {
-            console.log(erro)
-        }
-    }
+    // const getImagens = async () => {
+    //     try {
+    //         const res = await http.get("/newsGetAlls")
+    //         setList(res.data.results)
+    //         setUrl(res.data.url)
+    //     } catch (erro) {
+    //         console.log(erro)
+    //     }
+    // }
 
-    useEffect(() => {
-        getImagens()
-    }, [])
+    // useEffect(() => {
+    //     getImagens()
+    // }, [])
 
     const HandleDelete = async (id: number) => {
         try {
