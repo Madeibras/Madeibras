@@ -18,19 +18,19 @@ const Slide = ({ editImg, setEditImg, setActive, setList, list }: IProps) => {
 
     const [url, setUrl] = useState('')
 
-    // const getImagens = async () => {
-    //     try {
-    //         const res = await http.get("/newsGetAlls")
-    //         setList(res.data.results)
-    //         setUrl(res.data.url)
-    //     } catch (erro) {
-    //         console.log(erro)
-    //     }
-    // }
+    const getImagens = async () => {
+        try {
+            const res = await http.get("/newsGetAlls")
+            setList(res.data.results)
+            setUrl(res.data.url)
+        } catch (erro) {
+            console.log(erro)
+        }
+    }
 
-    // useEffect(() => {
-    //     getImagens()
-    // }, [])
+    useEffect(() => {
+        getImagens()
+    }, [])
 
     const HandleDelete = async (id: number) => {
         try {
@@ -65,7 +65,7 @@ const Slide = ({ editImg, setEditImg, setActive, setList, list }: IProps) => {
             <C.Box ref={carrousel}>
                 {list.map((item: any) => (
                     <C.CardImg key={item.id}>
-                        <img src={item.image} alt='Foto Madeibras' />
+                        <img src={url + item.filename} alt='Foto Madeibras' />
                         {token != null &&
                             <C.divBtns>
                                 <button title='Button' type='button' onClick={() => HandleDelete(item.id!)}> <BsFillTrashFill /> </button>
