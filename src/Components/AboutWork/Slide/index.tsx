@@ -14,7 +14,7 @@ interface IProps {
     list: ISlide[]
 }
 
-const Slide = ({ editImg, setEditImg, setActive, setList, list }: IProps) => {
+const Slide = ({ setEditImg, setActive, setList, list }: IProps) => {
 
     const [url, setUrl] = useState('')
 
